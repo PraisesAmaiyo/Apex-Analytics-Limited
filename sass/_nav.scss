@@ -156,7 +156,7 @@
 
          &_left {
             display: flex;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
             justify-content: center;
 
@@ -171,7 +171,7 @@
             .main-nav-list {
                list-style: none;
                display: flex;
-               gap: 1rem;
+               gap: .5rem;
                align-items: center;
 
 
@@ -211,7 +211,7 @@
 
                   &:hover,
                   &:active {
-                     color: $color-primary-600;
+                     color: $color-primary;
 
                      @media only screen and (max-width:$bp-big) {
                         color: $color-grey-light-1;
