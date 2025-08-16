@@ -27,89 +27,272 @@
 }
 
 .navigation-header {
+   width: 100%;
    position: absolute;
-   top: 2rem;
+   top: 0rem;
    left: 0;
    right: 0;
    z-index: 9999999;
-   background-color: $color-primary-50;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+
    height: 7rem;
-   max-width: 100rem;
-   width: 80%;
-   padding: 2rem;
-   border-radius: 5px;
    margin: 0 auto;
    transition: all 0.3s ease;
 
+   @media only screen and (min-width: $bp-monitor) {
+      width: 100%;
+   }
+
    @media only screen and (max-width:$bp-larger) {
-      width: 90%;
+      width: 100%;
       height: 6rem;
-      padding: 1.5rem;
+      justify-content: space-between;
+      // padding: 1.5rem;
 
    }
 
    @media only screen and (max-width:$bp-big) {
-      width: 80%;
-      height: 5rem;
-      padding: 1rem;
+      display: flex;
+      gap: 5rem;
+      align-items: center;
    }
 
-   .logo {
-      height: 3.5rem;
-
+   .main-nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: $color-grey-light-1;
 
       @media only screen and (max-width:$bp-big) {
-         height: 2.2rem;
+         flex-direction: column-reverse;
       }
-   }
 
-   .main-nav-list {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-
-      .button-group {
+      &-top {
          display: flex;
          align-items: center;
-         gap: 1rem;
+         justify-content: space-between;
+         padding: 1rem 0 .5rem 0;
+         background-color: $color-grey-dark-1;
+         padding: 1rem 2rem;
+
+         @media only screen and (min-width: $bp-monitor) {
+            padding: 1rem 5rem;
+         }
+
+         @media only screen and (max-width:$bp-big) {
+            display: none;
+         }
+
+
+         &--contact {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            font-size: 1.25rem;
+
+            .heading-minitext {
+               color: $color-grey-light-1;
+               font-weight: 600;
+               font-size: 1.25rem;
+            }
+
+            &_links {
+               display: flex;
+               align-items: center;
+               gap: 1rem;
+               font-weight: 600;
+               color: $color-primary-50;
+
+               &:last-child {
+                  margin-right: 1.5rem;
+               }
+
+               &:hover {
+
+                  // .nav-icon,
+                  .link-item {
+                     color: $color-primary-600;
+                     // text-decoration: underline;
+                     cursor: pointer;
+                     transition: all 0.2s ease;
+                  }
+               }
+
+               .nav-call_icon {
+                  background-color: $color-primary-600;
+                  height: 3rem;
+                  width: 3rem;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border-radius: 100%;
+
+                  .nav-icon {
+                     margin: 0;
+                     padding: 0;
+                  }
+               }
+
+               .nav-icon {
+                  font-size: 1rem;
+               }
+
+               .link-item {
+                  color: $color-grey-light-1;
+                  cursor: pointer;
+                  transition: all 0.2s ease;
+               }
+            }
+         }
+      }
+
+      &-bottom {
+         padding: 1rem 2rem;
+         display: flex;
+         justify-content: space-between;
+
+         @media only screen and (min-width: $bp-monitor) {
+            padding: 1rem 5rem;
+         }
+
+         &_left {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            justify-content: center;
+
+            .logo {
+               height: 4.5rem;
+
+               @media only screen and (max-width:$bp-big) {
+                  height: 3.2rem;
+               }
+            }
+
+            .main-nav-list {
+               list-style: none;
+               display: flex;
+               gap: 1rem;
+               align-items: center;
+
+
+               .main-nav-link {
+                  &.active {
+                     color: $color-primary-600 !important;
+
+                     @media only screen and (max-width:$bp-big) {
+                        color: $color-primary-600 !important;
+                     }
+                  }
+
+                  &:link,
+                  &:visited {
+                     display: inline-block;
+                     text-decoration: none;
+                     color: $color-grey-dark-1;
+                     font-weight: 600;
+                     font-size: 1.45rem;
+                     padding: .5rem;
+
+                     // &::before {
+                     //    position: absolute;
+                     //    bottom: 0;
+                     //    left: 0;
+                     //    display: block;
+                     //    content: '';
+                     //    height: 1px;
+                     //    width: 0px;
+                     //    background-color: $color-grey-light-1;
+                     // }
+
+                     @media only screen and (max-width:$bp-big) {
+                        font-size: 2rem;
+                     }
+                  }
+
+                  &:hover,
+                  &:active {
+                     color: $color-primary-600;
+
+                     @media only screen and (max-width:$bp-big) {
+                        color: $color-grey-light-1;
+                     }
+                  }
+               }
+            }
+         }
+
+
+         &_right {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+
+
+            &--socials {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               gap: .5rem;
+               font-size: 1.6rem;
+               color: $color-primary-500;
+               margin-left: 1.5rem;
+
+               .nav-icon {
+                  position: relative;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-size: 1.2rem;
+                  color: $color-primary-600;
+                  border-radius: 100%;
+                  text-decoration: none;
+                  width: 3rem;
+                  height: 3rem;
+                  background-color: $color-grey-light-2;
+                  overflow: hidden;
+
+                  &:hover {
+                     color: $color-grey-light-1;
+
+                     &::before {
+                        transform: scale(1);
+                     }
+                  }
+
+                  &::before {
+                     border-radius: 50%;
+                     transform: scale(0);
+                     transform-origin: center;
+                     content: '';
+                     position: absolute;
+                     top: 0;
+                     left: 0;
+                     right: 0;
+                     bottom: 0;
+                     background-color: $color-primary-600;
+                     transition: transform 0.6s ease;
+                     z-index: 0;
+                  }
+
+                  .icon {
+                     position: relative;
+                     text-decoration: none;
+                     z-index: 1;
+                  }
+               }
+
+
+            }
+         }
+
       }
    }
 
-   .main-nav-link:link,
-   .main-nav-link:visited {
-      display: inline-block;
-      text-decoration: none;
-      color: $color-primary-600;
-      font-weight: 600;
-      font-size: 1.6rem;
-      padding: 1rem;
 
-      &::before {
-         position: absolute;
-         bottom: 0;
-         left: 0;
-         display: block;
-         content: '';
-         height: 1px;
-         width: 0px;
-         background-color: $color-grey-light-1;
-      }
 
-      @media only screen and (max-width:$bp-big) {
-         font-size: 2rem;
-      }
-   }
 
-   .main-nav-link:hover,
-   .main-nav-link:active {
-      padding: .5rem 1rem;
-      box-shadow: inset 0 0 0 1px $color-primary;
-      border-radius: 5px;
-   }
+
 
    .button-group {
 
