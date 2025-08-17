@@ -49,7 +49,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #fff; }
+  color: #fff;
+  transition: margin-top 0.5s ease; }
   .section-hero .hero-slideshow {
     position: absolute;
     top: 0;
@@ -93,7 +94,7 @@ body {
         width: 160rem; } }
     .section-hero .hero .hero-text {
       opacity: 0;
-      transition: all 1.5s ease-in-out;
+      transition: all 1.5s ease;
       position: absolute;
       width: 60%;
       top: 50%;
@@ -102,15 +103,20 @@ body {
       z-index: 2; }
       .section-hero .hero .hero-text .heading-midtext {
         width: 70%; }
+      .section-hero .hero .hero-text .tag,
       .section-hero .hero .hero-text h1,
       .section-hero .hero .hero-text p,
       .section-hero .hero .hero-text .btn-group {
         opacity: 0;
         transform: translateY(20px);
-        transition: all 0.6s ease-in-out; }
+        transition: all 0.6s ease; }
     .section-hero .hero .hero-text.active {
       opacity: 1;
       transform: translateY(-50%); }
+      .section-hero .hero .hero-text.active .tag {
+        transition-delay: 0.3s;
+        opacity: 1;
+        transform: translateY(0); }
       .section-hero .hero .hero-text.active h1 {
         transition-delay: 0.3s;
         opacity: 1;
@@ -158,6 +164,61 @@ body {
       .section-hero .hero-bottom_textbox .textbox-minitext {
         font-weight: 500;
         font-size: 1.3rem; }
+
+.section-credibility {
+  position: relative;
+  background-color: #fff;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: margin-top 0.5s ease; }
+  .section-credibility .credibility {
+    width: 100%;
+    height: 100%;
+    margin: auto 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 2.5rem;
+    position: relative;
+    z-index: 1;
+    padding: 7rem 5rem 7rem 5rem; }
+    @media only screen and (min-width: 100em) {
+      .section-credibility .credibility {
+        width: 160rem; } }
+    .section-credibility .credibility-card {
+      width: 33.333%;
+      padding: 3.5rem 2rem 3.5rem 2rem;
+      border-radius: 3rem;
+      box-shadow: #edf2f2 0px 10px 30px; }
+      .section-credibility .credibility-card:hover .credibility-card_number::before {
+        width: 7.5rem; }
+      .section-credibility .credibility-card_number {
+        color: #47844b;
+        opacity: 0.7;
+        margin-bottom: 0.5rem;
+        height: 6rem;
+        position: relative;
+        transition: all 0.5s ease; }
+        .section-credibility .credibility-card_number::before {
+          content: '';
+          height: 2px;
+          width: 5rem;
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          background-color: #47844b;
+          transition: all 0.5s ease; }
+      .section-credibility .credibility-card_heading {
+        color: #112540; }
+      .section-credibility .credibility-card_text {
+        color: #2170bf; }
+
+.section-space {
+  height: 100rem; }
 
 .naira-input-container input {
   padding-left: 3rem; }
@@ -329,8 +390,17 @@ select {
 .mb-2 {
   margin-bottom: 2rem; }
 
+.mb-3 {
+  margin-bottom: 3rem; }
+
+.mt-1 {
+  margin-top: 1rem; }
+
 .mt-2 {
   margin-top: 2rem; }
+
+.mt-3 {
+  margin-top: 3rem; }
 
 .heading-text {
   font-size: 6rem;
@@ -346,18 +416,20 @@ select {
 
 .heading-subtext {
   font-size: 1.8rem;
-  color: #000; }
+  color: #000;
+  font-family: "Plus Jakarta Sans", sans-serif; }
 
 .heading-minitext {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  font-family: "Plus Jakarta Sans", sans-serif; }
 
 .tag {
   display: block;
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 600;
   text-align: left;
-  letter-spacing: .3rem; }
+  margin-bottom: 1.8rem;
+  font-family: "Plus Jakarta Sans", sans-serif; }
   @media only screen and (max-width: 38.6em) {
     .tag {
       margin-bottom: 1rem;
@@ -421,9 +493,6 @@ select {
     display: block; }
   .nav-open .icon-mobile-nav[name="menu-outline"] {
     display: none; } }
-
-.initial-navigation {
-  display: flex; }
 
 .sticky-nav {
   position: fixed !important;
