@@ -129,6 +129,16 @@ select {
    }
 }
 
+
+.btn-group {
+   display: flex;
+   gap: 2rem;
+   align-items: center;
+   justify-content: left;
+
+   margin-top: 3rem;
+}
+
 .btn {
    transform: translateZ(0);
    position: relative;
@@ -191,7 +201,23 @@ select {
    color: $color-grey-light-1;
 
    &::before {
-      background: $color-secondary;
+      background: $color-secondary-950;
+   }
+
+   &:hover::before,
+   &:active::before {
+      scale: 1.5 1.5;
+      translate: 0 0;
+      border-radius: 50%;
+   }
+}
+
+.secondary-btn {
+   background-color: $color-secondary;
+   color: $color-grey-light-1;
+
+   &::before {
+      background: $color-primary;
    }
 
    &:hover::before,
@@ -246,13 +272,24 @@ select {
 
 .heading-text {
    // text-align: center;
-   font-size: 3rem;
-   margin-bottom: 1.5rem;
+   font-size: 6rem;
+   font-weight: 700;
+   line-height: 1.1;
+   margin-bottom: 2.5rem;
+   color: $color-primary;
+}
+
+.heading-midtext {
+   // text-align: left;
+   font-size: 2.1rem;
+   font-weight: 500;
+   color: $color-grey-dark-1;
 }
 
 .heading-subtext {
    // text-align: left;
    font-size: 1.8rem;
+   color: $color-grey-dark-1;
 }
 
 .heading-minitext {

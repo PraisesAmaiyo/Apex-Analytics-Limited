@@ -24,6 +24,10 @@
    @media only screen and (max-width:$bp-big) {
       height: 5rem !important;
    }
+
+   .main-nav .main-nav-top {
+      display: none;
+   }
 }
 
 .navigation-header {
@@ -34,7 +38,7 @@
    right: 0;
    z-index: 9999999;
 
-   height: 7rem;
+   // height: 7rem;
    margin: 0 auto;
    transition: all 0.3s ease;
 
@@ -44,7 +48,7 @@
 
    @media only screen and (max-width:$bp-larger) {
       width: 100%;
-      height: 6rem;
+      // height: 6rem;
       justify-content: space-between;
       // padding: 1.5rem;
 
