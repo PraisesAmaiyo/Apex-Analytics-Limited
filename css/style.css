@@ -235,7 +235,7 @@ body {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 5rem;
     position: relative;
     z-index: 1; }
     .section-about .about-top {
@@ -271,7 +271,8 @@ body {
       height: 100%; }
       .section-about .about-bottom_one {
         padding: 0rem 5rem 0rem 5rem;
-        margin: 0 auto; }
+        margin: 0 auto;
+        height: 8rem; }
         @media only screen and (min-width: 100em) {
           .section-about .about-bottom_one {
             width: 160rem; } }
@@ -285,15 +286,30 @@ body {
         .section-about .about-bottom_two--combine {
           display: flex;
           width: 160rem;
-          padding: 5rem 5rem 0rem 5rem;
           padding: 3rem 5rem 3rem 5rem; }
         .section-about .about-bottom_two--left {
           background-color: #2170bf;
-          margin: 0 auto;
-          width: 55%; }
+          width: 55%;
+          z-index: 2;
+          margin-top: -3rem;
+          margin-bottom: -3rem;
+          padding-top: 3rem;
+          padding-bottom: 3rem; }
         .section-about .about-bottom_two--right {
-          background-color: green;
-          width: 45%; }
+          position: relative;
+          width: 50%;
+          margin-bottom: -14rem;
+          margin-left: -5rem; }
+          .section-about .about-bottom_two--right .image-background {
+            background-image: url(../img/apex-analytics-header-image-2.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: -11rem;
+            left: 0; }
 
 .section-space {
   height: 100rem; }

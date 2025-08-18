@@ -75,7 +75,7 @@ function showNextSlide() {
 texts[0].classList.add('active');
 
 // Change every 6s
-setInterval(showNextSlide, 6000);
+setInterval(showNextSlide, 4000);
 
 // IGNORE
 const main = document.querySelector('.home-container');

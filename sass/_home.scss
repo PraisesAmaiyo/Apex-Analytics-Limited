@@ -281,7 +281,6 @@
    }
 }
 
-
 .section-about {
    position: relative;
    background-color: $color-grey-light-1;
@@ -306,7 +305,7 @@
       justify-content: center;
       display: flex;
       flex-direction: column;
-      gap: 2.5rem;
+      gap: 5rem;
       position: relative;
       z-index: 1;
 
@@ -359,9 +358,12 @@
 
 
          &_one {
-
             padding: 0rem 5rem 0rem 5rem;
             margin: 0 auto;
+            height: 8rem;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
 
             @media only screen and (min-width: $bp-monitor) {
                width: 160rem;
@@ -370,6 +372,7 @@
             &-heading {
                text-align: left;
                margin-bottom: 1.2rem;
+
             }
          }
 
@@ -384,16 +387,17 @@
             &--combine {
                display: flex;
                width: 160rem;
-               padding: 5rem 5rem 0rem 5rem;
                padding: 3rem 5rem 3rem 5rem;
             }
 
             &--left {
                background-color: $color-primary;
-               margin: 0 auto;
                width: 55%;
-
-               // @media only screen and (min-width: $bp-monitor) {
+               z-index: 2;
+               margin-top: -3rem;
+               margin-bottom: -3rem;
+               padding-top: 3rem;
+               padding-bottom: 3rem // @media only screen and (min-width: $bp-monitor) {
                //    width: 160rem;
                // }
 
@@ -401,8 +405,26 @@
             }
 
             &--right {
-               background-color: green;
-               width: 45%;
+               position: relative;
+               // background-color: green;
+               width: 50%;
+               margin-bottom: -14rem;
+               margin-left: -5rem;
+
+               .image-background {
+                  background-image: url(../img/apex-analytics-header-image-2.jpg);
+                  background-position: center;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  height: 100%;
+                  width: 100%;
+
+                  position: absolute;
+                  // this is 8rem height of &_one and 3rem padding 0f &--combine - Search 11rem (Value for top:) to understand future adjustements.
+                  top: -11rem;
+                  left: 0;
+
+               }
             }
          }
 
