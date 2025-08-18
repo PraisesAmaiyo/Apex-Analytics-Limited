@@ -281,6 +281,139 @@
    }
 }
 
+
+.section-about {
+   position: relative;
+   background-color: $color-grey-light-1;
+   // background-color: green;
+
+
+   // background-color: transparent;
+   // opacity: 0.9;
+   height: max-content;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: $color-grey-light-1;
+   transition: margin-top 0.5s ease;
+
+   .about {
+      width: 100%;
+      height: 100%;
+      margin: auto 0;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      position: relative;
+      z-index: 1;
+
+
+      &-top {
+         width: 100%;
+         height: 100%;
+         padding: 0rem 5rem 0rem 5rem;
+
+         @media only screen and (min-width: $bp-monitor) {
+            width: 160rem;
+         }
+
+         &-heading {
+            text-align: center;
+            margin-bottom: 1.2rem;
+         }
+
+         &-stats {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            justify-content: center;
+
+            &_info {
+               display: flex;
+               flex-direction: column;
+               gap: .5rem;
+               align-items: center;
+
+               &--number {
+                  font-size: 3.5rem;
+                  font-family: $font-primary;
+                  color: $color-secondary;
+               }
+
+               &--text {
+                  text-transform: uppercase;
+                  font-size: 1.2rem;
+                  color: $color-secondary-800;
+               }
+            }
+         }
+      }
+
+
+      &-bottom {
+         width: 100%;
+         height: 100%;
+
+
+         &_one {
+
+            padding: 0rem 5rem 0rem 5rem;
+            margin: 0 auto;
+
+            @media only screen and (min-width: $bp-monitor) {
+               width: 160rem;
+            }
+
+            &-heading {
+               text-align: left;
+               margin-bottom: 1.2rem;
+            }
+         }
+
+         &_two {
+            // display: flex;
+            background-image: linear-gradient(to right,
+                  $color-primary 50%,
+                  $color-primary-100 50%);
+            display: flex;
+            justify-content: center;
+
+            &--combine {
+               display: flex;
+               width: 160rem;
+               padding: 5rem 5rem 0rem 5rem;
+               padding: 3rem 5rem 3rem 5rem;
+            }
+
+            &--left {
+               background-color: $color-primary;
+               margin: 0 auto;
+               width: 55%;
+
+               // @media only screen and (min-width: $bp-monitor) {
+               //    width: 160rem;
+               // }
+
+
+            }
+
+            &--right {
+               background-color: green;
+               width: 45%;
+            }
+         }
+
+
+
+      }
+
+
+   }
+}
+
 .section-space {
    height: 100rem;
 }

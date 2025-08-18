@@ -291,6 +291,24 @@ select {
    color: $color-primary;
 }
 
+.heading-midtext-slim {
+   // text-align: left;
+   text-transform: uppercase;
+   font-size: 2.1rem;
+   font-weight: 200;
+   color: $color-grey-dark-1;
+   font-family: $font-secondary;
+}
+
+.heading-midtext-wide {
+   // text-align: left;
+   text-transform: uppercase;
+   font-size: 2.1rem;
+   font-weight: 800;
+   color: $color-grey-dark-1;
+   font-family: $font-primary;
+}
+
 .heading-midtext {
    // text-align: left;
    font-size: 2.1rem;

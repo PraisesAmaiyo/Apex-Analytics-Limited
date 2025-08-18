@@ -217,6 +217,84 @@ body {
       .section-credibility .credibility-card_text {
         color: #2170bf; }
 
+.section-about {
+  position: relative;
+  background-color: #fff;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: margin-top 0.5s ease; }
+  .section-about .about {
+    width: 100%;
+    height: 100%;
+    margin: auto 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    position: relative;
+    z-index: 1; }
+    .section-about .about-top {
+      width: 100%;
+      height: 100%;
+      padding: 0rem 5rem 0rem 5rem; }
+      @media only screen and (min-width: 100em) {
+        .section-about .about-top {
+          width: 160rem; } }
+      .section-about .about-top-heading {
+        text-align: center;
+        margin-bottom: 1.2rem; }
+      .section-about .about-top-stats {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+        justify-content: center; }
+        .section-about .about-top-stats_info {
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
+          align-items: center; }
+          .section-about .about-top-stats_info--number {
+            font-size: 3.5rem;
+            font-family: "Familjen Grotesk", sans-serif;
+            color: #47844b; }
+          .section-about .about-top-stats_info--text {
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            color: #2e4d31; }
+    .section-about .about-bottom {
+      width: 100%;
+      height: 100%; }
+      .section-about .about-bottom_one {
+        padding: 0rem 5rem 0rem 5rem;
+        margin: 0 auto; }
+        @media only screen and (min-width: 100em) {
+          .section-about .about-bottom_one {
+            width: 160rem; } }
+        .section-about .about-bottom_one-heading {
+          text-align: left;
+          margin-bottom: 1.2rem; }
+      .section-about .about-bottom_two {
+        background-image: linear-gradient(to right, #2170bf 50%, #e4edfa 50%);
+        display: flex;
+        justify-content: center; }
+        .section-about .about-bottom_two--combine {
+          display: flex;
+          width: 160rem;
+          padding: 5rem 5rem 0rem 5rem;
+          padding: 3rem 5rem 3rem 5rem; }
+        .section-about .about-bottom_two--left {
+          background-color: #2170bf;
+          margin: 0 auto;
+          width: 55%; }
+        .section-about .about-bottom_two--right {
+          background-color: green;
+          width: 45%; }
+
 .section-space {
   height: 100rem; }
 
@@ -408,6 +486,20 @@ select {
   line-height: 1.1;
   margin-bottom: 2.5rem;
   color: #2170bf; }
+
+.heading-midtext-slim {
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  font-weight: 200;
+  color: #000;
+  font-family: "Plus Jakarta Sans", sans-serif; }
+
+.heading-midtext-wide {
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #000;
+  font-family: "Familjen Grotesk", sans-serif; }
 
 .heading-midtext {
   font-size: 2.1rem;
