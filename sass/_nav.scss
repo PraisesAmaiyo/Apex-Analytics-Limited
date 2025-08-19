@@ -130,6 +130,9 @@
                   align-items: center;
                   border-radius: 100%;
 
+                  aspect-ratio: 1 / 1;
+                  flex-shrink: 0;
+
                   .nav-icon {
                      margin: 0;
                      padding: 0;
@@ -255,6 +258,9 @@
                   height: 3rem;
                   background-color: $color-grey-light-2;
                   overflow: hidden;
+
+                  aspect-ratio: 1 / 1;
+                  flex-shrink: 0;
 
                   &:hover {
                      color: $color-grey-light-1;

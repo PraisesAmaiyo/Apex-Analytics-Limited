@@ -180,6 +180,9 @@
             background-color: $color-primary-600;
             border-radius: 50%;
 
+            aspect-ratio: 1 / 1;
+            flex-shrink: 0;
+
             .icon {
                font-size: 2rem;
             }
@@ -305,7 +308,7 @@
       justify-content: center;
       display: flex;
       flex-direction: column;
-      gap: 5rem;
+      gap: 6rem;
       position: relative;
       z-index: 1;
 
@@ -346,6 +349,7 @@
                   text-transform: uppercase;
                   font-size: 1.2rem;
                   color: $color-secondary-800;
+                  text-align: center;
                }
             }
          }
@@ -391,16 +395,112 @@
             }
 
             &--left {
+               // background-color: $color-primary;
                background-color: $color-primary;
                width: 55%;
                z-index: 2;
                margin-top: -3rem;
                margin-bottom: -3rem;
                padding-top: 3rem;
-               padding-bottom: 3rem // @media only screen and (min-width: $bp-monitor) {
+               padding-bottom: 3rem;
+               padding-right: 2rem;
+
+               &-group {
+                  display: flex;
+                  gap: 2rem;
+
+                  .group-left {
+                     margin-right: auto;
+                  }
+
+                  .group-right {
+                     background-color: $color-grey-light-1;
+                     color: $color-grey-dark-1;
+                     text-align: center;
+                     padding: 1rem;
+                     margin-right: 2rem;
+                     position: relative;
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: center;
+                     align-items: center;
+                     gap: .5rem;
+                     min-width: 12rem;
+
+                     &::before {
+                        content: '';
+                        position: absolute;
+                        height: 3rem;
+                        width: 3rem;
+                        background-color: $color-grey-light-1;
+                        background: linear-gradient(166deg, rgba($color-primary-400, 1) 0%, rgba($color-primary-600, 1) 35%);
+                        top: 3.5px;
+                        left: 3.5px;
+                     }
+
+                     &-number {
+                        font-size: 5rem;
+                        font-family: $font-secondary;
+                        position: relative;
+
+
+
+                        .number-sign {
+                           position: absolute;
+                           top: 0;
+                           right: -3;
+                           font-size: 2.5rem;
+                           color: $color-primary-600;
+                        }
+                     }
+                  }
+               }
+
+
+
+               // @media only screen and (min-width: $bp-monitor) {
                //    width: 160rem;
                // }
 
+               .heading-subtext {
+                  color: $color-grey-light-1;
+                  margin-bottom: 1rem;
+               }
+
+               .heading-minitext {
+                  margin-bottom: 2rem;
+               }
+
+               .about-list {
+                  display: flex;
+                  gap: 1rem;
+                  align-items: center;
+                  width: 100%;
+
+                  &:not(:last-child) {
+                     margin-bottom: 1.5rem;
+                  }
+
+                  &_icon {
+                     background: #FFF;
+                     background: linear-gradient(166deg, rgba(255, 255, 255, 1) 0%, rgba(230, 230, 230, 1) 35%);
+                     color: $color-primary;
+                     font-size: 1rem;
+                     height: 2rem;
+                     width: 2rem;
+                     border-radius: 50%;
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+
+                     aspect-ratio: 1 / 1;
+                     flex-shrink: 0;
+                  }
+
+                  &_text {
+                     margin: 0;
+                  }
+               }
 
             }
 

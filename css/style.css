@@ -154,7 +154,9 @@ body {
         width: 4rem;
         height: 4rem;
         background-color: #2170bf;
-        border-radius: 50%; }
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        flex-shrink: 0; }
         .section-hero .hero-bottom_textbox .textbox-icon .icon {
           font-size: 2rem; }
       .section-hero .hero-bottom_textbox:hover {
@@ -235,7 +237,7 @@ body {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 6rem;
     position: relative;
     z-index: 1; }
     .section-about .about-top {
@@ -265,7 +267,8 @@ body {
           .section-about .about-top-stats_info--text {
             text-transform: uppercase;
             font-size: 1.2rem;
-            color: #2e4d31; }
+            color: #2e4d31;
+            text-align: center; }
     .section-about .about-bottom {
       width: 100%;
       height: 100%; }
@@ -294,7 +297,72 @@ body {
           margin-top: -3rem;
           margin-bottom: -3rem;
           padding-top: 3rem;
-          padding-bottom: 3rem; }
+          padding-bottom: 3rem;
+          padding-right: 2rem; }
+          .section-about .about-bottom_two--left-group {
+            display: flex;
+            gap: 2rem; }
+            .section-about .about-bottom_two--left-group .group-left {
+              margin-right: auto; }
+            .section-about .about-bottom_two--left-group .group-right {
+              background-color: #fff;
+              color: #000;
+              text-align: center;
+              padding: 1rem;
+              margin-right: 2rem;
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap: .5rem;
+              min-width: 12rem; }
+              .section-about .about-bottom_two--left-group .group-right::before {
+                content: '';
+                position: absolute;
+                height: 3rem;
+                width: 3rem;
+                background-color: #fff;
+                background: linear-gradient(166deg, #539ddd 0%, #2170bf 35%);
+                top: 3.5px;
+                left: 3.5px; }
+              .section-about .about-bottom_two--left-group .group-right-number {
+                font-size: 5rem;
+                font-family: "Plus Jakarta Sans", sans-serif;
+                position: relative; }
+                .section-about .about-bottom_two--left-group .group-right-number .number-sign {
+                  position: absolute;
+                  top: 0;
+                  right: -3;
+                  font-size: 2.5rem;
+                  color: #2170bf; }
+          .section-about .about-bottom_two--left .heading-subtext {
+            color: #fff;
+            margin-bottom: 1rem; }
+          .section-about .about-bottom_two--left .heading-minitext {
+            margin-bottom: 2rem; }
+          .section-about .about-bottom_two--left .about-list {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            width: 100%; }
+            .section-about .about-bottom_two--left .about-list:not(:last-child) {
+              margin-bottom: 1.5rem; }
+            .section-about .about-bottom_two--left .about-list_icon {
+              background: #FFF;
+              background: linear-gradient(166deg, white 0%, #e6e6e6 35%);
+              color: #2170bf;
+              font-size: 1rem;
+              height: 2rem;
+              width: 2rem;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              aspect-ratio: 1 / 1;
+              flex-shrink: 0; }
+            .section-about .about-bottom_two--left .about-list_text {
+              margin: 0; }
         .section-about .about-bottom_two--right {
           position: relative;
           width: 50%;
@@ -695,7 +763,9 @@ select {
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 100%; }
+            border-radius: 100%;
+            aspect-ratio: 1 / 1;
+            flex-shrink: 0; }
             .navigation-header .main-nav-top--contact_links .nav-call_icon .nav-icon {
               margin: 0;
               padding: 0; }
@@ -772,7 +842,9 @@ select {
             width: 3rem;
             height: 3rem;
             background-color: #f6f7ff;
-            overflow: hidden; }
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            flex-shrink: 0; }
             .navigation-header .main-nav-bottom_right--socials .nav-icon:hover {
               color: #fff; }
               .navigation-header .main-nav-bottom_right--socials .nav-icon:hover::before {
