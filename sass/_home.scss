@@ -384,7 +384,7 @@
             // display: flex;
             background-image: linear-gradient(to right,
                   $color-primary 50%,
-                  $color-primary-100 50%);
+                  $color-primary-50 50%);
             display: flex;
             justify-content: center;
 
@@ -533,6 +533,101 @@
       }
 
 
+   }
+}
+
+
+.section-partners {
+
+   background-color: $color-grey-light-1;
+
+   // background-color: transparent;
+   // opacity: 0.9;
+   height: max-content;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: $color-grey-light-1;
+
+   .partners {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      align-items: center;
+      // justify-content: center;
+      display: flex;
+      gap: 2.5rem;
+      position: relative;
+      z-index: 1;
+      padding: 7rem 5rem 3rem 5rem;
+      border-bottom: 1px solid $color-grey-light-3;
+
+
+
+      @media only screen and (min-width: $bp-monitor) {
+         width: 160rem;
+      }
+
+      &-textbox {
+         width: 40rem;
+         min-width: 10rem;
+         display: flex;
+         align-items: center;
+         text-align: center;
+
+         .heading-midtext {
+            color: $color-primary;
+
+         }
+
+      }
+
+      &-swiper {
+         display: flex;
+         gap: 6rem;
+         overflow: hidden;
+
+
+         .swiper {
+            width: 100%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+         }
+
+
+
+         .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+
+            // &:active,
+            // &:hover {
+            //    cursor: pointer;
+            // }
+         }
+
+
+         &_logo {
+            height: 5rem;
+            filter: grayscale(1);
+            opacity: 0.5;
+            transition: filter 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+
+            &:hover {
+               filter: none;
+               opacity: 1;
+               transform: scale(1.05);
+            }
+
+
+         }
+      }
    }
 }
 
