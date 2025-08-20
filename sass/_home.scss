@@ -288,8 +288,6 @@
    position: relative;
    background-color: $color-grey-light-1;
    // background-color: green;
-
-
    // background-color: transparent;
    // opacity: 0.9;
    height: max-content;
@@ -499,6 +497,7 @@
 
                   &_text {
                      margin: 0;
+                     font-weight: 600;
                   }
                }
 
@@ -577,7 +576,7 @@
          text-align: center;
 
          .heading-midtext {
-            color: $color-primary;
+            color: $color-secondary;
 
          }
 
@@ -630,6 +629,362 @@
       }
    }
 }
+
+
+.section-services {
+   position: relative;
+   background-color: $color-grey-light-1;
+   // background-color: green;
+   // background-color: transparent;
+   // opacity: 0.9;
+   height: max-content;
+   // color: $color-grey-light-1;
+   transition: margin-top 0.5s ease;
+
+   /* The main container for the horizontal scroll */
+   .services {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      text-align: center;
+      // justify-content: center;
+      // display: flex;
+      // flex-direction: column;
+      // gap: 6rem;
+      position: relative;
+      z-index: 1;
+      padding: 7rem 5rem 7rem 5rem;
+
+
+      @media only screen and (min-width: $bp-monitor) {
+         width: 160rem;
+      }
+
+      &-top {
+
+         &-heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .heading-minitext {
+               width: 80%;
+               text-align: center;
+               margin-top: 2rem;
+               margin-bottom: 4rem;
+            }
+         }
+      }
+
+
+      &-bottom {
+         height: 70vh;
+         overflow: hidden;
+         position: relative;
+         background-color: $color-grey-light-1;
+
+         padding-top: 68rem;
+
+
+
+         @media (max-width: 768px) {
+            height: auto; // let content decide height
+            min-height: 60vh; // still keeps some presence
+            min-height: calc(100vh - 80px);
+            padding-top: 80px;
+         }
+
+
+         /* The container that will move horizontally */
+         .scroll-wrapper {
+            display: flex;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            align-items: center;
+            /* Vertically centers the service boxes */
+            will-change: transform;
+            /* Performance optimization */
+         }
+
+         .service-box.is-first {
+            margin-left: 30vw;
+            /* This creates the initial space to the left */
+         }
+
+         .service-box.is-last {
+            margin-right: 30vw;
+            /* This creates the final space to the right */
+         }
+
+         /* Individual service boxes */
+         .service-box {
+            width: min-content;
+            height: min-content;
+            min-width: 50rem;
+            background: $color-primary-50;
+            color: $color-primary-900;
+            margin: 0 1.2rem;
+            padding: 3rem;
+            flex-shrink: 0;
+            text-align: left;
+
+            // flex: 0 0 auto;
+            // /* Prevent shrinking */
+            // min-width: clamp(280px, 45vw, 500px);
+            // /* Responsive widths */
+            // box-sizing: border-box;
+
+            border-top: solid 2px $color-primary-900;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+
+            &.active {
+               background-color: $color-primary;
+               transform: scale(1.04);
+               color: $color-grey-light-1;
+
+
+               .heading-midtext {
+                  color: $color-grey-light-1;
+               }
+
+               .service-list_icon {
+                  background: #FFF;
+                  background: #FFF;
+                  background: linear-gradient(166deg, rgba($color-grey-light-1, 1) 0%, rgba($color-grey-light-3, 1) 35%);
+                  color: $color-primary;
+
+               }
+            }
+
+            &_one {
+               display: flex;
+               align-items: center;
+               gap: 2rem;
+               margin-bottom: 2rem;
+
+               .heading-midtext {
+                  margin-right: auto;
+                  color: $color-primary-900;
+                  width: 60%;
+               }
+
+               .tag {
+                  font-size: 1.5rem;
+               }
+            }
+
+            &_three {
+               margin-bottom: 5rem;
+
+               .service-list {
+                  display: flex;
+                  gap: 1rem;
+                  align-items: center;
+                  width: 100%;
+
+                  &:not(:last-child) {
+                     margin-bottom: 1.5rem;
+                  }
+
+                  &_icon {
+                     background: #FFF;
+                     background: linear-gradient(166deg, rgba($color-primary-400, 1) 0%, rgba($color-primary-600, 1) 35%);
+                     color: $color-grey-light-1;
+                     font-size: 1rem;
+                     height: 2rem;
+                     width: 2rem;
+                     border-radius: 50%;
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+
+                     aspect-ratio: 1 / 1;
+                     flex-shrink: 0;
+                  }
+
+                  &_text {
+                     margin: 0;
+                     font-weight: 600;
+                  }
+               }
+            }
+
+            &_four {
+               position: relative;
+
+               .service-icon {
+                  font-size: 8rem;
+
+                  position: absolute;
+                  bottom: 0rem;
+                  right: 0rem;
+                  opacity: 0.3;
+               }
+            }
+
+
+         }
+      }
+   }
+}
+
+.scrolling-text {
+   overflow: hidden;
+   white-space: nowrap;
+   width: 100%;
+   background: #fff;
+   /* adjust to your section bg */
+   // border-top: 1px solid #eee;
+   // border-bottom: 1px solid #eee;
+
+   .scrolling-track {
+      display: inline-block;
+      padding: 20px 0;
+      font-size: 12rem;
+      text-transform: uppercase;
+      /* large font size */
+      animation: scroll-left 100s linear infinite;
+      // font-family: $font-secondary;
+      font-weight: 700;
+
+      .scrolling-track span {
+         margin: 0 2rem;
+         font-weight: 700;
+      }
+
+      .filled {
+         color: $color-primary;
+         /* your brand color */
+      }
+
+      .hollow {
+         color: transparent;
+         -webkit-text-stroke: 1px $color-primary;
+         text-stroke: 1px $color-primary;
+      }
+
+   }
+
+   @keyframes scroll-left {
+      from {
+         transform: translateX(0);
+      }
+
+      to {
+         transform: translateX(-50%);
+      }
+
+   }
+}
+
+.section-tech-achievements {
+   position: relative;
+   padding: 7rem 5rem;
+   background: $color-grey-light-1; // base background
+   overflow: hidden;
+
+
+   &-heading {
+      text-align: center;
+
+      .heading-midtext-wide {
+         color: $color-primary;
+         transition: color 0.6s ease;
+      }
+   }
+
+   // Overlay layer (handles fade)
+   &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba($color-primary, 0.7),
+            rgba($color-primary, 0.7)),
+         url(../img/apex-analytics-header-image-2.jpg) center/cover no-repeat;
+      opacity: 0; // start invisible
+      transition: opacity 0.8s ease; // fade in/out
+      z-index: 0;
+   }
+
+   &.active::before {
+      opacity: 1; // fade overlay in
+   }
+
+   &.active .heading-midtext-wide {
+      color: $color-grey-light-1;
+   }
+
+   // Ensure content stays above overlay
+   * {
+      position: relative;
+      z-index: 1;
+   }
+
+   .heading-midtext-wide {
+      color: $color-primary-900;
+   }
+}
+
+
+.cards {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 20px;
+   max-width: 1100px;
+   margin: 0 auto;
+
+   >div {
+      flex: 1; // make each column equal width
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+   }
+
+   .card {
+      background: white;
+      flex: 1; // make each column equal width
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      & .heading-subtext {
+         font-size: 1.7rem;
+         color: $color-primary-900;
+         text-transform: uppercase;
+         font-family: $font-primary;
+      }
+
+      & .heading-minitext {
+         font-size: 1.3rem;
+         color: $color-primary-900;
+         font-weight: 400;
+
+      }
+   }
+}
+
+
+.card:hover {
+   transform: translateY(-5px);
+}
+
+.card .icon {
+   font-size: 3rem;
+   color: #007bff;
+   margin-bottom: 10px;
+}
+
+
+
+
 
 .section-space {
    height: 100rem;

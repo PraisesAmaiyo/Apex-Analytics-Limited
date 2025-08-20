@@ -16,6 +16,14 @@
       href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet">
 
+   <!-- Google Icon -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+
+
    <link rel="stylesheet" href="css/style.css" />
 
    <!-- Favicon -->
@@ -32,6 +40,9 @@
 
    <!-- Smooth Scroll -->
    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
    <!-- Javascript and Third-Party CDNs -->
    <script defer type="module" src="JS/script.js"></script>
@@ -415,12 +426,13 @@
                   <div class="swiper-wrapper">
 
                      <div class="swiper-slide">
-                        <!-- Starts with an Empty Div -->
+                        <img src="./img/partners/agip.jpg" alt="AGIP - Apex Analytics Limited trusted partners"
+                           class="partners-swiper_logo">
                      </div>
 
                      <div class="swiper-slide">
-                        <img src="./img/partners/renaissance.png" alt="Total - Apex Analytics Limited trusted partners"
-                           class="partners-swiper_logo">
+                        <img src="./img/partners/renaissance.png"
+                           alt="Renaissance - Apex Analytics Limited trusted partners" class="partners-swiper_logo">
                      </div>
 
                      <div class="swiper-slide">
@@ -429,21 +441,18 @@
                      </div>
 
                      <div class="swiper-slide">
-                        <img src="./img/partners/agip.jpg" alt="Total - Apex Analytics Limited trusted partners"
+                        <img src="./img/partners/mobil.png" alt="Mobil - Apex Analytics Limited trusted partners"
+                           class="partners-swiper_logo">
+                     </div>
+
+
+                     <div class="swiper-slide">
+                        <img src="./img/partners/chevron.png" alt="Chevron - Apex Analytics Limited trusted partners"
                            class="partners-swiper_logo">
                      </div>
 
                      <div class="swiper-slide">
-                        <img src="./img/partners/chevron.png" alt="Total - Apex Analytics Limited trusted partners"
-                           class="partners-swiper_logo">
-                     </div>
-                     <div class="swiper-slide">
-                        <img src="./img/partners/mobil.png" alt="Total - Apex Analytics Limited trusted partners"
-                           class="partners-swiper_logo">
-                     </div>
-
-                     <div class="swiper-slide">
-                        <img src="./img/partners/nnpc.webp" alt="Total - Apex Analytics Limited trusted partners"
+                        <img src="./img/partners/nnpc.webp" alt="NNPC - Apex Analytics Limited trusted partners"
                            class="partners-swiper_logo">
                      </div>
 
@@ -486,6 +495,496 @@
                </div>
             </div> -->
 
+         </div>
+      </section>
+
+      <section class="section-services">
+         <div class="services">
+            <div class="services-top">
+
+               <div class="services-top-heading">
+
+                  <h1 class="heading-midtext-slim">Services Intro Heading</h1>
+                  <h1 class="heading-midtext-wide">Services main heading goes here</h1>
+
+                  <p class="heading-minitext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
+                     consequatur!
+                     Natus ab quam molestiae, et assumenda voluptates aut ex debitis dolor dolores numquam illo eos. A
+                     explicabo reiciendis sequi molestias.</p>
+               </div>
+            </div>
+
+            <div class="services-bottom">
+               <div class="scroll-wrapper">
+
+                  <div class="service-box  is-first">
+                     <div class="service-box_one">
+                        <h1 class="heading-midtext">Environmental & Sustainability Consulting</h1>
+                        <h6 class="tag">01</h6>
+                     </div>
+
+                     <div class="service-box_two mb-2">
+                        <p class="heading-minitext">We provide expert guidance on environmental compliance and
+                           sustainable practices. From audits to climate risk management, our team ensures projects meet
+                           global sustainability standards.</p>
+                     </div>
+
+                     <div class="service-box_three">
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">EIA & EMP preparation</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Environmental Audits</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">GHG management & ESG reporting</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Climate risk assessment</p>
+                        </div>
+
+                     </div>
+
+                     <div class="service-box_four">
+                        <span class="material-symbols-sharp service-icon">
+                           globe
+                        </span>
+                     </div>
+
+                  </div>
+
+                  <div class="service-box">
+                     <div class="service-box_one">
+                        <h1 class="heading-midtext">Geophysical & Geotechnical Services</h1>
+                        <h6 class="tag">02</h6>
+                     </div>
+
+                     <div class="service-box_two mb-2">
+                        <p class="heading-minitext">Our geophysical and geotechnical expertise helps clients understand
+                           subsurface conditions for safe and reliable projects. We deliver accurate, science-based
+                           insights for design and construction.</p>
+                     </div>
+
+                     <div class="service-box_three">
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Subsurface investigations</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Soil mechanics & analysis</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Borehole logging</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Seismic surveys</p>
+                        </div>
+
+                     </div>
+
+                     <div class="service-box_four">
+
+                        <span class="material-symbols-sharp service-icon">
+                           landscape_2
+                        </span>
+                     </div>
+
+                  </div>
+
+                  <div class="service-box">
+                     <div class="service-box_one">
+                        <h1 class="heading-midtext">Integrated Waste & Water Solutions</h1>
+                        <h6 class="tag">03</h6>
+                     </div>
+
+                     <div class="service-box_two mb-2">
+                        <p class="heading-minitext">We design and implement efficient waste and water management
+                           systems. Our solutions reduce environmental impact while supporting recycling and resource
+                           recovery.</p>
+                     </div>
+
+                     <div class="service-box_three">
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">TDU design & assessment</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Wastewater treatment systems</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Recycling & recovery solutions</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Hazardous waste management</p>
+                        </div>
+
+                     </div>
+
+                     <div class="service-box_four">
+
+                        <span class="material-symbols-sharp service-icon">
+                           water
+                        </span>
+                     </div>
+
+                  </div>
+
+                  <div class="service-box">
+                     <div class="service-box_one">
+                        <h1 class="heading-midtext">Environmental Laboratory Services</h1>
+                        <h6 class="tag">04</h6>
+                     </div>
+
+                     <div class="service-box_two mb-2">
+                        <p class="heading-minitext">Our accredited laboratories deliver precise analysis for
+                           environmental samples. We ensure reliable results for air, water, soil, and hazardous
+                           materials testing.</p>
+                     </div>
+
+                     <div class="service-box_three">
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">ISO-compliant analysis</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Air, water & soil testingl</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Effluent characterization</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Hazardous material analysis</p>
+                        </div>
+
+                     </div>
+
+                     <div class="service-box_four">
+
+                        <span class="material-symbols-sharp service-icon">
+                           experiment
+                        </span>
+                     </div>
+
+                  </div>
+
+                  <div class="service-box">
+                     <div class="service-box_one">
+                        <h1 class="heading-midtext">GIS & Remote Sensing</h1>
+                        <h6 class="tag">05</h6>
+                     </div>
+
+                     <div class="service-box_two mb-2">
+                        <p class="heading-minitext">We harness GIS and remote sensing to provide spatial insights and
+                           mapping solutions. Our services support informed decision-making and advanced environmental
+                           planning.</p>
+                     </div>
+
+                     <div class="service-box_three">
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Spatial analysis</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Digital terrain modelling</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">LIDAR processingn</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Environmental mapping</p>
+                        </div>
+
+                     </div>
+
+                     <div class="service-box_four">
+
+                        <span class="material-symbols-sharp service-icon">
+                           my_location
+                        </span>
+                     </div>
+
+                  </div>
+
+                  <div class="service-box is-last">
+                     <div class="service-box_one">
+                        <h1 class="heading-midtext">Training & Capacity Building</h1>
+                        <h6 class="tag">06</h6>
+                     </div>
+
+                     <div class="service-box_two mb-2">
+                        <p class="heading-minitext">We design and deliver tailored training programs for professionals
+                           in environmental and geoscience fields. Our sessions combine technical expertise with
+                           practical applications.</p>
+                     </div>
+
+                     <div class="service-box_three">
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Custom technical training</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Environmental management</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Geoscience skills development</p>
+                        </div>
+
+                        <div class="service-list">
+                           <div class="service-list_icon">
+
+                              <i class="fa-solid fa-check "></i>
+                           </div>
+
+                           <p class=" heading-minitext service-list_text ">Hands-on learning programs</p>
+                        </div>
+
+                     </div>
+
+                     <div class="service-box_four">
+
+                        <span class="material-symbols-sharp service-icon">
+                           workspace_premium
+                        </span>
+                     </div>
+
+                  </div>
+
+               </div>
+            </div>
+
+         </div>
+      </section>
+
+      <section class="scrolling-text">
+         <div class="scrolling-track">
+            <span class="filled">Environment.</span>
+            <span class="hollow">Research.</span>
+            <span class="filled">GeoScience.</span>
+            <span class="hollow">Sustainability.</span>
+            <span class="filled">Innovation.</span>
+            <!-- repeat some so it looks continuous -->
+            <span class="hollow">Environment.</span>
+            <span class="filled">Research.</span>
+         </div>
+      </section>
+
+      <section class="section-tech-achievements" id="tech-achievements">
+         <div class="section-tech-achievements-heading">
+
+            <h1 class="heading-midtext-wide mb-2">Technology & Infrastucture</h1>
+         </div>
+
+         <div class="cards">
+            <div class="">
+
+               <div class="card mb-2">
+                  <span class="material-symbols-sharp icon">
+                     experiment
+                  </span>
+                  <h3 class="heading-subtext mb-1">Laboratory Facilities</h3>
+                  <p class="heading-minitext">State-of-the-art environmental laboratory facilities.</p>
+               </div>
+
+               <div class="card">
+                  <span class="material-symbols-sharp icon">
+                     map_pin_review
+                  </span>
+                  <h3 class="heading-subtext mb-1">Survey Equipment</h3>
+                  <p class="heading-minitext">Modern geophysical and geotechnical survey equipment.</p>
+               </div>
+            </div>
+
+            <div class="">
+
+               <div class="card mb-2">
+                  <span class="material-symbols-sharp icon">
+                     public
+                  </span>
+                  <h3 class="heading-subtext mb-1">GIS & Remote Sensing</h3>
+                  <p class="heading-minitext">GIS & remote sensing software (ArcGIS, QGIS, ENVI).</p>
+               </div>
+
+               <div class="card">
+                  <span class="material-symbols-sharp icon">
+                     cloud_circle
+                  </span>
+                  <h3 class="heading-subtext mb-1">Digital Platforms</h3>
+                  <p class="heading-minitext">Digital data platforms for monitoring and reporting.</p>
+               </div>
+            </div>
+         </div>
+
+         <div class="section-tech-achievements-heading">
+
+            <h1 class="heading-midtext-wide mb-2 mt-2">Key Achievements</h1>
+         </div>
+
+         <div class="cards">
+            <div class="">
+               <div class="card mb-2">
+                  <span class="material-symbols-sharp icon">
+                     approval_delegation
+                  </span>
+                  <h3 class="heading-subtext mb-1">100+ Projects Delivered</h3>
+                  <p class="heading-minitext">Delivered over 100 successful EIAs and EMPs across Nigeria.</p>
+               </div>
+               <div class="card">
+                  <span class="material-symbols-sharp icon">
+                     energy_program_saving
+                  </span>
+                  <h3 class="heading-subtext mb-1">GHG Mitigation</h3>
+                  <p class="heading-minitext">Developed GHG inventories and mitigation plans for marginal field
+                     operators.
+                  </p>
+               </div>
+            </div>
+
+            <div>
+               <div class="card mb-2">
+                  <span class="material-symbols-sharp icon">
+                     verified_user
+                  </span>
+                  <h3 class="heading-subtext mb-1">Compliance Support</h3>
+                  <p class="heading-minitext">Supported NUPRC-aligned environmental audits and sustainability reporting.
+                  </p>
+               </div>
+
+               <div class="card">
+                  <span class="material-symbols-sharp icon">
+                     groups
+                  </span>
+                  <h3 class="heading-subtext mb-1">Strategic Partnerships</h3>
+                  <p class="heading-minitext">Partnered with government and international bodies on climate resilience
+                     projects.</p>
+               </div>
+            </div>
          </div>
       </section>
 

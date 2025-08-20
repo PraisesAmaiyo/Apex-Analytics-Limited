@@ -362,7 +362,8 @@ body {
               aspect-ratio: 1 / 1;
               flex-shrink: 0; }
             .section-about .about-bottom_two--left .about-list_text {
-              margin: 0; }
+              margin: 0;
+              font-weight: 600; }
         .section-about .about-bottom_two--right {
           position: relative;
           width: 50%;
@@ -408,7 +409,7 @@ body {
       align-items: center;
       text-align: center; }
       .section-partners .partners-textbox .heading-midtext {
-        color: #2170bf; }
+        color: #47844b; }
     .section-partners .partners-swiper {
       display: flex;
       gap: 6rem;
@@ -434,6 +435,230 @@ body {
           filter: none;
           opacity: 1;
           transform: scale(1.05); }
+
+.section-services {
+  position: relative;
+  background-color: #fff;
+  height: max-content;
+  transition: margin-top 0.5s ease;
+  /* The main container for the horizontal scroll */ }
+  .section-services .services {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 7rem 5rem 7rem 5rem; }
+    @media only screen and (min-width: 100em) {
+      .section-services .services {
+        width: 160rem; } }
+    .section-services .services-top-heading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .section-services .services-top-heading .heading-minitext {
+        width: 80%;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 4rem; }
+    .section-services .services-bottom {
+      height: 70vh;
+      overflow: hidden;
+      position: relative;
+      background-color: #fff;
+      padding-top: 68rem;
+      /* The container that will move horizontally */
+      /* Individual service boxes */ }
+      @media (max-width: 768px) {
+        .section-services .services-bottom {
+          height: auto;
+          min-height: 60vh;
+          min-height: calc(100vh - 80px);
+          padding-top: 80px; } }
+      .section-services .services-bottom .scroll-wrapper {
+        display: flex;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        align-items: center;
+        /* Vertically centers the service boxes */
+        will-change: transform;
+        /* Performance optimization */ }
+      .section-services .services-bottom .service-box.is-first {
+        margin-left: 30vw;
+        /* This creates the initial space to the left */ }
+      .section-services .services-bottom .service-box.is-last {
+        margin-right: 30vw;
+        /* This creates the final space to the right */ }
+      .section-services .services-bottom .service-box {
+        width: min-content;
+        height: min-content;
+        min-width: 50rem;
+        background: #f2f7fd;
+        color: #1a3b60;
+        margin: 0 1.2rem;
+        padding: 3rem;
+        flex-shrink: 0;
+        text-align: left;
+        border-top: solid 2px #1a3b60;
+        transition: background-color 0.3s ease, transform 0.3s ease; }
+        .section-services .services-bottom .service-box.active {
+          background-color: #2170bf;
+          transform: scale(1.04);
+          color: #fff; }
+          .section-services .services-bottom .service-box.active .heading-midtext {
+            color: #fff; }
+          .section-services .services-bottom .service-box.active .service-list_icon {
+            background: #FFF;
+            background: #FFF;
+            background: linear-gradient(166deg, white 0%, #e6e6e6 35%);
+            color: #2170bf; }
+        .section-services .services-bottom .service-box_one {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          margin-bottom: 2rem; }
+          .section-services .services-bottom .service-box_one .heading-midtext {
+            margin-right: auto;
+            color: #1a3b60;
+            width: 60%; }
+          .section-services .services-bottom .service-box_one .tag {
+            font-size: 1.5rem; }
+        .section-services .services-bottom .service-box_three {
+          margin-bottom: 5rem; }
+          .section-services .services-bottom .service-box_three .service-list {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            width: 100%; }
+            .section-services .services-bottom .service-box_three .service-list:not(:last-child) {
+              margin-bottom: 1.5rem; }
+            .section-services .services-bottom .service-box_three .service-list_icon {
+              background: #FFF;
+              background: linear-gradient(166deg, #539ddd 0%, #2170bf 35%);
+              color: #fff;
+              font-size: 1rem;
+              height: 2rem;
+              width: 2rem;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              aspect-ratio: 1 / 1;
+              flex-shrink: 0; }
+            .section-services .services-bottom .service-box_three .service-list_text {
+              margin: 0;
+              font-weight: 600; }
+        .section-services .services-bottom .service-box_four {
+          position: relative; }
+          .section-services .services-bottom .service-box_four .service-icon {
+            font-size: 8rem;
+            position: absolute;
+            bottom: 0rem;
+            right: 0rem;
+            opacity: 0.3; }
+
+.scrolling-text {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: #fff;
+  /* adjust to your section bg */ }
+  .scrolling-text .scrolling-track {
+    display: inline-block;
+    padding: 20px 0;
+    font-size: 12rem;
+    text-transform: uppercase;
+    /* large font size */
+    animation: scroll-left 100s linear infinite;
+    font-weight: 700; }
+    .scrolling-text .scrolling-track .scrolling-track span {
+      margin: 0 2rem;
+      font-weight: 700; }
+    .scrolling-text .scrolling-track .filled {
+      color: #2170bf;
+      /* your brand color */ }
+    .scrolling-text .scrolling-track .hollow {
+      color: transparent;
+      -webkit-text-stroke: 1px #2170bf;
+      text-stroke: 1px #2170bf; }
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(-50%); } }
+
+.section-tech-achievements {
+  position: relative;
+  padding: 7rem 5rem;
+  background: #fff;
+  overflow: hidden; }
+  .section-tech-achievements-heading {
+    text-align: center; }
+    .section-tech-achievements-heading .heading-midtext-wide {
+      color: #2170bf;
+      transition: color 0.6s ease; }
+  .section-tech-achievements::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(33, 112, 191, 0.7), rgba(33, 112, 191, 0.7)), url(../img/apex-analytics-header-image-2.jpg) center/cover no-repeat;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    z-index: 0; }
+  .section-tech-achievements.active::before {
+    opacity: 1; }
+  .section-tech-achievements.active .heading-midtext-wide {
+    color: #fff; }
+  .section-tech-achievements * {
+    position: relative;
+    z-index: 1; }
+  .section-tech-achievements .heading-midtext-wide {
+    color: #1a3b60; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto; }
+  .cards > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; }
+  .cards .card {
+    background: white;
+    flex: 1;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; }
+    .cards .card .heading-subtext {
+      font-size: 1.7rem;
+      color: #1a3b60;
+      text-transform: uppercase;
+      font-family: "Familjen Grotesk", sans-serif; }
+    .cards .card .heading-minitext {
+      font-size: 1.3rem;
+      color: #1a3b60;
+      font-weight: 400; }
+
+.card:hover {
+  transform: translateY(-5px); }
+
+.card .icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 10px; }
 
 .section-space {
   height: 100rem; }
