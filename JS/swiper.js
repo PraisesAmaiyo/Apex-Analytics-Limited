@@ -41,6 +41,111 @@ var swiper = new Swiper('.mySwiper', {
   freeModeMomentum: false,
 });
 
+var swiper = new Swiper('.team-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 10, // make them close together
+  loop: true,
+  speed: 600, // normal slide speed
+  freeMode: false, // keep snapping to slides
+  autoplay: false, // fully disable autoplay
+  navigation: {
+    nextEl: '.team-members-pagination_right',
+    prevEl: '.team-members-pagination_left',
+  },
+
+  // Responsive breakpoints
+  breakpoints: {
+    1200: {
+      slidesPerView: 4, // desktop large
+    },
+    992: {
+      slidesPerView: 4, // tablet landscape
+    },
+    768: {
+      slidesPerView: 2.5, // tablet portrait
+    },
+    576: {
+      slidesPerView: 2, // mobile
+    },
+    350: {
+      slidesPerView: 1.2, // mobile
+    },
+    0: {
+      slidesPerView: 1, // fallback mobile
+    },
+  },
+});
+
+var swiper = new Swiper('.reviews-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 10, // make them close together
+  loop: true,
+  speed: 600, // normal slide speed
+  freeMode: false, // keep snapping to slides
+  autoplay: false, // fully disable autoplay
+  navigation: {
+    nextEl: '.review-pagination_right .icon',
+    prevEl: '.review-pagination_left .icon',
+  },
+
+  // Responsive breakpoints
+  //   breakpoints: {
+  //     1200: {
+  //       slidesPerView: 3, // desktop large
+  //     },
+  //     992: {
+  //       slidesPerView: 3, // tablet landscape
+  //     },
+  //     768: {
+  //       slidesPerView: 2.5, // tablet portrait
+  //     },
+  //     576: {
+  //       slidesPerView: 2, // mobile
+  //     },
+  //     350: {
+  //       slidesPerView: 1.2, // mobile
+  //     },
+  //     0: {
+  //       slidesPerView: 1, // fallback mobile
+  //     },
+  //   },
+});
+
+var swiper = new Swiper('.projectsSwiper', {
+  slidesPerView: 1,
+  spaceBetween: 5, // make them close together
+  loop: true,
+  speed: 600, // normal slide speed
+  freeMode: false, // keep snapping to slides
+  autoplay: false, // fully disable autoplay
+  navigation: {
+    nextEl: '.team-members-pagination_right',
+    prevEl: '.team-members-pagination_left',
+  },
+
+  // Responsive breakpoints
+  breakpoints: {
+    1200: {
+      slidesPerView: 5, // desktop large
+    },
+    992: {
+      slidesPerView: 5, // tablet landscape
+    },
+    768: {
+      slidesPerView: 3.5, // tablet portrait
+    },
+    576: {
+      slidesPerView: 3, // mobile
+    },
+    350: {
+      slidesPerView: 2, // mobile
+    },
+    0: {
+      slidesPerView: 1.5, // fallback mobile
+    },
+  },
+});
+
 // // Register the ScrollTrigger plugin
 // gsap.registerPlugin(ScrollTrigger);
 
