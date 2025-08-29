@@ -58,24 +58,26 @@ const images = document.querySelectorAll('.slideshow-image');
 const texts = document.querySelectorAll('.hero-text');
 let currentIndex = 0;
 
-function showNextSlide() {
-  // Remove active from current
-  images[currentIndex].classList.remove('active');
-  texts[currentIndex].classList.remove('active');
+if (images.length > 0 && texts.length > 0) {
+  function showNextSlide() {
+    // Remove active from current
+    images[currentIndex].classList.remove('active');
+    texts[currentIndex].classList.remove('active');
 
-  // Next index
-  currentIndex = (currentIndex + 1) % images.length;
+    // Next index
+    currentIndex = (currentIndex + 1) % images.length;
 
-  // Add active to next
-  images[currentIndex].classList.add('active');
-  texts[currentIndex].classList.add('active');
+    // Add active to next
+    images[currentIndex].classList.add('active');
+    texts[currentIndex].classList.add('active');
+  }
+
+  // Initialize first text
+  texts[0].classList.add('active');
+
+  // Change every 6s
+  setInterval(showNextSlide, 4000);
 }
-
-// Initialize first text
-texts[0].classList.add('active');
-
-// Change every 6s
-setInterval(showNextSlide, 4000);
 
 // IGNORE
 const main = document.querySelector('.home-container');
@@ -128,3 +130,12 @@ function closeModal() {
   main.classList.remove('blur');
   main.classList.remove('no-scroll');
 }
+
+// Copyright Year Update
+const yearEl = document.querySelector('.copyright-year');
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
+
+// particlesJS.load('particles-js', 'particlesjs-config.json', function () {
+//   console.log('particles.js config loaded');
+// });

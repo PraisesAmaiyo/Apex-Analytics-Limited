@@ -114,19 +114,19 @@ var swiper = new Swiper('.reviews-swiper', {
 var swiper = new Swiper('.projectsSwiper', {
   slidesPerView: 1,
   spaceBetween: 5, // make them close together
-  loop: true,
+  loop: false,
   speed: 600, // normal slide speed
   freeMode: false, // keep snapping to slides
   autoplay: false, // fully disable autoplay
-  navigation: {
-    nextEl: '.team-members-pagination_right',
-    prevEl: '.team-members-pagination_left',
-  },
+  //   navigation: {
+  //     nextEl: '.team-members-pagination_right',
+  //     prevEl: '.team-members-pagination_left',
+  //   },
 
   // Responsive breakpoints
   breakpoints: {
     1200: {
-      slidesPerView: 5, // desktop large
+      slidesPerView: 6, // desktop large
     },
     992: {
       slidesPerView: 5, // tablet landscape
@@ -146,29 +146,70 @@ var swiper = new Swiper('.projectsSwiper', {
   },
 });
 
-// // Register the ScrollTrigger plugin
-// gsap.registerPlugin(ScrollTrigger);
+// Currently In USe
 
-// // Get the main services section and the wrapper
-// const servicesSection = document.querySelector('.services-bottom');
-// const scrollWrapper = document.querySelector('.scroll-wrapper');
+gsap.registerPlugin(ScrollTrigger);
 
-// // Calculate the total horizontal width of all service boxes
-// // This will be the distance we need to scroll
-// const totalScrollWidth = scrollWrapper.scrollWidth - window.innerWidth;
+const servicesSection = document.querySelector('.services-bottom');
+const scrollWrapper = document.querySelector('.scroll-wrapper');
+const boxes = gsap.utils.toArray('.service-box');
 
-// // Animate the horizontal scroll
-// gsap.to(scrollWrapper, {
-//   x: -totalScrollWidth, // Move the wrapper to the left by the calculated width
-//   ease: 'none', // No easing for a smooth, linear scroll
-//   scrollTrigger: {
-//     trigger: servicesSection, // The element that triggers the animation
-//     pin: true, // "Pins" the services section so it stays in place
-//     scrub: 1, // Connects the scrollbar position to the animation
-//     start: 'top top', // When the top of the section hits the top of the viewport
-//     end: () => '+=' + totalScrollWidth, // The end point is based on the total width we need to scroll
-//   },
-// });
+if (servicesSection && scrollWrapper && boxes.length) {
+  // Calculate the total scrollable distance dynamically
+  const getScrollableWidth = () => {
+    return scrollWrapper.scrollWidth - window.innerWidth;
+  };
+
+  // Create the main horizontal scroll animation
+  const mainScrollTween = gsap.to(scrollWrapper, {
+    x: () => -getScrollableWidth(),
+    ease: 'none',
+    scrollTrigger: {
+      trigger: servicesSection,
+      pin: true,
+      scrub: 1,
+      start: 'top top',
+      end: () => `+=${getScrollableWidth() + window.innerWidth}`,
+      invalidateOnRefresh: true,
+    },
+  });
+
+  // Now, create a more robust ScrollTrigger for each box
+  boxes.forEach((box, index) => {
+    ScrollTrigger.create({
+      trigger: box,
+      containerAnimation: mainScrollTween, // This remains the key for synchronizing
+      start: 'left 60%', // Trigger when the box's left edge is 60% across the viewport
+      end: 'right 40%', // Stay active until its right edge reaches 40% across
+      onEnter: () => setActive(index),
+      onEnterBack: () => setActive(index),
+    });
+  });
+
+  function setActive(index) {
+    boxes.forEach((box, i) => {
+      box.classList.toggle('active', i === index);
+    });
+  }
+}
+
+const section = document.querySelector('.section-tech-achievements');
+if (section) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          section.classList.add('active');
+        } else {
+          section.classList.remove('active');
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  observer.observe(section);
+}
 
 // Functional
 //
@@ -249,64 +290,3 @@ var swiper = new Swiper('.projectsSwiper', {
 //
 //
 // Functional
-
-gsap.registerPlugin(ScrollTrigger);
-
-const servicesSection = document.querySelector('.services-bottom');
-const scrollWrapper = document.querySelector('.scroll-wrapper');
-const boxes = gsap.utils.toArray('.service-box');
-
-if (servicesSection && scrollWrapper && boxes.length) {
-  // Calculate the total scrollable distance dynamically
-  const getScrollableWidth = () => {
-    return scrollWrapper.scrollWidth - window.innerWidth;
-  };
-
-  // Create the main horizontal scroll animation
-  const mainScrollTween = gsap.to(scrollWrapper, {
-    x: () => -getScrollableWidth(),
-    ease: 'none',
-    scrollTrigger: {
-      trigger: servicesSection,
-      pin: true,
-      scrub: 1,
-      start: 'top top',
-      end: () => `+=${getScrollableWidth() + window.innerWidth}`,
-      invalidateOnRefresh: true,
-    },
-  });
-
-  // Now, create a more robust ScrollTrigger for each box
-  boxes.forEach((box, index) => {
-    ScrollTrigger.create({
-      trigger: box,
-      containerAnimation: mainScrollTween, // This remains the key for synchronizing
-      start: 'left 60%', // Trigger when the box's left edge is 60% across the viewport
-      end: 'right 40%', // Stay active until its right edge reaches 40% across
-      onEnter: () => setActive(index),
-      onEnterBack: () => setActive(index),
-    });
-  });
-
-  function setActive(index) {
-    boxes.forEach((box, i) => {
-      box.classList.toggle('active', i === index);
-    });
-  }
-}
-
-const section = document.querySelector('.section-tech-achievements');
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        section.classList.add('active');
-      } else {
-        section.classList.remove('active');
-      }
-    });
-  },
-  { threshold: 0.6 }
-);
-
-observer.observe(section);
