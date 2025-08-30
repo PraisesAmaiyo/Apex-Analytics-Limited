@@ -1548,7 +1548,7 @@
       gap: 2.5rem;
       position: relative;
       z-index: 1;
-      padding: 7rem 0rem 3rem 0rem;
+      padding: 7rem 0rem 7rem 0rem;
 
       &-heading {
          text-align: center;
@@ -1692,60 +1692,62 @@
          }
       }
 
-      &-background {
-         position: relative;
-         padding: 15rem 3rem 7rem 3rem;
-         width: 100%;
-         margin-top: -10rem;
+   }
+}
 
-         display: flex;
-         align-items: center;
-         justify-content: center;
+.cta {
+   position: relative;
+   padding: 7rem 3rem 7rem 3rem;
+   width: 100%;
+   // margin-top: -10rem;
 
-         &::before {
-            content: ""; // important!
-            position: absolute;
-            inset: 0; // makes it fill the parent
-            background: linear-gradient(rgba($color-primary, 0.7),
-                  rgba($color-primary-950, 0.7)),
-               url(../img/apex-analytics-header-image-2.jpg) center/cover no-repeat;
-            z-index: -1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   &::before {
+      content: ""; // important!
+      position: absolute;
+      inset: 0; // makes it fill the parent
+      background: linear-gradient(rgba($color-primary, 0.7),
+            rgba($color-primary-950, 0.7)),
+         url(../img/apex-analytics-header-image-2.jpg) center/cover no-repeat;
+      z-index: -1;
+      object-fit: contain;
+      background-position: top;
+   }
+
+   &-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      @media only screen and (min-width: $bp-monitor) {
+         width: 160rem;
+      }
+
+      &_text {
+         margin-right: auto;
+
+         .heading-subtext,
+         .heading-midtext-wide {
+            color: $color-grey-light-1;
          }
 
-         &-container {
-            display: flex;
-            align-items: center;
-            width: 100%;
-
-            @media only screen and (min-width: $bp-monitor) {
-               width: 160rem;
-            }
-
-            &_text {
-               margin-right: auto;
-
-               .heading-subtext,
-               .heading-midtext-wide {
-                  color: $color-grey-light-1;
-               }
-
-               .heading-midtext-wide {
-                  font-size: 4rem;
-                  color: $color-grey-light-1;
-               }
-            }
-
-            &_btn {
-               margin-left: 2rem;
-            }
+         .heading-midtext-wide {
+            font-size: 4rem;
+            color: $color-grey-light-1;
          }
+      }
+
+      &_btn {
+         margin-left: 2rem;
       }
    }
 }
 
-/* ========================================= */
+
 /* --- FOOTER --- */
-/* ========================================= */
 .section-footer {
    position: relative;
    background-color: $color-primary-50;
@@ -1754,7 +1756,7 @@
    align-items: center;
    justify-content: center;
    transition: margin-top 0.5s ease;
-   margin-top: 7rem;
+   // margin-top: 7rem;
 
    .footer {
       position: relative;
@@ -1891,9 +1893,6 @@
 }
 
 // Footer Media queries
-/* ========================================= */
-/* --- MEDIUM SCREENS (e.g., Tablets) --- */
-/* ========================================= */
 @media only screen and (min-width: 768px) {
    .section-footer .footer {
       /* MEDIUM SCREEN LAYOUT
@@ -1909,9 +1908,6 @@
    }
 }
 
-/* ========================================= */
-/* --- LARGE SCREENS (e.g., Desktops) --- */
-/* ========================================= */
 @media only screen and (min-width: 1024px) {
    .section-footer .footer {
       /* LARGE SCREEN LAYOUT
@@ -1958,7 +1954,6 @@
 
 
 // About Page
-
 .about-page-hero,
 .services-page-hero {
    padding: 10rem 3rem;
@@ -2653,8 +2648,8 @@
       // text-align: center;
 
       display: grid;
-      grid-template-columns: 26rem 1fr;
-      gap: 4rem;
+      grid-template-columns: 30% 1fr;
+      gap: 6rem;
 
       position: relative;
       z-index: 1;
@@ -2663,11 +2658,28 @@
          width: 160rem;
       }
 
+
+      // Tablet breakpoint
+      @media only screen and (max-width: 900px) {
+         grid-template-columns: 1fr; // Single column
+         grid-template-rows: auto auto;
+      }
+
+      // Mobile breakpoint
+      @media only screen and (max-width: 600px) {
+         padding: 5rem 2rem;
+         gap: 3rem;
+      }
+
       &--aside {
          display: flex;
          flex-direction: column;
          gap: 4rem;
-         width: 24.5rem;
+         // width: 24.5rem;
+
+         @media only screen and (max-width: 900px) {
+            order: 2;
+         }
 
          .aside-links {
             border-radius: 8px;
@@ -2691,7 +2703,7 @@
                         display: block;
                         padding: .8rem 1.5rem;
                         color: $color-grey-dark-1;
-                        font-size: 1.35rem;
+                        // font-size: 1.35rem;
                         font-weight: 500;
                         text-decoration: none;
                         padding: 1.2rem 0;
@@ -2705,7 +2717,7 @@
                         }
 
                         .heading-minitext {
-                           font-size: 1.3rem
+                           margin-right: auto;
                         }
 
                         .icon {
@@ -2740,7 +2752,7 @@
 
             &_cta {
                button {
-                  width: 100%;
+                  // width: 100%;
                }
             }
 
@@ -2750,7 +2762,8 @@
 
                img {
                   width: 100%;
-                  height: 10rem;
+                  height: auto;
+                  max-height: 35rem;
                   object-fit: cover;
                   border-radius: 10px;
                }
@@ -2760,12 +2773,16 @@
 
       &--content {
 
+         @media only screen and (max-width: 900px) {
+            order: 1;
+         }
+
          .content-image {
             margin-bottom: 3.5rem;
 
             img {
                width: 100%;
-               height: 25rem;
+               height: 30rem;
                object-fit: cover;
                border-radius: 10px;
             }
@@ -2880,6 +2897,218 @@
                }
             }
          }
+
+         .content-pagination {
+            display: flex;
+            justify-content: space-between;
+            gap: 4rem;
+
+            // .content-prev {
+            //    text-align: start;
+            //    margin-right: 3rem;
+
+            //    &:hover {
+            //       a.heading-midtext {
+            //          color: $color-primary;
+            //       }
+            //    }
+
+            //    &_btn {
+            //       display: flex;
+            //       gap: 2rem;
+            //       align-items: center;
+            //       justify-content: start;
+
+
+            //       .tag {
+            //          margin: 0;
+            //       }
+
+            //       &--icon {
+            //          height: 5rem;
+            //          width: 5rem;
+            //          display: flex;
+            //          justify-content: center;
+            //          align-items: center;
+            //          overflow: hidden;
+            //          background-color: $color-primary;
+            //          border-radius: 100%;
+
+            //          aspect-ratio: 1 / 1;
+            //          flex-shrink: 0;
+            //       }
+
+            //       .icon {
+            //          padding: 1.3rem;
+            //          color: $color-grey-light-1;
+            //          font-size: 2.5rem;
+
+            //          position: relative;
+
+            //          // aspect-ratio: 1 / 1;
+            //       }
+            //    }
+
+            //    &_text {
+            //       .heading-midtext {
+            //          text-decoration: none;
+            //       }
+            //    }
+            // }
+
+            .content-next {
+               text-align: end;
+               margin-left: auto;
+
+               &:hover {
+                  a.heading-midtext {
+                     color: $color-primary;
+                  }
+
+
+                  .material-symbols-sharp.icon {
+                     transform: translateX(100%);
+                  }
+
+                  .material-symbols-sharp.icon_2 {
+                     transform: translateX(0);
+                  }
+               }
+
+               &_btn {
+                  display: flex;
+                  gap: 2rem;
+                  align-items: center;
+                  justify-content: end;
+
+                  .tag {
+                     margin: 0;
+                  }
+
+                  &--icon {
+                     height: 5rem;
+                     width: 5rem;
+                     display: flex;
+
+                     justify-content: center;
+                     align-items: center;
+                     overflow: hidden;
+
+                     background-color: $color-primary;
+                     border-radius: 100%;
+                     aspect-ratio: 1 / 1;
+                     flex-shrink: 0;
+                     position: relative;
+                  }
+               }
+
+               &_text {
+                  a.heading-midtext {
+                     text-decoration: none;
+                     font-weight: 700;
+                  }
+               }
+            }
+
+            .content-prev {
+               text-align: start;
+               margin-right: 3rem;
+
+               &:hover {
+                  a.heading-midtext {
+                     color: $color-primary;
+                  }
+
+                  /* On hover, slide the first icon off to the LEFT */
+                  .material-symbols-sharp.prevIcon {
+                     transform: translateX(-100%);
+                  }
+
+                  /* And slide the second icon in from the RIGHT */
+                  .material-symbols-sharp.prevIcon_2 {
+                     transform: translateX(0);
+                  }
+               }
+
+               &_btn {
+                  display: flex;
+                  gap: 2rem;
+                  align-items: center;
+                  justify-content: end;
+
+                  .tag {
+                     margin: 0;
+                  }
+
+                  &--icon {
+                     height: 5rem;
+                     width: 5rem;
+                     display: flex;
+
+                     justify-content: center;
+                     align-items: center;
+                     overflow: hidden;
+
+                     background-color: $color-primary;
+                     border-radius: 100%;
+                     aspect-ratio: 1 / 1;
+                     flex-shrink: 0;
+                     position: relative;
+                  }
+               }
+
+               &_text {
+                  a.heading-midtext {
+                     text-decoration: none;
+                     font-weight: 700;
+                  }
+               }
+            }
+
+            // PREV BUTTON
+
+            .material-symbols-sharp.prevIcon,
+            .material-symbols-sharp.prevIcon_2 {
+               /* Style for both icons */
+               padding: 1.3rem;
+               color: $color-grey-light-1;
+               font-size: 2.5rem;
+               position: absolute;
+               transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+
+            .material-symbols-sharp.prevIcon {
+               /* Initial state of the first icon: visible */
+               transform: translateX(0);
+            }
+
+            .material-symbols-sharp.prevIcon_2 {
+               /* Now the second icon starts off-screen to the RIGHT */
+               transform: translateX(100%);
+            }
+
+            // NEXT BUTTON
+            .material-symbols-sharp.icon,
+            .material-symbols-sharp.icon_2 {
+               /* Style for both icons */
+               padding: 1.3rem;
+               color: $color-grey-light-1;
+               font-size: 2.5rem;
+               position: absolute;
+               transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+
+            .material-symbols-sharp.icon {
+               transform: translateX(0);
+            }
+
+            .material-symbols-sharp.icon_2 {
+               transform: translateX(-100%);
+            }
+
+         }
+
+
       }
    }
 }

@@ -1000,7 +1000,7 @@ body {
     gap: 2.5rem;
     position: relative;
     z-index: 1;
-    padding: 7rem 0rem 3rem 0rem; }
+    padding: 7rem 0rem 7rem 0rem; }
     .section-projects .projects-heading {
       text-align: center;
       margin-bottom: 3rem; }
@@ -1092,41 +1092,41 @@ body {
           .section-projects .projects-swiper .swiper-slide .project:hover .project-name_container {
             opacity: 1;
             transform: translate(-50%, -50%) translateY(0); }
-    .section-projects .projects-background {
-      position: relative;
-      padding: 15rem 3rem 7rem 3rem;
-      width: 100%;
-      margin-top: -10rem;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      .section-projects .projects-background::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(rgba(33, 112, 191, 0.7), rgba(17, 37, 64, 0.7)), url(../img/apex-analytics-header-image-2.jpg) center/cover no-repeat;
-        z-index: -1; }
-      .section-projects .projects-background-container {
-        display: flex;
-        align-items: center;
-        width: 100%; }
-        @media only screen and (min-width: 100em) {
-          .section-projects .projects-background-container {
-            width: 160rem; } }
-        .section-projects .projects-background-container_text {
-          margin-right: auto; }
-          .section-projects .projects-background-container_text .heading-subtext,
-          .section-projects .projects-background-container_text .heading-midtext-wide {
-            color: #fff; }
-          .section-projects .projects-background-container_text .heading-midtext-wide {
-            font-size: 4rem;
-            color: #fff; }
-        .section-projects .projects-background-container_btn {
-          margin-left: 2rem; }
 
-/* ========================================= */
+.cta {
+  position: relative;
+  padding: 7rem 3rem 7rem 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(33, 112, 191, 0.7), rgba(17, 37, 64, 0.7)), url(../img/apex-analytics-header-image-2.jpg) center/cover no-repeat;
+    z-index: -1;
+    object-fit: contain;
+    background-position: top; }
+  .cta-container {
+    display: flex;
+    align-items: center;
+    width: 100%; }
+    @media only screen and (min-width: 100em) {
+      .cta-container {
+        width: 160rem; } }
+    .cta-container_text {
+      margin-right: auto; }
+      .cta-container_text .heading-subtext,
+      .cta-container_text .heading-midtext-wide {
+        color: #fff; }
+      .cta-container_text .heading-midtext-wide {
+        font-size: 4rem;
+        color: #fff; }
+    .cta-container_btn {
+      margin-left: 2rem; }
+
 /* --- FOOTER --- */
-/* ========================================= */
 .section-footer {
   position: relative;
   background-color: #f2f7fd;
@@ -1134,8 +1134,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: margin-top 0.5s ease;
-  margin-top: 7rem; }
+  transition: margin-top 0.5s ease; }
   .section-footer .footer {
     position: relative;
     width: 100%;
@@ -1226,9 +1225,6 @@ body {
         white-space: nowrap;
         /* Prevents long text from breaking */ }
 
-/* ========================================= */
-/* --- MEDIUM SCREENS (e.g., Tablets) --- */
-/* ========================================= */
 @media only screen and (min-width: 768px) {
   .section-footer .footer {
     /* MEDIUM SCREEN LAYOUT
@@ -1240,9 +1236,6 @@ body {
       grid-column: 1 / -1;
       /* Makes the logo/info section span the full width */ } }
 
-/* ========================================= */
-/* --- LARGE SCREENS (e.g., Desktops) --- */
-/* ========================================= */
 @media only screen and (min-width: 1024px) {
   .section-footer .footer {
     /* LARGE SCREEN LAYOUT
@@ -1756,18 +1749,28 @@ body {
     height: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 26rem 1fr;
-    gap: 4rem;
+    grid-template-columns: 30% 1fr;
+    gap: 6rem;
     position: relative;
     z-index: 1; }
     @media only screen and (min-width: 100em) {
       .service-detail_container {
         width: 160rem; } }
+    @media only screen and (max-width: 900px) {
+      .service-detail_container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto; } }
+    @media only screen and (max-width: 600px) {
+      .service-detail_container {
+        padding: 5rem 2rem;
+        gap: 3rem; } }
     .service-detail_container--aside {
       display: flex;
       flex-direction: column;
-      gap: 4rem;
-      width: 24.5rem; }
+      gap: 4rem; }
+      @media only screen and (max-width: 900px) {
+        .service-detail_container--aside {
+          order: 2; } }
       .service-detail_container--aside .aside-links {
         border-radius: 8px;
         padding: 2rem;
@@ -1783,7 +1786,6 @@ body {
               display: block;
               padding: .8rem 1.5rem;
               color: #000;
-              font-size: 1.35rem;
               font-weight: 500;
               text-decoration: none;
               padding: 1.2rem 0;
@@ -1793,7 +1795,7 @@ body {
               .service-detail_container--aside .aside-links_container .aside-services_link a:hover {
                 color: #19518b; }
               .service-detail_container--aside .aside-links_container .aside-services_link a .heading-minitext {
-                font-size: 1.3rem; }
+                margin-right: auto; }
               .service-detail_container--aside .aside-links_container .aside-services_link a .icon {
                 font-size: 1.3rem; }
               .service-detail_container--aside .aside-links_container .aside-services_link a.active {
@@ -1806,21 +1808,23 @@ body {
         .service-detail_container--aside .aside-contact_heading .heading-midtext,
         .service-detail_container--aside .aside-contact_heading .heading-minitext {
           color: #fff; }
-        .service-detail_container--aside .aside-contact_cta button {
-          width: 100%; }
         .service-detail_container--aside .aside-contact_image {
           width: 100%;
           margin-top: 3rem; }
           .service-detail_container--aside .aside-contact_image img {
             width: 100%;
-            height: 10rem;
+            height: auto;
+            max-height: 35rem;
             object-fit: cover;
             border-radius: 10px; }
+    @media only screen and (max-width: 900px) {
+      .service-detail_container--content {
+        order: 1; } }
     .service-detail_container--content .content-image {
       margin-bottom: 3.5rem; }
       .service-detail_container--content .content-image img {
         width: 100%;
-        height: 25rem;
+        height: 30rem;
         object-fit: cover;
         border-radius: 10px; }
     .service-detail_container--content .content-bullets {
@@ -1873,6 +1877,101 @@ body {
             margin: 0;
             font-size: 1.5rem;
             font-weight: 500; }
+    .service-detail_container--content .content-pagination {
+      display: flex;
+      justify-content: space-between;
+      gap: 4rem; }
+      .service-detail_container--content .content-pagination .content-next {
+        text-align: end;
+        margin-left: auto; }
+        .service-detail_container--content .content-pagination .content-next:hover a.heading-midtext {
+          color: #2170bf; }
+        .service-detail_container--content .content-pagination .content-next:hover .material-symbols-sharp.icon {
+          transform: translateX(100%); }
+        .service-detail_container--content .content-pagination .content-next:hover .material-symbols-sharp.icon_2 {
+          transform: translateX(0); }
+        .service-detail_container--content .content-pagination .content-next_btn {
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+          justify-content: end; }
+          .service-detail_container--content .content-pagination .content-next_btn .tag {
+            margin: 0; }
+          .service-detail_container--content .content-pagination .content-next_btn--icon {
+            height: 5rem;
+            width: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: #2170bf;
+            border-radius: 100%;
+            aspect-ratio: 1 / 1;
+            flex-shrink: 0;
+            position: relative; }
+        .service-detail_container--content .content-pagination .content-next_text a.heading-midtext {
+          text-decoration: none;
+          font-weight: 700; }
+      .service-detail_container--content .content-pagination .content-prev {
+        text-align: start;
+        margin-right: 3rem; }
+        .service-detail_container--content .content-pagination .content-prev:hover {
+          /* On hover, slide the first icon off to the LEFT */
+          /* And slide the second icon in from the RIGHT */ }
+          .service-detail_container--content .content-pagination .content-prev:hover a.heading-midtext {
+            color: #2170bf; }
+          .service-detail_container--content .content-pagination .content-prev:hover .material-symbols-sharp.prevIcon {
+            transform: translateX(-100%); }
+          .service-detail_container--content .content-pagination .content-prev:hover .material-symbols-sharp.prevIcon_2 {
+            transform: translateX(0); }
+        .service-detail_container--content .content-pagination .content-prev_btn {
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+          justify-content: end; }
+          .service-detail_container--content .content-pagination .content-prev_btn .tag {
+            margin: 0; }
+          .service-detail_container--content .content-pagination .content-prev_btn--icon {
+            height: 5rem;
+            width: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: #2170bf;
+            border-radius: 100%;
+            aspect-ratio: 1 / 1;
+            flex-shrink: 0;
+            position: relative; }
+        .service-detail_container--content .content-pagination .content-prev_text a.heading-midtext {
+          text-decoration: none;
+          font-weight: 700; }
+      .service-detail_container--content .content-pagination .material-symbols-sharp.prevIcon,
+      .service-detail_container--content .content-pagination .material-symbols-sharp.prevIcon_2 {
+        /* Style for both icons */
+        padding: 1.3rem;
+        color: #fff;
+        font-size: 2.5rem;
+        position: absolute;
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+      .service-detail_container--content .content-pagination .material-symbols-sharp.prevIcon {
+        /* Initial state of the first icon: visible */
+        transform: translateX(0); }
+      .service-detail_container--content .content-pagination .material-symbols-sharp.prevIcon_2 {
+        /* Now the second icon starts off-screen to the RIGHT */
+        transform: translateX(100%); }
+      .service-detail_container--content .content-pagination .material-symbols-sharp.icon,
+      .service-detail_container--content .content-pagination .material-symbols-sharp.icon_2 {
+        /* Style for both icons */
+        padding: 1.3rem;
+        color: #fff;
+        font-size: 2.5rem;
+        position: absolute;
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+      .service-detail_container--content .content-pagination .material-symbols-sharp.icon {
+        transform: translateX(0); }
+      .service-detail_container--content .content-pagination .material-symbols-sharp.icon_2 {
+        transform: translateX(-100%); }
 
 .naira-input-container input {
   padding-left: 3rem; }
@@ -2110,12 +2209,12 @@ select {
   color: #000; }
 
 .heading-subtext {
-  font-size: 1.8rem;
+  font-size: 1.95rem;
   color: #000;
   font-family: "Plus Jakarta Sans", sans-serif; }
 
 .heading-minitext {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-family: "Plus Jakarta Sans", sans-serif; }
 
 .tag {
