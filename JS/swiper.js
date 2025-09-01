@@ -118,10 +118,19 @@ var swiper = new Swiper('.projectsSwiper', {
   speed: 600, // normal slide speed
   freeMode: false, // keep snapping to slides
   autoplay: false, // fully disable autoplay
-  //   navigation: {
-  //     nextEl: '.team-members-pagination_right',
-  //     prevEl: '.team-members-pagination_left',
-  //   },
+  navigation: {
+    nextEl: '.projects-pagination_right',
+    prevEl: '.projects-pagination_left',
+  },
+  on: {
+    slideChange: function () {
+      const prev = document.querySelector('.projects-pagination_left');
+      const next = document.querySelector('.projects-pagination_right');
+
+      prev.classList.toggle('disabled', this.isBeginning);
+      next.classList.toggle('disabled', this.isEnd);
+    },
+  },
 
   // Responsive breakpoints
   breakpoints: {

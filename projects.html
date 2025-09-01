@@ -27,7 +27,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=format_quote" /> -->
 
 
-   <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="./css/style.css" />
 
    <!-- Favicon -->
    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -48,9 +48,9 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
    <!-- Javascript and Third-Party CDNs -->
-   <script defer type="module" src="JS/script.js"></script>
+   <script defer type="module" src="/JS/script.js"></script>
 
-   <script defer type="module" src="JS/swiper.js"></script>
+   <script defer type="module" src="/JS/swiper.js"></script>
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -117,7 +117,7 @@
 
                      <!-- Services with Dropdown -->
                      <li class="nav-item dropdown">
-                        <a class="main-nav-link active" href="#">
+                        <a class="main-nav-link" href="/services.html">
                            Services
                            <span class="material-symbols-sharp">
                               keyboard_arrow_down
@@ -133,7 +133,8 @@
                         </ul>
                      </li>
 
-                     <li><a class="main-nav-link" href="/projects.html">Projects</a></li>
+                     <li><a class="main-nav-link active" href="/projects.html">Projects</a>
+                     </li>
 
                      <li><a class="main-nav-link" href="/team-members.html">Team Members</a></li>
 
@@ -176,15 +177,15 @@
 
       </header>
 
-      <section class="services-page-hero">
-         <div class="services-page-background"></div>
+      <section class="projects-page-hero">
+         <div class="projects-page-background"></div>
 
          <!-- <div id="particles-js"></div> -->
 
-         <div class="services-page-hero_container">
+         <div class="projects-page-hero_container">
             <div class="hero-text">
                <h1 class="heading-text">
-                  Services
+                  Projects
                </h1>
 
                <div class="hero-text_nav">
@@ -193,7 +194,7 @@
                   </span>
 
                   <p class="heading-subtext">
-                     Home &nbsp;/ &nbsp;<span class="color">Services</span>
+                     Home &nbsp;/ &nbsp;<span class="color">Projects</span>
                   </p>
                </div>
 
@@ -201,503 +202,139 @@
          </div>
       </section>
 
-      <section class="section-services_2">
-         <div class="services_2">
-            <div class="services_2-top mb-3">
+      <section class="section-projects single">
+         <div class="projects">
 
-               <div class="services_2-top-heading">
-
-                  <h1 class="heading-midtext mb-2">Our Services</h1>
-                  <h1 class="heading-text">Comprehensive <br /> Solutions For <span class="blue-text">Every <br />
-                        Challenge.</span> </h1>
+            <div class="projects-top mb-3">
+               <div class="projects-top-heading">
+                  <h1 class="heading-midtext mb-2">Our Projects</h1>
+                  <h1 class="heading-text">
+                     Proven <br /> Expertise In <span class="blue-text">Every <br /> Solution.</span>
+                  </h1>
                </div>
             </div>
 
-            <div class="services_2-bottom">
-               <div class="scroll-wrapper_2">
+            <div class="projects-cards">
 
-                  <a class="service-box_2  is-first" href="/services/environmental.html">
-                     <div class="service-box_2_one">
-                        <h1 class="heading-midtext">Environmental & Sustainability Consulting</h1>
-                        <h6 class="tag">01</h6>
-                     </div>
 
-                     <div class="service-box_2_two mb-2">
-                        <p class="heading-minitext">We provide expert guidance on environmental compliance and
-                           sustainable practices. From audits to climate risk management, our team ensures projects meet
-                           global sustainability standards.</p>
-                     </div>
 
-                     <div class="service-box_2_three">
-                        <div class="service-list">
-                           <div class="service-list_icon">
+               <div class="projects-cards_single">
+                  <div class="project-image_container">
 
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">EIA & EMP preparation</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Environmental Audits</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">GHG management & ESG reporting</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Climate risk assessment</p>
-                        </div>
-
-                     </div>
-
-                     <div class="service-box_2_four">
-                        <span class="material-symbols-sharp service-icon">
-                           globe
-                        </span>
-                     </div>
-
-                  </a>
-
-                  <a class="service-box_2" href="/services/geophysical.html">
-                     <div class="service-box_2_one">
-                        <h1 class="heading-midtext">Geophysical & Geotechnical Services</h1>
-                        <h6 class="tag">02</h6>
-                     </div>
-
-                     <div class="service-box_2_two mb-2">
-                        <p class="heading-minitext">Our geophysical and geotechnical expertise helps clients understand
-                           subsurface conditions for safe and reliable projects. We deliver accurate, science-based
-                           insights for design and construction.</p>
-                     </div>
-
-                     <div class="service-box_2_three">
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Subsurface investigations</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Soil mechanics & analysis</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Borehole logging</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Seismic surveys</p>
-                        </div>
-
-                     </div>
-
-                     <div class="service-box_2_four">
-
-                        <span class="material-symbols-sharp service-icon">
-                           landscape_2
-                        </span>
-                     </div>
-
-                  </a>
-
-                  <a class="service-box_2" href="/services/waste-water.html">
-                     <div class="service-box_2_one">
-                        <h1 class="heading-midtext">Integrated Waste & Water Solutions</h1>
-                        <h6 class="tag">03</h6>
-                     </div>
-
-                     <div class="service-box_2_two mb-2">
-                        <p class="heading-minitext">We design and implement efficient waste and water management
-                           systems. Our solutions reduce environmental impact while supporting recycling and resource
-                           recovery.</p>
-                     </div>
-
-                     <div class="service-box_2_three">
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">TDU design & assessment</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Wastewater treatment systems</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Recycling & recovery solutions</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Hazardous waste management</p>
-                        </div>
-
-                     </div>
-
-                     <div class="service-box_2_four">
-
-                        <span class="material-symbols-sharp service-icon">
-                           water
-                        </span>
-                     </div>
-
-                  </a>
-
-                  <a class="service-box_2" href="/services/laboratory.html">
-                     <div class="service-box_2_one">
-                        <h1 class="heading-midtext">Environmental Laboratory Services</h1>
-                        <h6 class="tag">04</h6>
-                     </div>
-
-                     <div class="service-box_2_two mb-2">
-                        <p class="heading-minitext">Our accredited laboratories deliver precise analysis for
-                           environmental samples. We ensure reliable results for air, water, soil, and hazardous
-                           materials testing.</p>
-                     </div>
-
-                     <div class="service-box_2_three">
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">ISO-compliant analysis</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Air, water & soil testingl</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Effluent characterization</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Hazardous material analysis</p>
-                        </div>
-
-                     </div>
-
-                     <div class="service-box_2_four">
-
-                        <span class="material-symbols-sharp service-icon">
-                           experiment
-                        </span>
-                     </div>
-
-                  </a>
-
-                  <a class="service-box_2" href="/services/gis.html">
-                     <div class="service-box_2_one">
-                        <h1 class="heading-midtext">GIS & Remote Sensing</h1>
-                        <h6 class="tag">05</h6>
-                     </div>
-
-                     <div class="service-box_2_two mb-2">
-                        <p class="heading-minitext">We harness GIS and remote sensing to provide spatial insights and
-                           mapping solutions. Our services support informed decision-making and advanced environmental
-                           planning.</p>
-                     </div>
-
-                     <div class="service-box_2_three">
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Spatial analysis</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Digital terrain modelling</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">LIDAR processingn</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Environmental mapping</p>
-                        </div>
-
-                     </div>
-
-                     <div class="service-box_2_four">
-
-                        <span class="material-symbols-sharp service-icon">
-                           my_location
-                        </span>
-                     </div>
-
-                  </a>
-
-                  <a class="service-box_2 is-last" href="/services/training.html">
-                     <div class="service-box_2_one">
-                        <h1 class="heading-midtext">Training & Capacity Building</h1>
-                        <h6 class="tag">06</h6>
-                     </div>
-
-                     <div class="service-box_2_two mb-2">
-                        <p class="heading-minitext">We design and deliver tailored training programs for professionals
-                           in environmental and geoscience fields. Our sessions combine technical expertise with
-                           practical applications.</p>
-                     </div>
-
-                     <div class="service-box_2_three">
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Custom technical training</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Environmental management</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Geoscience skills development</p>
-                        </div>
-
-                        <div class="service-list">
-                           <div class="service-list_icon">
-
-                              <i class="fa-solid fa-check "></i>
-                           </div>
-
-                           <p class=" heading-minitext service-list_text ">Hands-on learning programs</p>
-                        </div>
-
-                     </div>
-
-                     <div class="service-box_2_four">
-
-                        <span class="material-symbols-sharp service-icon">
-                           workspace_premium
-                        </span>
-                     </div>
-
-                  </a>
-
-               </div>
-            </div>
-
-         </div>
-      </section>
-
-      <section class="section-partners mt-4" style="background-color: #000;">
-         <div class="partners" style="border-bottom: 1px solid #4d4d4d;">
-            <div class="partners-textbox">
-               <h1 class="heading-midtext" style="color: #fff;">Trusted Partners:</h1>
-            </div>
-
-            <div class="partners-swiper">
-               <div class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-
-                     <div class="swiper-slide">
-                        <img src="./img/partners/agip.jpg" alt="AGIP - Apex Analytics Limited trusted partners"
-                           class="partners-swiper_logo">
-                     </div>
-
-                     <div class="swiper-slide">
-                        <img src="./img/partners/renaissance.png"
-                           alt="Renaissance - Apex Analytics Limited trusted partners" class="partners-swiper_logo">
-                     </div>
-
-                     <div class="swiper-slide">
-                        <img src="./img/partners/total-logo.png" alt="Total - Apex Analytics Limited trusted partners"
-                           class="partners-swiper_logo">
-                     </div>
-
-                     <div class="swiper-slide">
-                        <img src="./img/partners/mobil.png" alt="Mobil - Apex Analytics Limited trusted partners"
-                           class="partners-swiper_logo">
-                     </div>
-
-
-                     <div class="swiper-slide">
-                        <img src="./img/partners/chevron.png" alt="Chevron - Apex Analytics Limited trusted partners"
-                           class="partners-swiper_logo">
-                     </div>
-
-                     <div class="swiper-slide">
-                        <img src="./img/partners/nnpc.webp" alt="NNPC - Apex Analytics Limited trusted partners"
-                           class="partners-swiper_logo">
-                     </div>
-
-
-
+                     <img src="./img/apex-analytics-header-image-3.jpg" alt="Apex Analytics Limited - Project 1"
+                        class="project-image">
                   </div>
+
+                  <a class="project-name_container" href="/projects/underground-water-toxicity.html">
+                     <div class="heading-midtext-slim">
+                        SPDC - Rivers State
+                     </div>
+
+                     <div class="heading-midtext-wide">
+                        Underground Water Toxicity
+                     </div>
+                  </a>
                </div>
-            </div>
 
-         </div>
-      </section>
 
-      <section class="section-actions">
-         <div class="actions">
-            <div class="actions-top mb-3">
+               <div class="projects-cards_single">
+                  <div class="project-image_container">
 
-               <div class="actions-top-heading">
-
-                  <h1 class="heading-midtext mb-2">How It Works</h1>
-
-                  <h1 class="heading-text">Delivering Reliable <br /> Solutions <span class="blue-text">In Four Simple
-                        <br /> Steps.</span> </h1>
-               </div>
-            </div>
-
-            <div class="actions-bottom mb-3">
-
-               <div class="actions-bottom_container">
-                  <div class="actions-bottom_container--icon mb-1">
-                     <span class="material-symbols-sharp icon">
-                        assignment_add
-                     </span>
+                     <img src="./img/apex-analytics-header-image-2.jpg" alt="Apex Analytics Limited - Project 1"
+                        class="project-image">
                   </div>
-                  <h1 class="heading-midtext mt-1">Understanding Your Needs</h1>
-                  <p class=" heading-minitext mt-1">We begin by engaging with you to define project goals, regulatory
-                     requirements, and operational realities</p>
+
+                  <a class="project-name_container" href="/projects/underground-water-toxicity.html">
+                     <div class="heading-midtext-slim">
+                        NNPC - Delta State
+                     </div>
+
+                     <div class="heading-midtext-wide">
+                        Underground Water Toxicity
+                     </div>
+                  </a>
                </div>
 
-               <div class="actions-bottom_container">
-                  <div class="actions-bottom_container--icon mb-1">
-                     <span class="material-symbols-sharp icon">
-                        lab_research
-                     </span>
-                  </div>
-                  <h1 class="heading-midtext mt-1">Data Collection & Analysis</h1>
 
-                  <p class=" heading-minitext mt-1">Our experts gather field data, conduct laboratory testing, or deploy
-                     advanced tools to ensure accuracy.</p>
+               <div class="projects-cards_single">
+                  <div class="project-image_container">
+
+                     <img src="./img/apex-analytics-header-image-1.jpg" alt="Apex Analytics Limited - Project 1"
+                        class="project-image">
+                  </div>
+
+                  <a class="project-name_container" href="/projects/underground-water-toxicity.html">
+                     <div class="heading-midtext-slim">
+                        Total Energies - Cross Rivers State
+                     </div>
+
+                     <div class="heading-midtext-wide">
+                        Underground Water Toxicity
+                     </div>
+                  </a>
                </div>
 
-               <div class="actions-bottom_container">
-                  <div class="actions-bottom_container--icon mb-1">
-                     <span class="material-symbols-sharp icon">
-                        analytics
-                     </span>
+
+               <div class="projects-cards_single">
+                  <div class="project-image_container">
+
+                     <img src="./img/apex-analytics-header-image-3.jpg" alt="Apex Analytics Limited - Project 1"
+                        class="project-image">
                   </div>
-                  <h1 class="heading-midtext mt-1">Insight Development</h1>
-                  <p class=" heading-minitext mt-1">Results are interpreted by our multidisciplinary team, transforming
-                     raw data into clear insights and practical solutions.</p>
+
+                  <a class="project-name_container" href="/projects/underground-water-toxicity.html">
+                     <div class="heading-midtext-slim">
+                        SPDC - Rivers State
+                     </div>
+
+                     <div class="heading-midtext-wide">
+                        Underground Water Toxicity
+                     </div>
+                  </a>
                </div>
 
-               <div class="actions-bottom_container">
-                  <div class="actions-bottom_container--icon mb-1">
-                     <span class="material-symbols-sharp icon">
-                        assignment_turned_in
-                     </span>
+
+               <div class="projects-cards_single">
+                  <div class="project-image_container">
+
+                     <img src="./img/apex-analytics-header-image-2.jpg" alt="Apex Analytics Limited - Project 1"
+                        class="project-image">
                   </div>
-                  <h1 class="heading-midtext mt-1">Results & Recommendations</h1>
-                  <p class=" heading-minitext mt-1">Our reports offer compliance-backed guidance and actionable
-                     strategies for sustainable growth and value.</p>
+
+                  <a class="project-name_container" href="/projects/underground-water-toxicity.html">
+                     <div class="heading-midtext-slim">
+                        NNPC - Delta State
+                     </div>
+
+                     <div class="heading-midtext-wide">
+                        Underground Water Toxicity
+                     </div>
+                  </a>
+               </div>
+
+
+               <div class="projects-cards_single">
+                  <div class="project-image_container">
+
+                     <img src="./img/apex-analytics-header-image-1.jpg" alt="Apex Analytics Limited - Project 1"
+                        class="project-image">
+                  </div>
+
+                  <a class="project-name_container" href="/projects/underground-water-toxicity.html">
+                     <div class="heading-midtext-slim">
+                        Total Energies - Cross Rivers State
+                     </div>
+
+                     <div class="heading-midtext-wide">
+                        Underground Water Toxicity
+                     </div>
+                  </a>
                </div>
             </div>
          </div>
-
-
-
-
+         </div>
+         </div>
       </section>
-
 
       <section class="section-choose-us">
          <div class="choose-us">
@@ -1085,156 +722,18 @@
             </div>
       </section>
 
-
-      <section class="section-projects">
-         <div class="projects">
-            <div class="projects-heading">
-               <h1 class="heading-midtext-slim">Proven Expertise</h1>
-               <h1 class="heading-midtext-wide">Shaping Sustainable Solutions</h1>
-               <p class="heading-subtext">
-                  At Apex Analytics, our projects go beyond delivering reports—we create measurable impact.
-                  From environmental assessments to geotechnical surveys and sustainability programs,
-                  we partner with clients to achieve compliance, resilience, and long-term value.
-               </p>
-            </div>
-
-            <div class="projects-swiper">
-               <div class="swiper projectsSwiper">
-                  <div class="swiper-wrapper">
-
-                     <div class="swiper-slide">
-                        <div class="project">
-                           <div class="project-image_container">
-
-                              <img src="./img/apex-analytics-header-image-3.jpg"
-                                 alt="Apex Analytics Limited - Project 1" class="project-image">
-                           </div>
-
-                           <a class="project-name_container" href="#">
-                              <div class="heading-midtext-slim">
-                                 SPDC - Rivers State
-                              </div>
-
-                              <div class="heading-midtext-wide">
-                                 Underground Water Toxicity
-                              </div>
-                           </a>
-                        </div>
-                     </div>
-
-                     <div class="swiper-slide">
-                        <div class="project">
-                           <div class="project-image_container">
-
-                              <img src="./img/apex-analytics-header-image-2.jpg"
-                                 alt="Apex Analytics Limited - Project 1" class="project-image">
-                           </div>
-
-                           <a class="project-name_container" href="#">
-                              <div class="heading-midtext-slim">
-                                 NNPC - Delta State
-                              </div>
-
-                              <div class="heading-midtext-wide">
-                                 Underground Water Toxicity
-                              </div>
-                           </a>
-                        </div>
-                     </div>
-
-                     <div class="swiper-slide">
-                        <div class="project">
-                           <div class="project-image_container">
-
-                              <img src="./img/apex-analytics-header-image-1.jpg"
-                                 alt="Apex Analytics Limited - Project 1" class="project-image">
-                           </div>
-
-                           <a class="project-name_container" href="#">
-                              <div class="heading-midtext-slim">
-                                 Total Energies - Cross Rivers State
-                              </div>
-
-                              <div class="heading-midtext-wide">
-                                 Underground Water Toxicity
-                              </div>
-                           </a>
-                        </div>
-                     </div>
-
-                     <div class="swiper-slide">
-                        <div class="project">
-                           <div class="project-image_container">
-
-                              <img src="./img/apex-analytics-header-image-3.jpg"
-                                 alt="Apex Analytics Limited - Project 1" class="project-image">
-                           </div>
-
-                           <a class="project-name_container" href="#">
-                              <div class="heading-midtext-slim">
-                                 SPDC - Rivers State
-                              </div>
-
-                              <div class="heading-midtext-wide">
-                                 Underground Water Toxicity
-                              </div>
-                           </a>
-                        </div>
-                     </div>
-
-                     <div class="swiper-slide">
-                        <div class="project">
-                           <div class="project-image_container">
-
-                              <img src="./img/apex-analytics-header-image-2.jpg"
-                                 alt="Apex Analytics Limited - Project 1" class="project-image">
-                           </div>
-
-                           <a class="project-name_container" href="#">
-                              <div class="heading-midtext-slim">
-                                 NNPC - Delta State
-                              </div>
-
-                              <div class="heading-midtext-wide">
-                                 Underground Water Toxicity
-                              </div>
-                           </a>
-                        </div>
-                     </div>
-
-                     <div class="swiper-slide">
-                        <div class="project">
-                           <div class="project-image_container">
-
-                              <img src="./img/apex-analytics-header-image-1.jpg"
-                                 alt="Apex Analytics Limited - Project 1" class="project-image">
-                           </div>
-
-                           <a class="project-name_container" href="#">
-                              <div class="heading-midtext-slim">
-                                 Total Energies - Cross Rivers State
-                              </div>
-
-                              <div class="heading-midtext-wide">
-                                 Underground Water Toxicity
-                              </div>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="projects-pagination">
-               <div class="projects-pagination_left">
-                  <i class="fa-solid fa-chevron-left icon"></i>
-               </div>
-
-               <div class="projects-pagination_right">
-                  <i class="fa-solid fa-chevron-right icon"></i>
-               </div>
-
-            </div>
+      <section class="scrolling-text">
+         <div class="scrolling-track">
+            <span class="filled">Innovation.</span>
+            <span class="hollow">Precision.</span>
+            <span class="filled">Sustainability.</span>
+            <span class="hollow">Engineering.</span>
+            <span class="filled">Impact.</span>
+            <span class="hollow">Data-Driven.</span>
+            <span class="filled">Compliance.</span>
+            <span class="hollow">Expertise.</span>
+            <span class="filled">Solutions.</span>
+            <span class="hollow">Results.</span>
          </div>
       </section>
 
