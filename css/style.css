@@ -672,6 +672,7 @@ body {
   overflow: hidden;
   width: 100%;
   max-width: 30rem;
+  margin: 0 auto;
   transition: all .6s ease-in-out; }
   .member-card:hover .image-container_image {
     transform: scale(1.1); }
@@ -1012,7 +1013,7 @@ body {
           width: 160rem; } }
       .section-projects .projects-heading .heading-subtext {
         color: #000;
-        width: 70%;
+        width: 85%;
         margin: 1.5rem auto; }
     .section-projects .projects-swiper {
       display: flex;
@@ -1236,6 +1237,14 @@ body {
         width: max-content; }
         .section-footer .footer-nav_container .heading-midtext-wide {
           color: #1a3b60; }
+        .section-footer .footer-nav_container .list:not(:last-child) {
+          margin-bottom: .7rem; }
+        .section-footer .footer-nav_container a {
+          text-decoration: none;
+          transition: all 0.5s ease; }
+          .section-footer .footer-nav_container a:hover, .section-footer .footer-nav_container a:active {
+            color: #2170bf;
+            font-weight: 600; }
     .section-footer .footer-contact .heading-midtext-wide {
       color: #1a3b60; }
     .section-footer .footer-contact_info .heading-subtext {
@@ -1288,6 +1297,8 @@ body {
     padding: 2rem 5rem;
     border-top: 1px solid rgba(26, 59, 96, 0.2);
     width: 100%; }
+    .section-copyright .copyright .copyright-text.heading-minitext {
+      font-size: 1.2rem; }
     @media only screen and (min-width: 100em) {
       .section-copyright .copyright {
         width: 160rem; } }
@@ -1299,8 +1310,10 @@ body {
 .about-page-hero,
 .services-page-hero,
 .projects-page-hero,
-.team-members-page-hero {
-  padding: 10rem 3rem;
+.team-members-page-hero,
+.single-members-page-hero,
+.contact-page-hero {
+  padding: 5.5rem 3rem;
   background-repeat: no-repeat;
   height: max-content;
   position: relative;
@@ -1308,15 +1321,39 @@ body {
   .about-page-hero .about-page-background,
   .about-page-hero .services-page-background,
   .about-page-hero .projects-page-background,
+  .about-page-hero .team-members-page-background,
+  .about-page-hero .single-members-page-background,
+  .about-page-hero .contact-page-background,
   .services-page-hero .about-page-background,
   .services-page-hero .services-page-background,
   .services-page-hero .projects-page-background,
+  .services-page-hero .team-members-page-background,
+  .services-page-hero .single-members-page-background,
+  .services-page-hero .contact-page-background,
   .projects-page-hero .about-page-background,
   .projects-page-hero .services-page-background,
   .projects-page-hero .projects-page-background,
+  .projects-page-hero .team-members-page-background,
+  .projects-page-hero .single-members-page-background,
+  .projects-page-hero .contact-page-background,
   .team-members-page-hero .about-page-background,
   .team-members-page-hero .services-page-background,
-  .team-members-page-hero .projects-page-background {
+  .team-members-page-hero .projects-page-background,
+  .team-members-page-hero .team-members-page-background,
+  .team-members-page-hero .single-members-page-background,
+  .team-members-page-hero .contact-page-background,
+  .single-members-page-hero .about-page-background,
+  .single-members-page-hero .services-page-background,
+  .single-members-page-hero .projects-page-background,
+  .single-members-page-hero .team-members-page-background,
+  .single-members-page-hero .single-members-page-background,
+  .single-members-page-hero .contact-page-background,
+  .contact-page-hero .about-page-background,
+  .contact-page-hero .services-page-background,
+  .contact-page-hero .projects-page-background,
+  .contact-page-hero .team-members-page-background,
+  .contact-page-hero .single-members-page-background,
+  .contact-page-hero .contact-page-background {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1330,28 +1367,59 @@ body {
   .about-page-hero .about-page-background,
   .services-page-hero .about-page-background,
   .projects-page-hero .about-page-background,
-  .team-members-page-hero .about-page-background {
+  .team-members-page-hero .about-page-background,
+  .single-members-page-hero .about-page-background,
+  .contact-page-hero .about-page-background {
     background-image: url(../img/apex-analytics-header-image-1.jpg); }
   .about-page-hero .services-page-background,
   .services-page-hero .services-page-background,
   .projects-page-hero .services-page-background,
-  .team-members-page-hero .services-page-background {
+  .team-members-page-hero .services-page-background,
+  .single-members-page-hero .services-page-background,
+  .contact-page-hero .services-page-background {
     background-image: url(../img/apex-analytics-header-image-2.jpg); }
   .about-page-hero .projects-page-background,
   .services-page-hero .projects-page-background,
   .projects-page-hero .projects-page-background,
-  .team-members-page-hero .projects-page-background {
+  .team-members-page-hero .projects-page-background,
+  .single-members-page-hero .projects-page-background,
+  .contact-page-hero .projects-page-background {
+    background-image: url(../img/apex-analytics-header-image-3.jpg); }
+  .about-page-hero .team-members-page-background,
+  .services-page-hero .team-members-page-background,
+  .projects-page-hero .team-members-page-background,
+  .team-members-page-hero .team-members-page-background,
+  .single-members-page-hero .team-members-page-background,
+  .contact-page-hero .team-members-page-background {
+    background-image: url(../img/apex-analytics-header-image-3.jpg); }
+  .about-page-hero .single-members-page-background,
+  .services-page-hero .single-members-page-background,
+  .projects-page-hero .single-members-page-background,
+  .team-members-page-hero .single-members-page-background,
+  .single-members-page-hero .single-members-page-background,
+  .contact-page-hero .single-members-page-background {
+    background-image: url(../img/apex-analytics-header-image-3.jpg); }
+  .about-page-hero .contact-page-background,
+  .services-page-hero .contact-page-background,
+  .projects-page-hero .contact-page-background,
+  .team-members-page-hero .contact-page-background,
+  .single-members-page-hero .contact-page-background,
+  .contact-page-hero .contact-page-background {
     background-image: url(../img/apex-analytics-header-image-3.jpg); }
   @media only screen and (max-width: 30.5em) {
     .about-page-hero,
     .services-page-hero,
     .projects-page-hero,
-    .team-members-page-hero {
+    .team-members-page-hero,
+    .single-members-page-hero,
+    .contact-page-hero {
       padding: 10rem 1.5rem; } }
   .about-page-hero_container,
   .services-page-hero_container,
   .projects-page-hero_container,
-  .team-members-page-hero_container {
+  .team-members-page-hero_container,
+  .single-members-page-hero_container,
+  .contact-page-hero_container {
     width: 100%;
     height: 100%;
     padding-left: 2rem;
@@ -1362,19 +1430,25 @@ body {
       .about-page-hero_container,
       .services-page-hero_container,
       .projects-page-hero_container,
-      .team-members-page-hero_container {
+      .team-members-page-hero_container,
+      .single-members-page-hero_container,
+      .contact-page-hero_container {
         width: 160rem; } }
     @media only screen and (max-width: 50.3em) {
       .about-page-hero_container,
       .services-page-hero_container,
       .projects-page-hero_container,
-      .team-members-page-hero_container {
+      .team-members-page-hero_container,
+      .single-members-page-hero_container,
+      .contact-page-hero_container {
         padding-left: 0rem;
         padding-right: 0rem; } }
     .about-page-hero_container .hero-text,
     .services-page-hero_container .hero-text,
     .projects-page-hero_container .hero-text,
-    .team-members-page-hero_container .hero-text {
+    .team-members-page-hero_container .hero-text,
+    .single-members-page-hero_container .hero-text,
+    .contact-page-hero_container .hero-text {
       position: relative;
       z-index: 1;
       padding: 3rem 0;
@@ -1383,14 +1457,18 @@ body {
       .about-page-hero_container .hero-text .heading-text,
       .services-page-hero_container .hero-text .heading-text,
       .projects-page-hero_container .hero-text .heading-text,
-      .team-members-page-hero_container .hero-text .heading-text {
+      .team-members-page-hero_container .hero-text .heading-text,
+      .single-members-page-hero_container .hero-text .heading-text,
+      .contact-page-hero_container .hero-text .heading-text {
         font-size: 6rem;
         margin-bottom: 1.5rem;
         color: #fff; }
       .about-page-hero_container .hero-text_nav,
       .services-page-hero_container .hero-text_nav,
       .projects-page-hero_container .hero-text_nav,
-      .team-members-page-hero_container .hero-text_nav {
+      .team-members-page-hero_container .hero-text_nav,
+      .single-members-page-hero_container .hero-text_nav,
+      .contact-page-hero_container .hero-text_nav {
         display: inline-flex;
         width: auto;
         padding: 1rem;
@@ -1400,21 +1478,29 @@ body {
         .about-page-hero_container .hero-text_nav--icon,
         .services-page-hero_container .hero-text_nav--icon,
         .projects-page-hero_container .hero-text_nav--icon,
-        .team-members-page-hero_container .hero-text_nav--icon {
+        .team-members-page-hero_container .hero-text_nav--icon,
+        .single-members-page-hero_container .hero-text_nav--icon,
+        .contact-page-hero_container .hero-text_nav--icon {
           color: #fff;
           background-color: #2170bf;
           padding: .5rem;
-          margin-right: 1rem; }
+          margin-right: 1rem;
+          font-size: 1.5rem; }
         .about-page-hero_container .hero-text_nav .heading-subtext,
         .services-page-hero_container .hero-text_nav .heading-subtext,
         .projects-page-hero_container .hero-text_nav .heading-subtext,
-        .team-members-page-hero_container .hero-text_nav .heading-subtext {
+        .team-members-page-hero_container .hero-text_nav .heading-subtext,
+        .single-members-page-hero_container .hero-text_nav .heading-subtext,
+        .contact-page-hero_container .hero-text_nav .heading-subtext {
           color: #000;
-          font-weight: 600; }
+          font-weight: 600;
+          font-size: 1.5rem; }
           .about-page-hero_container .hero-text_nav .heading-subtext .color,
           .services-page-hero_container .hero-text_nav .heading-subtext .color,
           .projects-page-hero_container .hero-text_nav .heading-subtext .color,
-          .team-members-page-hero_container .hero-text_nav .heading-subtext .color {
+          .team-members-page-hero_container .hero-text_nav .heading-subtext .color,
+          .single-members-page-hero_container .hero-text_nav .heading-subtext .color,
+          .contact-page-hero_container .hero-text_nav .heading-subtext .color {
             color: #2170bf; }
 
 .about-page-about,
@@ -2550,29 +2636,51 @@ body {
         max-width: 1200px;
         margin: 0 auto;
         /* RESPONSIVE */ }
-        .member-detail_container--content .experience-section .experience-container .skill p {
+        .member-detail_container--content .experience-section .experience-container .grid-left .skill p {
           display: flex;
           justify-content: space-between;
           font-size: 1.4rem;
           margin-bottom: 0.5rem;
           font-family: "Familjen Grotesk", sans-serif; }
-        .member-detail_container--content .experience-section .experience-container .progress-bar {
+        .member-detail_container--content .experience-section .experience-container .grid-left .progress-bar {
           background: #ddd;
           border-radius: 50px;
           height: 10px;
           overflow: hidden; }
-        .member-detail_container--content .experience-section .experience-container .progress {
+        .member-detail_container--content .experience-section .experience-container .grid-left .progress {
           height: 100%;
           background: #2170bf;
           border-radius: 50px;
           transition: width 0.4s ease; }
-        .member-detail_container--content .experience-section .experience-container .swiper-placeholder {
-          height: 200px;
-          background: #e0e0e0;
-          border-radius: 8px;
+        .member-detail_container--content .experience-section .experience-container .grid-right .key-projects {
+          list-style: none;
+          padding: 0;
+          margin: 0;
           display: flex;
-          justify-content: center;
-          align-items: center; }
+          flex-direction: column;
+          gap: 1.5rem; }
+        .member-detail_container--content .experience-section .experience-container .grid-right .key-projects li {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          background: #f8f9fa;
+          padding: 1rem 1.5rem;
+          border-radius: 12px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+          transition: transform 0.2s ease; }
+          .member-detail_container--content .experience-section .experience-container .grid-right .key-projects li:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1); }
+        .member-detail_container--content .experience-section .experience-container .grid-right .key-projects .icon {
+          font-size: 2rem;
+          color: #2170bf;
+          /* Customize to brand color */
+          flex-shrink: 0; }
+        .member-detail_container--content .experience-section .experience-container .grid-right .key-projects strong {
+          display: block;
+          margin-bottom: 0.3rem;
+          font-size: 1.4rem;
+          color: #333; }
         @media (max-width: 768px) {
           .member-detail_container--content .experience-section .experience-container .experience-container {
             grid-template-columns: 1fr; } }
@@ -2739,57 +2847,140 @@ body {
       .member-detail_container--content .content-pagination .material-symbols-sharp.icon_2 {
         transform: translateX(-100%); }
 
-.naira-input-container input {
-  padding-left: 3rem; }
-
-.naira-input-container {
+.contact-detail {
   position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%; }
+  background-color: #fff;
+  height: max-content;
+  transition: margin-top 0.5s ease;
+  padding: 8rem 3rem;
+  /* The main container for the horizontal scroll */ }
+  .contact-detail_container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 47%;
+    gap: 3rem;
+    position: relative;
+    z-index: 1; }
+    @media only screen and (min-width: 100em) {
+      .contact-detail_container {
+        width: 160rem; } }
+    .contact-detail_container .contact-left_container .contact-left-aside_group {
+      display: flex;
+      gap: 1.5rem; }
+    .contact-detail_container .contact-left_container .contact-left-aside_info {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+      width: 50%; }
+      .contact-detail_container .contact-left_container .contact-left-aside_info .icon {
+        font-size: 4.5rem;
+        color: #2170bf; }
+      .contact-detail_container .contact-left_container .contact-left-aside_info a {
+        text-decoration: none;
+        color: #000; }
+        .contact-detail_container .contact-left_container .contact-left-aside_info a:hover {
+          text-decoration: none;
+          color: #000; }
+      .contact-detail_container .contact-left_container .contact-left-aside_info .bold {
+        font-weight: bold;
+        color: #112540; }
+    .contact-detail_container .contact-left .aside-top_image {
+      width: 100%;
+      height: 35rem;
+      overflow: hidden;
+      border-radius: 10px; }
+      .contact-detail_container .contact-left .aside-top_image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: inherit; }
+    .contact-detail_container .contact-form {
+      flex: 1;
+      padding-left: 2rem;
+      display: flex;
+      flex-direction: column; }
+      @media only screen and (max-width: 25.5em) {
+        .contact-detail_container .contact-form {
+          padding: 2rem; } }
+      .contact-detail_container .contact-form .form .form-group {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem; }
+        .contact-detail_container .contact-form .form .form-group.full-width {
+          flex-direction: column; }
+        .contact-detail_container .contact-form .form .form-group .input-container {
+          width: 100%; }
 
-.naira {
-  position: absolute;
-  font-family: inherit;
-  font-weight: 500;
-  color: #274029;
-  font-size: 1.6rem;
-  left: 10px; }
+.map-section {
+  position: relative;
+  background-color: #fff;
+  height: max-content;
+  transition: margin-top 0.5s ease;
+  padding: 8rem 0rem 0rem 0rem;
+  /* The main container for the horizontal scroll */ }
+  .map-section_container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 47%;
+    gap: 3rem;
+    position: relative;
+    z-index: 1; }
+    .map-section_container .map {
+      flex: 1; }
+      .map-section_container .map iframe {
+        width: 100%;
+        height: 100%; }
+        @media only screen and (max-width: 38.6em) {
+          .map-section_container .map iframe {
+            height: 30rem; } }
 
 label {
   display: block;
   text-align: left;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  margin-bottom: .5rem;
-  color: #274029; }
+  margin-bottom: .5rem; }
 
 input,
-select {
+select,
+textarea {
   margin-bottom: 2rem;
   height: 5rem;
   width: 100%;
-  outline: 1.5px solid #000;
+  outline: 1.5px solid #e6e6e6;
   padding: 1rem;
-  padding-left: 3rem;
   font-size: 1.6rem;
   font-family: inherit;
-  font-weight: 500;
-  color: #47844b;
+  font-weight: 400;
+  color: #112540;
   border: none;
   background-color: #ffffff;
-  border-radius: 50px;
-  box-shadow: 0 1px 2px rgba(71, 132, 75, 0.5);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(33, 112, 191, 0.5);
   transition: all 0.3s ease; }
   @media only screen and (max-width: 30.5em) {
     input,
-    select {
+    select,
+    textarea {
       width: 100%; } }
   input:focus, input:valid,
   select:focus,
-  select:valid {
+  select:valid,
+  textarea:focus,
+  textarea:valid {
     background-color: #fff;
-    box-shadow: 0 0 0.3rem 0.5rem rgba(71, 132, 75, 0.36); }
+    outline: 1.5px solid #2170bf; }
+
+textarea {
+  height: auto; }
 
 .double-input {
   display: flex;
@@ -2861,7 +3052,8 @@ select {
   font-size: 1.3rem;
   line-height: 22px;
   cursor: pointer;
-  transition: color 0.3s ease; }
+  transition: color 0.3s ease;
+  white-space: nowrap; }
   .btn::before {
     content: "";
     position: absolute;

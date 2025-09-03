@@ -1011,6 +1011,7 @@
    overflow: hidden;
    width: 100%;
    max-width: 30rem;
+   margin: 0 auto;
    // box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
    transition: all .6s ease-in-out;
 
@@ -1563,7 +1564,7 @@
 
          .heading-subtext {
             color: $color-grey-dark-1;
-            width: 70%;
+            width: 85%;
             margin: 1.5rem auto;
          }
 
@@ -1899,6 +1900,25 @@
             .heading-midtext-wide {
                color: $color-primary-900;
             }
+
+            .list {
+               &:not(:last-child) {
+                  margin-bottom: .7rem;
+               }
+            }
+
+            a {
+               text-decoration: none;
+               transition: all 0.5s ease;
+
+
+
+               &:hover,
+               &:active {
+                  color: $color-primary;
+                  font-weight: 600;
+               }
+            }
          }
       }
 
@@ -1981,6 +2001,10 @@
       border-top: 1px solid rgba($color-primary-900, 0.2);
       width: 100%;
 
+      .copyright-text.heading-minitext {
+         font-size: 1.2rem;
+      }
+
       @media only screen and (min-width: $bp-monitor) {
          width: 160rem;
       }
@@ -1998,8 +2022,10 @@
 .about-page-hero,
 .services-page-hero,
 .projects-page-hero,
-.team-members-page-hero {
-   padding: 10rem 3rem;
+.team-members-page-hero,
+.single-members-page-hero,
+.contact-page-hero {
+   padding: 5.5rem 3rem;
    // background-color: #2a2f35;
    background-repeat: no-repeat;
    height: max-content;
@@ -2012,7 +2038,10 @@
 
    .about-page-background,
    .services-page-background,
-   .projects-page-background {
+   .projects-page-background,
+   .team-members-page-background,
+   .single-members-page-background,
+   .contact-page-background {
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -2034,6 +2063,18 @@
    }
 
    .projects-page-background {
+      background-image: url(../img/apex-analytics-header-image-3.jpg);
+   }
+
+   .team-members-page-background {
+      background-image: url(../img/apex-analytics-header-image-3.jpg);
+   }
+
+   .single-members-page-background {
+      background-image: url(../img/apex-analytics-header-image-3.jpg);
+   }
+
+   .contact-page-background {
       background-image: url(../img/apex-analytics-header-image-3.jpg);
    }
 
@@ -2087,11 +2128,13 @@
                background-color: $color-primary;
                padding: .5rem;
                margin-right: 1rem;
+               font-size: 1.5rem;
             }
 
             .heading-subtext {
                color: $color-grey-dark-1;
                font-weight: 600;
+               font-size: 1.5rem;
 
                .color {
                   color: $color-primary;
@@ -4002,37 +4045,74 @@
                max-width: 1200px;
                margin: 0 auto;
 
-               .skill p {
-                  display: flex;
-                  justify-content: space-between;
-                  font-size: 1.4rem;
-                  margin-bottom: 0.5rem;
-                  font-family: $font-primary;
+               .grid-left {
+                  .skill p {
+                     display: flex;
+                     justify-content: space-between;
+                     font-size: 1.4rem;
+                     margin-bottom: 0.5rem;
+                     font-family: $font-primary;
+                  }
+
+                  .progress-bar {
+                     background: #ddd;
+                     border-radius: 50px;
+                     height: 10px;
+                     overflow: hidden;
+                  }
+
+                  .progress {
+                     height: 100%;
+                     background: $color-primary;
+                     border-radius: 50px;
+                     transition: width 0.4s ease;
+                  }
                }
 
-               .progress-bar {
-                  background: #ddd;
-                  border-radius: 50px;
-                  height: 10px;
-                  overflow: hidden;
-               }
-
-               .progress {
-                  height: 100%;
-                  background: $color-primary;
-                  border-radius: 50px;
-                  transition: width 0.4s ease;
-               }
+               .grid-right {
 
 
-               .swiper-placeholder {
-                  height: 200px;
-                  background: #e0e0e0;
-                  border-radius: 8px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
+                  .key-projects {
+                     list-style: none;
+                     padding: 0;
+                     margin: 0;
+                     display: flex;
+                     flex-direction: column;
+                     gap: 1.5rem;
+                  }
+
+                  .key-projects li {
+                     display: flex;
+                     align-items: center;
+                     gap: 1rem;
+                     background: #f8f9fa;
+                     padding: 1rem 1.5rem;
+                     border-radius: 12px;
+                     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+                     transition: transform 0.2s ease;
+
+                     &:hover {
+                        transform: translateY(-4px);
+                        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+                     }
+                  }
+
+
+                  .key-projects .icon {
+                     font-size: 2rem;
+                     color: $color-primary;
+                     /* Customize to brand color */
+                     flex-shrink: 0;
+                  }
+
+                  .key-projects strong {
+                     display: block;
+                     margin-bottom: 0.3rem;
+                     font-size: 1.4rem;
+                     color: #333;
+                  }
                }
+
 
                /* RESPONSIVE */
                @media (max-width: 768px) {
@@ -4334,6 +4414,192 @@
          }
 
 
+      }
+   }
+}
+
+.contact-detail {
+   position: relative;
+   background-color: $color-grey-light-1;
+   height: max-content;
+   transition: margin-top 0.5s ease;
+   padding: 8rem 3rem;
+
+   /* The main container for the horizontal scroll */
+   &_container {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      // text-align: center;
+
+      display: grid;
+      grid-template-columns: 50% 47%;
+      // grid-template-rows: 1fr 1fr;
+      gap: 3rem;
+
+      position: relative;
+      z-index: 1;
+
+      @media only screen and (min-width: $bp-monitor) {
+         width: 160rem;
+      }
+
+
+      // // Tablet breakpoint
+      // @media only screen and (max-width: 900px) {
+      //    grid-template-columns: 1fr; // Single column
+      //    grid-template-rows: auto auto;
+      // }
+
+      // // Mobile breakpoint
+      // @media only screen and (max-width: 600px) {
+      //    padding: 5rem 2rem;
+      //    gap: 3rem;
+      // }
+
+
+
+      .contact-left {
+
+         // padding: 0 2rem;
+
+
+         &_container {
+            // padding-top: 1rem;
+
+            .contact-left-aside {
+
+               &_group {
+                  display: flex;
+                  gap: 1.5rem;
+               }
+
+               &_info {
+                  display: flex;
+                  align-items: center;
+                  gap: 1.5rem;
+                  list-style: none;
+                  padding-bottom: 1.5rem;
+                  margin-bottom: 1.5rem;
+                  width: 50%;
+
+                  .icon {
+                     font-size: 4.5rem;
+                     color: $color-primary;
+                  }
+
+                  a {
+                     text-decoration: none;
+                     color: $color-grey-dark-1;
+
+                     &:hover {
+                        text-decoration: none;
+                        color: $color-grey-dark-1;
+                     }
+                  }
+
+                  .bold {
+                     font-weight: bold;
+                     color: $color-primary-950;
+
+                  }
+               }
+
+            }
+         }
+
+
+         .aside-top_image {
+            width: 100%;
+            height: 35rem; // ✅ Fixed height box
+            overflow: hidden; // ✅ Hide anything that overflows
+            border-radius: 10px;
+
+            img {
+               width: 100%;
+               height: 100%; // ✅ Force the image to fill the box
+               object-fit: cover; // ✅ Crop instead of distort
+               display: block;
+               border-radius: inherit; // match parent radius
+            }
+         }
+      }
+
+
+      .contact-form {
+         flex: 1;
+         padding-left: 2rem;
+         display: flex;
+         flex-direction: column;
+
+         @media only screen and (max-width:$bp-small-extra) {
+            padding: 2rem;
+         }
+
+
+         .heading-midtext,
+         .heading-minitext {
+            // margin-bottom: 1.5rem;
+         }
+
+         .form {
+            .form-group {
+               display: flex;
+               gap: 1rem;
+               margin-bottom: 1rem;
+
+               &.full-width {
+                  flex-direction: column;
+               }
+
+               .input-container {
+                  width: 100%;
+               }
+            }
+
+         }
+      }
+
+
+
+
+   }
+}
+
+.map-section {
+   position: relative;
+   background-color: $color-grey-light-1;
+   height: max-content;
+   transition: margin-top 0.5s ease;
+   padding: 8rem 0rem 0rem 0rem;
+
+   /* The main container for the horizontal scroll */
+   &_container {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      // text-align: center;
+
+      display: grid;
+      grid-template-columns: 50% 47%;
+      // grid-template-rows: 1fr 1fr;
+      gap: 3rem;
+
+      position: relative;
+      z-index: 1;
+
+      .map {
+         flex: 1;
+
+         iframe {
+            width: 100%;
+            height: 100%;
+
+
+            @media only screen and (max-width:$bp-medium) {
+               height: 30rem;
+            }
+         }
       }
    }
 }

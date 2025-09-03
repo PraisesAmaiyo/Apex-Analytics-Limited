@@ -27,7 +27,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=format_quote" /> -->
 
 
-   <link rel="stylesheet" href="/css/style.css" />
+   <link rel="stylesheet" href="css/style.css" />
 
    <!-- Favicon -->
    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -47,10 +47,14 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-   <!-- Javascript and Third-Party CDNs -->
-   <script defer type="module" src="/JS/script.js"></script>
+   <!-- particles.js -->
+   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-   <script defer type="module" src="/JS/swiper.js"></script>
+
+   <!-- Javascript and Third-Party CDNs -->
+   <script defer type="module" src="JS/script.js"></script>
+
+   <script defer type="module" src="JS/swiper.js"></script>
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -107,19 +111,19 @@
                <div class="main-nav-bottom_left">
 
                   <a href="/index.html">
-                     <img class="logo" alt="Apex Analytics Limited logo" src="/img/logo.png" />
+                     <img class="logo" alt="Apex Analytics Limited logo" src="img/logo.png" />
                   </a>
 
                   <ul class="main-nav-list">
                      <li><a class="main-nav-link   " href="/index.html">Home</a></li>
 
-                     <li><a class="main-nav-link " href="/about-us.html">About</a></li>
+                     <li><a class="main-nav-link" href="/about-us.html">About</a></li>
 
                      <!-- Services with Dropdown -->
-                     <li class="nav-item dropdown ">
-                        <a class="main-nav-link " href="/services.html">
+                     <li class="nav-item dropdown">
+                        <a class="main-nav-link" href="/services.html">
                            Services
-                           <span class="material-symbols-sharp icon">
+                           <span class="material-symbols-sharp">
                               keyboard_arrow_down
                            </span>
                         </a>
@@ -135,9 +139,9 @@
 
                      <li><a class="main-nav-link" href="/projects.html">Projects</a></li>
 
-                     <li><a class="main-nav-link active" href="/team-members.html">Team Members</a></li>
+                     <li><a class="main-nav-link" href="/team-members.html">Team Members</a></li>
 
-                     <li><a class="main-nav-link" href="/contact-us.html">Contact Us</a></li>
+                     <li><a class="main-nav-link active" href="/contact-us.html">Contact Us</a></li>
                   </ul>
                </div>
 
@@ -161,13 +165,14 @@
 
 
                   <div class="">
-                     <a href="../assets/APEX ANALYTICS LIMITED COMPANY PROFILE.pdf" target="_blank">
+                     <a href="./assets/APEX ANALYTICS LIMITED COMPANY PROFILE.pdf" target="_blank">
                         <button class="btn primary-btn">Company Profile</button>
                      </a>
                   </div>
                </div>
             </div>
          </nav>
+
 
          <button class="btn-mobile-nav">
             <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
@@ -176,25 +181,24 @@
 
       </header>
 
-
-      <section class="single-members-page-hero">
-         <div class="single-members-page-background"></div>
+      <section class="contact-page-hero">
+         <div class="contact-page-background"></div>
 
          <!-- <div id="particles-js"></div> -->
 
-         <div class="single-members-page-hero_container">
+         <div class="contact-page-hero_container">
             <div class="hero-text">
                <h1 class="heading-text">
-                  Preye Ejenabedia
+                  Contact Us
                </h1>
 
                <div class="hero-text_nav">
-                  <span class="material-symbols-sharp icon hero-text_nav--icon ">
+                  <span class="material-symbols-sharp hero-text_nav--icon ">
                      house
                   </span>
 
                   <p class="heading-subtext">
-                     Home &nbsp;/ &nbsp;<span class="color">Preye Ejenabedia</span>
+                     Home &nbsp;/ &nbsp;<span class="color">Contact Us</span>
                   </p>
                </div>
 
@@ -202,302 +206,147 @@
          </div>
       </section>
 
-      <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+      <section class="contact-detail" itemscope itemtype="https://schema.org/Organization">
          <meta itemprop="name" content="Apex Analytics Limited" />
-      </span>
 
-      <section class="member-detail" itemscope itemtype="https://schema.org/Person">
-         <div class="member-detail_container">
-            <meta itemprop="name" content="Preye Ejenabedia" />
-            <meta itemprop="url" content="https://apex-ng.com/team/preye-ejenabedia" />
-            <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
-               <meta itemprop="name" content="Apex Analytics Limited" />
-            </span>
+         <div class="contact-detail_container">
 
+            <div class="contact-left">
+               <div class="contact-left_container">
+                  <h1 class="heading-midtext-wide mb-2">
+                     Get In touch
+                  </h1>
 
-            <div class="member-detail_container--aside">
-               <div class="aside-top_image">
-                  <img src="../img/reviews/review-3.jpg"
-                     alt="Preye Ejenabedia - Head of Laboratory at Apex Analytics Limited" itemprop="image">
-               </div>
+                  <p class="heading-minitext mb-2" itemprop="description">
+                     We’re here to help you with all your environmental testing, geoscience, and sustainability needs.
+                     Whether you’re seeking expert advice, requesting a quote, or partnering on a project, our team is
+                     just a call or message away.
+                  </p>
 
-               <div class="aside-header">
-                  <div class="aside-header_container">
-                     <h1 class="heading-midtext mb-2">
-                        Team Member Information
-                     </h1>
+                  <div class="contact-left-aside">
 
-                     <p class="heading-minitext mb-2" itemprop="description">
-                        Preye Ejenabedia has over 5 years of hands-on experience in managing chemical and
-                        environmental testing. Known for building efficient workflows, mentoring teams, and maintaining
-                        high testing standards. Passionate about delivering accurate, reliable results that help
-                        organizations make informed decisions and stay compliant with industry regulations.
-                     </p>
+                     <ul class="contact-left-aside_group">
 
-                     <div class="aside-members">
+                        <li class="contact-left-aside_info">
 
-                        <ul class="aside-members_group">
-
-                           <li class="aside-members_info">
-
-                              <span class="material-symbols-sharp icon">
-                                 phone_in_talk
-                              </span>
-
-                              <div class="aside-members_info--text">
-                                 <p class="heading-minitext">Phone</p>
-                                 <a href="tel:+2347051859488" class="heading-minitext bold" itemprop="telephone">+234
-                                    705
-                                    185 9488</a>
-                              </div>
-
-                           </li>
-
-                           <li class="aside-members_info">
-
-                              <span class="material-symbols-sharp icon">
-                                 work_history
-                              </span>
-
-                              <div class="aside-members_info--text">
-                                 <p class="heading-minitext">Experience</p>
-                                 <h5 class="heading-minitext bold">More Than 5+ Years</h5>
-                              </div>
-
-                           </li>
-                        </ul>
-
-
-                        <ul class="aside-members_group">
-                           <li class="aside-members_info">
-
-                              <span class="material-symbols-sharp icon">
-                                 mail
-                              </span>
-
-                              <div class="aside-members_info--text">
-                                 <p class="heading-minitext">Email</p>
-                                 <a href="mailto:preyeejenabedia@apex-ng.com" itemprop="email"
-                                    class="heading-minitext bold">preyeejenabedia@apex-ng.com</a>
-                              </div>
-
-                           </li>
-
-                           <li class="aside-members_info">
-                              <span class="material-symbols-sharp icon">
-                                 assignment_ind
-                              </span>
-
-                              <div class="aside-members_info--text">
-                                 <p class="heading-minitext">Role/Position</p>
-                                 <h5 class="heading-minitext bold" itemprop="jobTitle">Head of Laboratory
-                           </li>
-                     </div>
-
-
-
-                     <h3 class="heading-midtext">Let’s Connect</h3>
-
-                     <div class="aside-members_bottom">
-
-                        <div class="aside-members_socials">
-                           <a href="https://www.facebook.com/Apex-Analytics-Limited-181927449221499" itemprop="sameAs"
-                              target="_blank" class="nav-icon">
-                              <i class="fa-brands fa-facebook-f icon"></i>
-                           </a>
-
-                           <a href="https://x.com/apexanalyticslt" itemprop="sameAs" target="_blank" class="nav-icon">
-                              <i class="fa-brands fa-twitter icon"></i>
-                           </a>
-
-                           <a href="https://www.linkedin.com/company/apex-analytics-limited/" itemprop="sameAs"
-                              target="_blank" class="nav-icon">
-                              <i class="fa-brands fa-linkedin icon"></i>
-                           </a>
-                        </div>
-
-                        <div class="">
-                           <a href="../assets/APEX ANALYTICS LIMITED COMPANY PROFILE.pdf" target="_blank"
-                              itemprop="sameAs">
-                              <button class="btn primary-btn">View CV (PDF)</button>
-                           </a>
-                        </div>
-
-                     </div>
-                  </div>
-
-               </div>
-            </div>
-         </div>
-
-         <div class="member-detail_container--content">
-
-            <div class="experience-section">
-               <div class="experience-container">
-                  <!-- LEFT GRID -->
-                  <div class="grid-left">
-                     <h2 class="heading-midtext mb-2">Professional Experience</h2>
-                     <p class="heading-minitext mb-3">
-                        Experienced laboratory professional specializing in environmental testing, chemical analysis,
-                        and laboratory quality systems. Skilled in running instrumentation and delivering reliable
-                        data for environmental and industrial assessments.
-                     </p>
-
-                     <div class="skill mb-2">
-                        <p>Environmental & Industrial Sample Testing <span>92%</span></p>
-
-                        <div class="progress-bar">
-                           <div class="progress" style="width: 92%;"></div>
-                        </div>
-                     </div>
-
-                     <div class="skill mb-2">
-                        <p>Laboratory Quality Management & Accreditation<span>90%</span></p>
-                        <div class="progress-bar">
-                           <div class="progress" style="width: 90%;"></div>
-                        </div>
-                     </div>
-
-                     <div class="skill mb-2">
-                        <p>Instrument Calibration & Advanced Microscopy <span>86%</span></p>
-                        <div class="progress-bar">
-                           <div class="progress" style="width: 86%;"></div>
-                        </div>
-                     </div>
-
-                     <div class="skill mb-2">
-                        <p>Research & Method Development <span>80%</span></p>
-                        <div class="progress-bar">
-                           <div class="progress" style="width: 80%;"></div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <!-- RIGHT GRID -->
-                  <div class="grid-right">
-                     <h3 class="heading-midtext mb-2">Key Projects Worked On</h3>
-                     <p class="heading-minitext mb-3">
-                        Helped improve testing processes, ensured compliance with industry standards, and supported
-                        numerous environmental projects and audits.
-                     </p>
-                     <ul class="key-projects">
-                        <li>
                            <span class="material-symbols-sharp icon">
-                              priority
+                              location_on
                            </span>
-                           <div>
-                              <h6 class="heading-minitext">Oil Spill Impact Assessment – Niger Delta (2023)</h6>
 
+                           <div class="contact-left-aside_info--text">
+                              <p class="heading-minitext bold">Our Address</p>
+                              <p class="heading-minitext " itemprop="address">3 Nyokuru Close, off Estate Road,
+                                 Rumuogba, Port Harcourt</p>
                            </div>
+
                         </li>
 
-                        <li>
+                        <li class="contact-left-aside_info">
+
                            <span class="material-symbols-sharp icon">
-                              priority
+                              headphones
                            </span>
-                           <div>
-                              <h6 class="heading-minitext">Industrial Wastewater Compliance Testing – MRS
-                                 (2022)</h6>
+                           <div class="contact-left-aside_info--text">
+                              <p class="heading-minitext bold">Phone</p>
+                              <a href="tel:+2349010642299" class="heading-minitext " itemprop="telephone">+234 901
+                                 064 2299</a>
                            </div>
-                        </li>
 
-                        <li>
-                           <span class="material-symbols-sharp icon">
-                              priority
-                           </span>
-                           <div>
-                              <h6 class="heading-minitext">ISO 17025 Laboratory Accreditation Drive (2021)</h6>
-
-                           </div>
-                        </li>
-
-                        <li>
-                           <span class="material-symbols-sharp icon">
-                              priority
-                           </span>
-                           <div>
-                              <h6 class="heading-minitext">Pipeline Integrity Monitoring Program – Mobil
-                                 (2021)</h6>
-
-                           </div>
-                        </li>
-
-                        <li>
-                           <span class="material-symbols-sharp icon">
-                              priority
-                           </span>
-                           <div>
-                              <h6 class="heading-minitext">Environmental Baseline Studies (EBS) – Offshore Drilling
-                                 Operations (2020)</h6>
-                           </div>
                         </li>
                      </ul>
 
+
+                     <ul class="contact-left-aside_group">
+                        <li class="contact-left-aside_info">
+
+                           <span class="material-symbols-sharp icon">
+                              mail
+                           </span>
+
+                           <div class="contact-left-aside_info--text">
+                              <p class="heading-minitext bold">Email</p>
+                              <a href="mailto:info@apex-ng.com" itemprop="email"
+                                 class="heading-minitext ">info@apex-ng.com</a>
+                           </div>
+
+                        </li>
+
+                        <li class="contact-left-aside_info">
+                           <span class="material-symbols-sharp icon">
+                              assignment_ind
+                           </span>
+
+                           <div class="contact-left-aside_info--text">
+                              <p class="heading-minitext bold">Working Hours</p>
+                              <p class="heading-minitext " itemprop="jobTitle">Mon to Fri: 8am to 5pm
+                        </li>
                   </div>
+
                </div>
+
             </div>
 
-            <div class="content-pagination mt-5">
+            <div class="contact-form">
+               <h1 class="heading-midtext-wide mb-2">
+                  Send Us a Message
+               </h1>
 
-               <div class="content-prev">
-                  <div class="content-prev_btn">
-                     <div class="content-prev_btn--icon">
-                        <span class="material-symbols-sharp prevIcon">
-                           arrow_left_alt
-                        </span>
-                        <span class="material-symbols-sharp prevIcon_2">
-                           arrow_left_alt
-                        </span>
+               <form class="form" id="contact-form" method="POST" netlify data-netlify="true">
+                  <input type="hidden" name="Apex Analytics Limited Contact form-group" value="contact" />
+
+                  <div class="form-group">
+                     <div class="input-container">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
                      </div>
 
-                     <h4 class="tag">PREVIOUS</h4>
-                  </div>
-
-                  <div class="content-prev_text mt-1">
-                     <a href="#" class="heading-midtext">Michael Ochoche</a>
-                  </div>
-               </div>
-
-               <div class="content-next">
-                  <div class="content-next_btn">
-                     <h4 class="tag">NEXT</h4>
-
-                     <div class="content-next_btn--icon">
-
-                        <span class="material-symbols-sharp icon">
-                           arrow_right_alt
-                        </span>
-                        <span class="material-symbols-sharp icon_2">
-                           arrow_right_alt
-                        </span>
+                     <div class="input-container">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" inputmode="numeric" id="phone" name="phone" placeholder="Your Phone" required>
                      </div>
                   </div>
 
-                  <div class="content-next_text mt-1">
-                     <a href="#" class="heading-midtext">Team Member Name</a>
+                  <div class="form-group">
+
+                     <div class="input-container">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                     </div>
+
+                     <div class="input-container">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                     </div>
                   </div>
-               </div>
+
+                  <div class="form-group full-width">
+                     <label for="message">Message</label>
+                     <textarea id="message" name="message" rows="3" placeholder="Your Message" required></textarea>
+                  </div>
+
+                  <div class="g-recaptcha" data-sitekey="6LcbAYUqAAAAAOTXY28hK7L05cpDF63g7H4PWlQx" data-action="SUBMIT">
+                  </div>
+
+
+                  <button type="submit" class="btn primary-btn">
+                     Send Message
+                  </button>
+               </form>
+
             </div>
 
          </div>
-         </div>
-
       </section>
 
+      <section class="map-section">
+         <div class="map-container">
 
-
-      <section class="scrolling-text">
-         <div class="scrolling-track">
-            <span class="filled">Experts.</span>
-            <span class="hollow">Innovation.</span>
-            <span class="filled">Leadership.</span>
-            <span class="hollow">Collaboration.</span>
-            <span class="filled">Dedication.</span>
-            <span class="hollow">Experience.</span>
-            <span class="filled">Diversity.</span>
-            <span class="hollow">Talent.</span>
-            <span class="filled">Strategy.</span>
-            <span class="hollow">Excellence.</span>
+            <div class="map">
+               <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.5961411731823!2d7.036083618888783!3d4.8391962521979925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cdbf9a3d9e87%3A0x4994422e09cf1b65!2sApex%20analytics%20limited!5e0!3m2!1sen!2sng!4v1756899263098!5m2!1sen!2sng"
+                  width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
          </div>
       </section>
 
@@ -512,7 +361,7 @@
             </div>
 
             <div class="cta-container_btn">
-               <a href="../contact-us.html">
+               <a href="./contact-us.html">
 
                   <button class="btn secondary-btn">Contact Us</button>
                </a>
@@ -525,7 +374,7 @@
 
 
             <div class="footer-info">
-               <img src="../img/logo.png" alt="Apex Analytics Limited Logo" class="footer-logo">
+               <img src="./img/logo.png" alt="Apex Analytics Limited Logo" class="footer-logo">
 
                <p class="heading-minitext">At Apex Analytics, we combine science, innovation, and integrity to provide
                   reliable testing and consulting for a cleaner, safer future</p>
@@ -659,6 +508,13 @@
       </section>
 
    </main>
+
+   <script>
+      document.getElementById('phone').addEventListener('input', function (e) {
+         this.value = this.value.replace(/[^0-9+ ]/g, '');
+      });
+   </script>
+
 </body>
 
 </html>
