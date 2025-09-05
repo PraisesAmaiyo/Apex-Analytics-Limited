@@ -76,7 +76,7 @@ if (images.length > 0 && texts.length > 0) {
   texts[0].classList.add('active');
 
   // Change every 6s
-  setInterval(showNextSlide, 4000);
+  //   setInterval(showNextSlide, 4000);
 }
 
 // Copyright Year Update

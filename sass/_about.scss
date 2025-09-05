@@ -152,8 +152,8 @@
       width: 100%;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 50% 46%;
-      gap: 4%;
+      grid-template-columns: 48% 50%;
+      gap: 2rem;
       align-items: center;
       justify-content: center;
       height: 100%;
@@ -163,18 +163,21 @@
          width: 160rem;
       }
 
-      @media only screen and (max-width:$bp-large) {
+      @media only screen and (max-width:$bp-big) {
          grid-template-columns: 100%;
          grid-template-rows: auto;
          gap: 7rem;
+         padding: 1rem;
 
 
          .container-left {
-            order: 1
+            order: 2;
+            margin-top: 2rem;
          }
 
          .container-right {
-            order: 2
+            order: 1;
+
          }
 
       }
@@ -274,13 +277,33 @@
          position: relative;
          height: 100%;
 
+         @media only screen and (max-width:$bp-small) {
+            padding: 0;
+         }
+
+
+
+         @media only screen and (max-width:$bp-big) {
+            height: 60rem;
+         }
+
+
+
          &-inner {
             height: 100%;
             padding: 0 0 5rem 5rem;
+
+            @media only screen and (max-width:$bp-small) {
+               padding: 0;
+            }
          }
 
          .container-right_image {
             height: 100%;
+
+            @media only screen and (max-width:$bp-small) {
+               height: 60%;
+            }
 
             .about-service-image {
                width: 100%;
@@ -304,6 +327,15 @@
             border: 4px solid $color-primary-50;
             padding-right: 1rem;
             animation: jumpReverseAni 7s linear infinite;
+
+            @media only screen and (max-width:$bp-small) {
+               position: relative;
+               animation: none;
+               width: 100%;
+               max-width: 100%;
+               border: none;
+               margin-top: 2rem;
+            }
 
             &--icon {
                height: 6rem;
@@ -335,6 +367,10 @@
             top: 60px;
             background: $color-primary;
             animation: 7s linear 0s infinite normal none running jumpAni;
+
+            @media only screen and (max-width:$bp-small) {
+               display: none;
+            }
          }
       }
    }

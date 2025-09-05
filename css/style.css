@@ -54,6 +54,9 @@ body {
   @media only screen and (min-width: 100em) {
     .section-hero {
       height: 100rem; } }
+  @media only screen and (max-width: 50.3em) {
+    .section-hero {
+      height: 100rem; } }
   .section-hero #particles-js {
     position: absolute;
     width: 100%;
@@ -69,6 +72,9 @@ body {
     height: 100%;
     overflow: hidden;
     z-index: -1; }
+    @media only screen and (max-width: 50.3em) {
+      .section-hero .hero-slideshow {
+        position: relative; } }
   .section-hero .slideshow-image {
     position: absolute;
     top: 0;
@@ -103,6 +109,11 @@ body {
     @media only screen and (min-width: 100em) {
       .section-hero .hero {
         width: 160rem; } }
+    @media only screen and (max-width: 50.3em) {
+      .section-hero .hero {
+        padding: 0 2rem;
+        grid-template-columns: 1fr;
+        min-height: 60rem; } }
     .section-hero .hero .hero-text {
       opacity: 0;
       transition: all 1.5s ease;
@@ -115,10 +126,25 @@ body {
       @media only screen and (min-width: 100em) {
         .section-hero .hero .hero-text {
           top: 50%; } }
+      @media only screen and (max-width: 50.3em) {
+        .section-hero .hero .hero-text {
+          top: 55%;
+          width: 90%; } }
       .section-hero .hero .hero-text .heading-midtext {
-        width: 70%; }
+        width: 70%;
+        font-weight: 500; }
+        @media only screen and (max-width: 50.3em) {
+          .section-hero .hero .hero-text .heading-midtext {
+            font-weight: 400;
+            width: 100%; } }
       .section-hero .hero .hero-text .heading-text {
         margin-bottom: 1.5rem; }
+        @media only screen and (max-width: 50.3em) {
+          .section-hero .hero .hero-text .heading-text {
+            font-size: 5rem; } }
+      @media only screen and (max-width: 50.3em) {
+        .section-hero .hero .hero-text .tag {
+          font-size: 1.5rem; } }
       .section-hero .hero .hero-text .tag,
       .section-hero .hero .hero-text h1,
       .section-hero .hero .hero-text p,
@@ -897,6 +923,9 @@ body {
     text-transform: uppercase;
     animation: scroll-left 100s linear infinite;
     font-weight: 700; }
+    @media only screen and (max-width: 43.3em) {
+      .scrolling-text .scrolling-track {
+        font-size: 7rem; } }
     .scrolling-text .scrolling-track .scrolling-track span {
       margin: 0 2rem;
       font-weight: 700; }
@@ -1690,8 +1719,8 @@ body {
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 50% 46%;
-    gap: 4%;
+    grid-template-columns: 48% 50%;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -1700,18 +1729,20 @@ body {
       .about-page-about_container,
       .contact-about_container {
         width: 160rem; } }
-    @media only screen and (max-width: 43.3em) {
+    @media only screen and (max-width: 50.3em) {
       .about-page-about_container,
       .contact-about_container {
         grid-template-columns: 100%;
         grid-template-rows: auto;
-        gap: 7rem; }
+        gap: 7rem;
+        padding: 1rem; }
         .about-page-about_container .container-left,
         .contact-about_container .container-left {
-          order: 1; }
+          order: 2;
+          margin-top: 2rem; }
         .about-page-about_container .container-right,
         .contact-about_container .container-right {
-          order: 2; } }
+          order: 1; } }
     .about-page-about_container .heading-text,
     .contact-about_container .heading-text {
       color: #000; }
@@ -1783,13 +1814,29 @@ body {
       padding: 0 0rem 0 3rem;
       position: relative;
       height: 100%; }
+      @media only screen and (max-width: 30.5em) {
+        .about-page-about_container .container-right,
+        .contact-about_container .container-right {
+          padding: 0; } }
+      @media only screen and (max-width: 50.3em) {
+        .about-page-about_container .container-right,
+        .contact-about_container .container-right {
+          height: 60rem; } }
       .about-page-about_container .container-right-inner,
       .contact-about_container .container-right-inner {
         height: 100%;
         padding: 0 0 5rem 5rem; }
+        @media only screen and (max-width: 30.5em) {
+          .about-page-about_container .container-right-inner,
+          .contact-about_container .container-right-inner {
+            padding: 0; } }
       .about-page-about_container .container-right .container-right_image,
       .contact-about_container .container-right .container-right_image {
         height: 100%; }
+        @media only screen and (max-width: 30.5em) {
+          .about-page-about_container .container-right .container-right_image,
+          .contact-about_container .container-right .container-right_image {
+            height: 60%; } }
         .about-page-about_container .container-right .container-right_image .about-service-image,
         .contact-about_container .container-right .container-right_image .about-service-image {
           width: 100%;
@@ -1809,6 +1856,15 @@ body {
         border: 4px solid #f2f7fd;
         padding-right: 1rem;
         animation: jumpReverseAni 7s linear infinite; }
+        @media only screen and (max-width: 30.5em) {
+          .about-page-about_container .container-right .container-right_aside,
+          .contact-about_container .container-right .container-right_aside {
+            position: relative;
+            animation: none;
+            width: 100%;
+            max-width: 100%;
+            border: none;
+            margin-top: 2rem; } }
         .about-page-about_container .container-right .container-right_aside--icon,
         .contact-about_container .container-right .container-right_aside--icon {
           height: 6rem;
@@ -1836,6 +1892,10 @@ body {
         top: 60px;
         background: #2170bf;
         animation: 7s linear 0s infinite normal none running jumpAni; }
+        @media only screen and (max-width: 30.5em) {
+          .about-page-about_container .container-right:after,
+          .contact-about_container .container-right:after {
+            display: none; } }
 
 @keyframes jumpAni {
   0% {
