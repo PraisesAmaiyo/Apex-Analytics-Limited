@@ -30,7 +30,7 @@ var swiper = new Swiper('.swiper-3', {
 
 var swiper = new Swiper('.mySwiper', {
   slidesPerView: 3,
-  spaceBetween: 5,
+  spaceBetween: 10,
   loop: true,
   speed: 10000, // bigger = slower continuous speed
   autoplay: {
@@ -39,6 +39,31 @@ var swiper = new Swiper('.mySwiper', {
   },
   freeMode: true,
   freeModeMomentum: false,
+
+  // Responsive breakpoints
+  breakpoints: {
+    1200: {
+      slidesPerView: 5, // desktop large
+    },
+    992: {
+      slidesPerView: 4, // tablet landscape
+    },
+    768: {
+      slidesPerView: 3, // tablet portrait
+    },
+    576: {
+      slidesPerView: 3, // mobile
+    },
+    350: {
+      slidesPerView: 2.5, // mobile
+    },
+    200: {
+      slidesPerView: 2, // mobile
+    },
+    0: {
+      slidesPerView: 1.2, // fallback mobile
+    },
+  },
 });
 
 var swiper = new Swiper('.team-swiper', {
@@ -200,24 +225,6 @@ if (servicesSection && scrollWrapper && boxes.length) {
       box.classList.toggle('active', i === index);
     });
   }
-}
-
-const section = document.querySelector('.section-tech-achievements');
-if (section) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          section.classList.add('active');
-        } else {
-          section.classList.remove('active');
-        }
-      });
-    },
-    { threshold: 0.6 }
-  );
-
-  observer.observe(section);
 }
 
 // Functional

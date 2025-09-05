@@ -79,58 +79,6 @@ if (images.length > 0 && texts.length > 0) {
   setInterval(showNextSlide, 4000);
 }
 
-// IGNORE
-const main = document.querySelector('.home-container');
-const closeModalButton = document.querySelectorAll('.closeModal');
-const cancelButton = document.querySelector('.cancel-cta');
-const UnsubscribeButton = document.querySelector('.Unsubscribe-cta');
-
-//Cancel Suscription Modal
-const confirmationBtn = document.querySelector('.confirmationBtn');
-const confirmationModal = document.querySelector('.confirmation');
-
-if (confirmationBtn) {
-  confirmationBtn.addEventListener('click', openconfirmationModal);
-
-  function openconfirmationModal(event) {
-    event.stopPropagation();
-    confirmationModal.classList.toggle('openModal');
-
-    if (confirmationModal.classList.contains('openModal')) {
-      main.classList.add('blur');
-      main.classList.add('no-scroll');
-    } else {
-      main.classList.remove('blur');
-      main.classList.remove('no-scroll');
-    }
-  }
-}
-
-closeModalButton.forEach((closeButton) => {
-  closeButton.addEventListener('click', function () {
-    closeModal();
-  });
-});
-
-if (cancelButton) {
-  cancelButton.addEventListener('click', function () {
-    closeModal();
-  });
-}
-
-if (UnsubscribeButton) {
-  UnsubscribeButton.addEventListener('click', function () {
-    closeModal();
-  });
-}
-
-function closeModal() {
-  confirmationModal.classList.remove('openModal');
-
-  main.classList.remove('blur');
-  main.classList.remove('no-scroll');
-}
-
 // Copyright Year Update
 const yearEl = document.querySelector('.copyright-year');
 const currentYear = new Date().getFullYear();
@@ -139,3 +87,21 @@ yearEl.textContent = currentYear;
 // particlesJS.load('particles-js', 'particlesjs-config.json', function () {
 //   console.log('particles.js config loaded');
 // });
+
+const section = document.querySelector('.section-tech-achievements');
+if (section) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          section.classList.add('active');
+        } else {
+          section.classList.remove('active');
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  observer.observe(section);
+}
