@@ -76,7 +76,7 @@ if (images.length > 0 && texts.length > 0) {
   texts[0].classList.add('active');
 
   // Change every 6s
-  //   setInterval(showNextSlide, 4000);
+  setInterval(showNextSlide, 4000);
 }
 
 // Copyright Year Update
@@ -84,9 +84,15 @@ const yearEl = document.querySelector('.copyright-year');
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
 
-particlesJS.load('particles-js', '/particlesjs-config.json', function () {
-  //   console.log('particles.js config loaded');
-});
+// particles.js configuration
+
+const particlesContainer = document.getElementById('particles-js');
+
+if (particlesContainer) {
+  particlesJS.load('particles-js', '/particlesjs-config.json', function () {
+    console.log('particles.js config loaded');
+  });
+}
 
 const section = document.querySelector('.section-tech-achievements');
 if (section) {
