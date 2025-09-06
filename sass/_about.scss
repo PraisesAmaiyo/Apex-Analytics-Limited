@@ -791,6 +791,10 @@
    transition: margin-top 0.5s ease;
    padding: 8rem 3rem;
 
+   @media only screen and (max-width: $bp-big) {
+      padding: 7rem 2rem;
+   }
+
    /* The main container for the horizontal scroll */
    &_container {
       width: 100%;
@@ -820,6 +824,10 @@
       @media only screen and (max-width: 600px) {
          padding: 5rem 2rem;
          gap: 3rem;
+
+         @media only screen and (max-width: $bp-large) {
+            padding: 5rem 0rem;
+         }
       }
 
       &--aside {
@@ -944,6 +952,11 @@
             gap: 3rem;
             margin-top: 3rem;
 
+            @media only screen and (max-width: $bp-small) {
+               flex-direction: column;
+               gap: 1.5rem;
+            }
+
             &_container {
                list-style-type: none;
 
@@ -1059,58 +1072,9 @@
       justify-content: space-between;
       gap: 4rem;
 
-      // .content-prev {
-      //    text-align: start;
-      //    margin-right: 3rem;
-
-      //    &:hover {
-      //       a.heading-midtext {
-      //          color: $color-primary;
-      //       }
-      //    }
-
-      //    &_btn {
-      //       display: flex;
-      //       gap: 2rem;
-      //       align-items: center;
-      //       justify-content: start;
-
-
-      //       .tag {
-      //          margin: 0;
-      //       }
-
-      //       &--icon {
-      //          height: 5rem;
-      //          width: 5rem;
-      //          display: flex;
-      //          justify-content: center;
-      //          align-items: center;
-      //          overflow: hidden;
-      //          background-color: $color-primary;
-      //          border-radius: 100%;
-
-      //          aspect-ratio: 1 / 1;
-      //          flex-shrink: 0;
-      //       }
-
-      //       .icon {
-      //          padding: 1.3rem;
-      //          color: $color-grey-light-1;
-      //          font-size: 2.5rem;
-
-      //          position: relative;
-
-      //          // aspect-ratio: 1 / 1;
-      //       }
-      //    }
-
-      //    &_text {
-      //       .heading-midtext {
-      //          text-decoration: none;
-      //       }
-      //    }
-      // }
+      @media only screen and (max-width: $bp-smaller) {
+         flex-direction: column;
+      }
 
       .content-next {
          text-align: end;
@@ -1177,6 +1141,10 @@
       .content-prev {
          text-align: start;
          margin-right: 3rem;
+
+         @media only screen and (max-width: $bp-smaller) {
+            margin-right: auto;
+         }
 
          &:hover {
             p.heading-midtext {
@@ -1335,7 +1303,7 @@
 
          @media only screen and (min-width: 1000px) {
             grid-template-columns: repeat(3, 1fr);
-            max-width: 1200px; // centers the grid and keeps it from stretching
+            max-width: 1200px;
             margin: 0 auto;
          }
 
@@ -1384,6 +1352,11 @@
                border-radius: 5px;
                text-decoration: none;
 
+               @media only screen and (max-width: $bp-big) {
+                  transform: perspective(0) rotateX(0);
+               }
+
+
 
                .heading-midtext-slim {
                   font-size: 1.4rem;
@@ -1418,6 +1391,11 @@
    height: max-content;
    transition: margin-top 0.5s ease;
    padding: 8rem 3rem;
+   width: 100%;
+
+   @media only screen and (max-width: $bp-medium) {
+      padding: 7rem 2rem;
+   }
 
    /* The main container for the horizontal scroll */
    &_container {
@@ -1441,7 +1419,7 @@
 
       // Tablet breakpoint
       @media only screen and (max-width: 900px) {
-         grid-template-columns: 1fr; // Single column
+         grid-template-columns: 100%; // Single column
          grid-template-rows: auto auto;
       }
 
@@ -1451,16 +1429,23 @@
          gap: 3rem;
       }
 
+      @media only screen and (max-width: $bp-mid) {
+         padding: 0;
+      }
+
       &--aside {
          display: grid;
-         grid-template-columns: 64% 34%;
+         grid-template-columns: 58% 40%;
          // flex-direction: column;
          gap: 1.5rem;
          // width: 24.5rem;
 
-         @media only screen and (max-width: 900px) {
-            // order: 2;
+         @media only screen and (max-width: 768px) {
+            grid-template-columns: 48% 50%;
+         }
 
+         @media only screen and (max-width: $bp-big) {
+            grid-template-columns: 100%;
          }
 
          .aside-header {
@@ -1499,8 +1484,8 @@
 
             img {
                width: 100%;
-               height: auto;
-               max-height: 40rem;
+               height: 100%;
+               // max-height: 40rem;
                object-fit: cover;
                border-radius: 10px;
             }
@@ -1537,11 +1522,22 @@
             gap: 3rem;
             margin-top: 3rem;
 
+            @media only screen and (max-width: $bp-big) {
+               flex-direction: column;
+            }
+
+
             &_image {
                width: 50%;
                min-width: 40rem;
                height: auto;
                overflow: hidden;
+
+               @media only screen and (max-width: $bp-big) {
+                  width: 100%;
+                  min-width: unset;
+                  margin-top: 1rem;
+               }
 
                img {
                   width: 100%;
@@ -1573,7 +1569,6 @@
                   &-icon {
                      font-size: 2rem;
                      font-weight: 400;
-
                      color: $color-primary;
                      // margin-right: 1.2rem;
                   }
@@ -1648,6 +1643,10 @@
             justify-content: space-between;
             gap: 4rem;
 
+            @media only screen and (max-width: $bp-smaller) {
+               flex-direction: column;
+            }
+
             .content-next {
                text-align: end;
                margin-left: auto;
@@ -1705,6 +1704,11 @@
             .content-prev {
                text-align: start;
                margin-right: 3rem;
+
+
+               @media only screen and (max-width: $bp-smaller) {
+                  margin-right: auto;
+               }
 
                &:hover {
                   a.heading-midtext {
@@ -1943,7 +1947,12 @@
    background-color: $color-grey-light-1;
    height: max-content;
    transition: margin-top 0.5s ease;
-   padding: 8rem 3rem;
+   padding: 8rem 5rem;
+
+   @media only screen and (max-width: $bp-big) {
+      padding: 8rem 3rem;
+
+   }
 
    /* The main container for the horizontal scroll */
    &_container {
@@ -1951,12 +1960,6 @@
       height: 100%;
       margin: 0 auto;
       // text-align: center;
-
-      display: grid;
-      grid-template-columns: 1fr;
-      // grid-template-rows: 1fr 1fr;
-      gap: 6rem;
-
       position: relative;
       z-index: 1;
 
@@ -1964,54 +1967,79 @@
          width: 160rem;
       }
 
-
-      // Tablet breakpoint
-      @media only screen and (max-width: 900px) {
-         grid-template-columns: 1fr; // Single column
-         grid-template-rows: auto auto;
-      }
-
-      // Mobile breakpoint
-      @media only screen and (max-width: 600px) {
-         padding: 5rem 2rem;
-         gap: 3rem;
+      @media only screen and (max-width: $bp-big) {
+         margin-bottom: 5.5rem;
       }
 
       &--aside {
          display: grid;
          grid-template-columns: 34% 64%;
-         // flex-direction: column;
          gap: 1.5rem;
+         // flex-direction: column;
          // width: 24.5rem;
 
-         @media only screen and (max-width: 900px) {
-            // order: 2;
+         @media only screen and (max-width: $bp-big) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+         }
 
+         .aside-top_image {
+            width: 100%;
+            height: 35rem;
+            overflow: hidden;
+            border-radius: 10px;
+
+            @media only screen and (max-width: $bp-big) {
+               width: 85%;
+               height: 100%;
+               justify-self: center;
+            }
+
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               object-position: top;
+               display: block;
+               border-radius: inherit;
+            }
          }
 
          .aside-header {
-
             padding: 0 2rem;
+
+            @media only screen and (max-width: $bp-big) {
+               padding: 0;
+            }
 
 
             &_container {
                // padding-top: 1rem;
+               margin-bottom: 6rem;
 
                .aside-members {
 
                   &_group {
                      display: flex;
                      gap: 1.5rem;
+
+                     @media only screen and (max-width: $bp-mid) {
+                        flex-direction: column;
+                     }
                   }
 
                   &_info {
                      display: flex;
                      align-items: center;
-                     gap: 1.5rem;
+                     gap: 1rem;
                      list-style: none;
                      padding-bottom: 1.5rem;
                      margin-bottom: 1.5rem;
                      width: 50%;
+
+                     @media only screen and (max-width: $bp-big) {
+                        width: 100%;
+                     }
 
                      .icon {
                         font-size: 3rem;
@@ -2037,6 +2065,12 @@
                   justify-content: space-between;
                   align-items: center;
                   gap: 3rem;
+
+                  @media only screen and (max-width: $bp-small-extra) {
+                     flex-direction: column;
+                     align-items: start;
+                     gap: 4.3rem;
+                  }
                }
 
                .aside-members_socials {
@@ -2101,34 +2135,25 @@
             }
          }
 
-         .aside-top_image {
-            width: 100%;
-            height: 35rem; // ✅ Fixed height box
-            overflow: hidden; // ✅ Hide anything that overflows
-            border-radius: 10px;
 
-            img {
-               width: 100%;
-               height: 100%;
-               object-fit: cover;
-               object-position: top;
-               display: block;
-               border-radius: inherit;
-            }
-         }
       }
 
       &--content {
 
          .experience-section {
-            padding: 6rem 3rem;
+            // padding: 6rem 3rem;
 
             .experience-container {
                display: grid;
                grid-template-columns: 40% 1fr;
                gap: 4rem;
-               max-width: 1200px;
+               max-width: 160rem;
                margin: 0 auto;
+
+               @media only screen and (max-width: $bp-big) {
+                  grid-template-columns: 1fr;
+                  grid-template-rows: auto;
+               }
 
                .grid-left {
                   .skill p {
@@ -2346,6 +2371,11 @@
             justify-content: space-between;
             gap: 4rem;
 
+            @media only screen and (max-width: $bp-smaller) {
+               flex-direction: column;
+            }
+
+
             .content-next {
                text-align: end;
                margin-left: auto;
@@ -2403,6 +2433,11 @@
             .content-prev {
                text-align: start;
                margin-right: 3rem;
+
+
+               @media only screen and (max-width: $bp-smaller) {
+                  margin-right: auto;
+               }
 
                &:hover {
                   a.heading-midtext {
@@ -2510,6 +2545,10 @@
    transition: margin-top 0.5s ease;
    padding: 8rem 3rem;
 
+   @media only screen and (max-width: $bp-big) {
+      padding: 7rem 2rem;
+   }
+
    /* The main container for the horizontal scroll */
    &_container {
       width: 100%;
@@ -2528,6 +2567,13 @@
       @media only screen and (min-width: $bp-monitor) {
          width: 160rem;
       }
+
+      @media only screen and (max-width: $bp-big) {
+         grid-template-columns: 1fr;
+         grid-template-rows: auto;
+      }
+
+
 
 
       // // Tablet breakpoint
@@ -2557,6 +2603,10 @@
                &_group {
                   display: flex;
                   gap: 1.5rem;
+
+                  @media only screen and (max-width: $bp-medium) {
+                     flex-direction: column;
+                  }
                }
 
                &_info {
@@ -2567,6 +2617,10 @@
                   padding-bottom: 1.5rem;
                   margin-bottom: 1.5rem;
                   width: 50%;
+
+                  @media only screen and (max-width: $bp-medium) {
+                     width: 100%;
+                  }
 
                   .icon {
                      font-size: 4.5rem;
@@ -2618,7 +2672,11 @@
          flex-direction: column;
 
          @media only screen and (max-width:$bp-small-extra) {
-            padding: 2rem;
+            // padding: 2rem;
+         }
+
+         @media only screen and (max-width: $bp-big) {
+            padding: 0;
          }
 
 
@@ -2632,6 +2690,10 @@
                display: flex;
                gap: 1rem;
                margin-bottom: 1rem;
+
+               @media only screen and (max-width: $bp-small) {
+                  flex-direction: column;
+               }
 
                &.full-width {
                   flex-direction: column;
@@ -2656,7 +2718,7 @@
    background-color: $color-grey-light-1;
    height: max-content;
    transition: margin-top 0.5s ease;
-   padding: 8rem 0rem 0rem 0rem;
+   // padding: 8rem 0rem 0rem 0rem;
 
    /* The main container for the horizontal scroll */
    &_container {
