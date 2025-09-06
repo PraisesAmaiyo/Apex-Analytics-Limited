@@ -84,9 +84,9 @@ const yearEl = document.querySelector('.copyright-year');
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
 
-// particlesJS.load('particles-js', 'particlesjs-config.json', function () {
-//   console.log('particles.js config loaded');
-// });
+particlesJS.load('particles-js', '/particlesjs-config.json', function () {
+  //   console.log('particles.js config loaded');
+});
 
 const section = document.querySelector('.section-tech-achievements');
 if (section) {

@@ -57,13 +57,6 @@ body {
   @media only screen and (max-width: 50.3em) {
     .section-hero {
       height: 100rem; } }
-  .section-hero #particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    /* optional background */
-    z-index: 11;
-    /* keep it behind your content */ }
   .section-hero .hero-slideshow {
     position: absolute;
     top: 0;
@@ -1558,6 +1551,7 @@ body {
   .contact-page-hero .single-members-page-background,
   .contact-page-hero .contact-page-background {
     background-position: top;
+    background-position-x: 70%;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -1623,11 +1617,12 @@ body {
   .team-members-page-hero_container,
   .single-members-page-hero_container,
   .contact-page-hero_container {
-    width: 100%;
+    position: relative;
+    width: 60%;
     height: 100%;
     padding-left: 2rem;
     padding-right: 2rem;
-    margin: 0 auto;
+    margin: 0;
     z-index: 100; }
     @media only screen and (min-width: 100em) {
       .about-page-hero_container,
@@ -3798,6 +3793,14 @@ select {
 .disabled {
   opacity: 0.3;
   pointer-events: none; }
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 11; }
 
 /* MOBILE */
 .btn-mobile-nav {
