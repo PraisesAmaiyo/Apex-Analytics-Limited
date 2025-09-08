@@ -67,7 +67,11 @@
 <body class="home">
    <main class="home-container">
 
-      <header class="navigation-header ">
+      <div class="mobile-nav-bg"></div>
+      <header class="navigation-header  ">
+         <a href="/index.html" class=" mobile-nav-logo">
+            <img class="logo " alt="Apex Analytics Limited logo" src="/img/logo.png" />
+         </a>
 
 
          <nav class="main-nav">
@@ -110,6 +114,9 @@
 
             <div class="main-nav-bottom">
                <div class="main-nav-bottom_left">
+                  <button class="btn-mobile-nav_close">
+                     <ion-icon class="icon-mobile-nav dark" name="close-outline"></ion-icon>
+                  </button>
 
                   <a href="/index.html">
                      <img class="logo" alt="Apex Analytics Limited logo" src="img/logo.png" />
@@ -122,26 +129,38 @@
 
                      <!-- Services with Dropdown -->
                      <li class="nav-item dropdown">
-                        <a class="main-nav-link" href="/services.html">
-                           Services
-                           <i class="fa-solid fa-chevron-down dropdown-icon" style="padding: .5rem;"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                           <li><a href="/services/environmental-and-sustainability.html">Environmental &
+                        <div class="group">
+
+                           <a class="main-nav-link" href="/services.html">
+                              Services
+                           </a>
+                           <button class="dropdown-icon" aria-expanded="false" aria-controls="services-menu"
+                              aria-label="Toggle Services menu" type="button">
+                              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                           </button>
+                        </div>
+
+
+                        <ul id="services-menu" class="dropdown-menu" role="menu">
+                           <li><a role="menuitem" href="/services/environmental-and-sustainability.html">Environmental &
                                  Sustainability</a></li>
-                           <li><a href="/services/geophysical-and-geotechnical.html">Geophysical & Geotechnical</a></li>
-                           <li><a href="/services/integrated-waste-and-water.html">Integrated Waste & Water</a></li>
-                           <li><a href="/services/environmental-laboratory.html">Environmental Laboratory</a></li>
-                           <li><a href="/services/gis-and-remote-sensing.html">GIS & Remote Sensing</a></li>
-                           <li><a href="/services/training-and-capacity-building.html">Training & Capacity Building</a>
+                           <li><a role="menuitem" href="/services/geophysical-and-geotechnical.html">Geophysical &
+                                 Geotechnical</a></li>
+                           <li><a role="menuitem" href="/services/integrated-waste-and-water.html">Integrated Waste &
+                                 Water</a></li>
+                           <li><a role="menuitem" href="/services/environmental-laboratory.html">Environmental
+                                 Laboratory</a></li>
+                           <li><a role="menuitem" href="/services/gis-and-remote-sensing.html">GIS & Remote Sensing</a>
                            </li>
-                           <li><a href="/services/calibration-services.html">Calibration Services</a>
+                           <li><a role="menuitem" href="/services/training-and-capacity-building.html">Training &
+                                 Capacity Building</a></li>
+                           <li><a role="menuitem" href="/services/calibration-services.html">Calibration Services</a>
                            </li>
                         </ul>
                      </li>
 
-                     <li><a class="main-nav-link active" href="/projects.html">Projects</a>
-                     </li>
+
+                     <li><a class="main-nav-link active" href="#">Projects</a></li>
 
                      <li><a class="main-nav-link" href="/team-members.html">Team Members</a></li>
 
@@ -168,7 +187,7 @@
                   </div>
 
 
-                  <div class="">
+                  <div class="nav-profile">
                      <a href="./assets/APEX ANALYTICS LIMITED COMPANY PROFILE.pdf" target="_blank">
                         <button class="btn primary-btn">Company Profile</button>
                      </a>
@@ -177,9 +196,14 @@
             </div>
          </nav>
 
+         <div class="mobile-nav-profile">
+            <a href="./assets/APEX ANALYTICS LIMITED COMPANY PROFILE.pdf" target="_blank">
+               <button class="btn primary-btn">Company Profile</button>
+            </a>
+         </div>
+
          <button class="btn-mobile-nav">
             <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-            <ion-icon class="icon-mobile-nav dark" name="close-outline"></ion-icon>
          </button>
 
       </header>

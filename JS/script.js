@@ -1,9 +1,26 @@
-const btnNavEl = document.querySelector('.btn-mobile-nav');
+const openMobileNavBtn = document.querySelector('.btn-mobile-nav');
+const closeMobileNavBtn = document.querySelector('.btn-mobile-nav_close');
 const allLinks = document.querySelectorAll('a:link');
-const headerEl = document.querySelector('.navigation-header');
+const headerEl = document.querySelector('body');
+const mobileNavBg = document.querySelector('.mobile-nav-bg');
+const mainNav = document.querySelector('.main-nav');
 
-btnNavEl.addEventListener('click', function () {
-  headerEl.classList.toggle('nav-open');
+openMobileNavBtn.addEventListener('click', function () {
+  // When opening
+  headerEl.classList.add('nav-open');
+
+  // Delay order: background first, nav after
+  mobileNavBg.style.transitionDelay = '0.3s';
+  mainNav.style.transitionDelay = '0.6s';
+});
+
+closeMobileNavBtn.addEventListener('click', function () {
+  // Reverse delay order: nav first, background after
+  mainNav.style.transitionDelay = '0.2s';
+  mobileNavBg.style.transitionDelay = '0.6s';
+
+  // Trigger close
+  headerEl.classList.remove('nav-open');
 });
 
 allLinks.forEach(function (link) {
@@ -111,3 +128,40 @@ if (section) {
 
   observer.observe(section);
 }
+
+const breakpoint = 50.3 * 16; // ~804.8px
+const navItem = document.querySelector('.nav-item.dropdown');
+const dropdownIcon = navItem?.querySelector('.dropdown-icon');
+const dropdownMenu = navItem?.querySelector('.dropdown-menu');
+
+function isDesktop() {
+  return window.innerWidth >= breakpoint;
+}
+
+// Reset menu state when switching between desktop & mobile
+function resetMenuState() {
+  dropdownMenu.style.display = ''; // remove inline style
+  dropdownIcon.setAttribute('aria-expanded', 'false');
+}
+
+window.addEventListener('resize', resetMenuState);
+
+// Hover for desktop
+navItem?.addEventListener('mouseenter', () => {
+  if (isDesktop()) {
+    dropdownMenu.style.display = 'flex';
+  }
+});
+navItem?.addEventListener('mouseleave', () => {
+  if (isDesktop()) {
+    dropdownMenu.style.display = 'none';
+  }
+});
+
+// Click for mobile
+dropdownIcon?.addEventListener('click', (e) => {
+  e.preventDefault();
+  const isOpen = dropdownMenu.style.display === 'flex';
+  dropdownMenu.style.display = isOpen ? 'none' : 'flex';
+  dropdownIcon.setAttribute('aria-expanded', !isOpen);
+});
