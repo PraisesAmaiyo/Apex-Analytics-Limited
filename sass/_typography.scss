@@ -122,8 +122,103 @@ select {
    margin-top: 3rem;
 }
 
+// .btn {
+//    transform: translateZ(0);
+//    position: relative;
+//    overflow: hidden;
+//    z-index: 0;
+//    padding: 10px 25px;
+//    display: inline-block;
+//    border-radius: 4px;
+//    border: none;
+//    color: $color-grey-light-1;
+//    font-weight: 600;
+//    text-transform: uppercase;
+//    font-size: 1.3rem;
+//    line-height: 22px;
+//    cursor: pointer;
+//    transition: color 0.3s ease;
+//    white-space: nowrap;
+
+//    &::before {
+//       content: "";
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       width: 120%;
+//       height: 120%;
+//       border-radius: 20%;
+//       scale: 0 0;
+//       translate: 0 140%;
+//       transition: scale 0.6s cubic-bezier(0.215, 0.61, 0.355, 1), translate 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+//       z-index: -1;
+//    }
+// }
+
+// .primary-btn {
+//    background-color: $color-primary;
+//    color: $color-grey-light-1;
+
+//    &::before {
+//       background: $color-secondary-950;
+//    }
+
+//    &:hover::before,
+//    &:active::before {
+//       scale: 1.5 1.5;
+//       translate: 0 0;
+//       border-radius: 50%;
+//    }
+// }
+
+// .secondary-btn {
+//    background-color: $color-secondary;
+//    color: $color-grey-light-1;
+
+//    &::before {
+//       background: $color-primary;
+//    }
+
+//    &:hover::before,
+//    &:active::before {
+//       scale: 1.5 1.5;
+//       translate: 0 0;
+//       border-radius: 50%;
+//    }
+// }
+
+// .light-btn {
+//    background-color: $color-grey-light-1;
+//    color: $color-grey-dark-1;
+//    transition: color 0.3s ease;
+
+//    &::before {
+//       background: $color-primary-900;
+//    }
+
+//    &:hover {
+//       color: $color-grey-light-1 !important;
+//    }
+
+//    &:hover::before,
+//    &:active::before {
+//       scale: 1.5 1.5;
+//       translate: 0 0;
+//       border-radius: 50%;
+//    }
+// }
+
+
 .btn {
+   -webkit-transform: translateZ(0);
+   /* Force hardware acceleration */
    transform: translateZ(0);
+   -webkit-tap-highlight-color: transparent;
+   /* Remove iOS tap highlight */
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   user-select: none;
+
    position: relative;
    overflow: hidden;
    z-index: 0;
@@ -148,9 +243,16 @@ select {
       width: 120%;
       height: 120%;
       border-radius: 20%;
-      scale: 0 0;
-      translate: 0 140%;
-      transition: scale 0.6s cubic-bezier(0.215, 0.61, 0.355, 1), translate 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+      /* Add vendor prefixes for scale & translate */
+      -webkit-transform: scale(0, 0) translateY(140%);
+      transform: scale(0, 0) translateY(140%);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+
+      -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+
       z-index: -1;
    }
 }
@@ -165,8 +267,8 @@ select {
 
    &:hover::before,
    &:active::before {
-      scale: 1.5 1.5;
-      translate: 0 0;
+      -webkit-transform: scale(1.5, 1.5) translateY(0);
+      transform: scale(1.5, 1.5) translateY(0);
       border-radius: 50%;
    }
 }
@@ -181,49 +283,18 @@ select {
 
    &:hover::before,
    &:active::before {
-      scale: 1.5 1.5;
-      translate: 0 0;
+      -webkit-transform: scale(1.5, 1.5) translateY(0);
+      transform: scale(1.5, 1.5) translateY(0);
       border-radius: 50%;
    }
 }
 
-.light-btn {
-   background-color: $color-grey-light-1;
-   color: $color-grey-dark-1;
-   transition: color 0.3s ease;
 
-   &::before {
-      background: $color-primary-900;
-   }
 
-   &:hover {
-      color: $color-grey-light-1 !important;
-   }
 
-   &:hover::before,
-   &:active::before {
-      scale: 1.5 1.5;
-      translate: 0 0;
-      border-radius: 50%;
-   }
-}
 
-// .hero-btn-light {
-//    background-color: $color-grey-dark-1;
-//    color: $color-grey-light-1;
-//    box-shadow: inset 0px 0px 0px 2px $color-primary-light;
-//    padding: .8rem 1.5rem;
 
-//    &:hover {
-//       transform: scale(1.07);
-//       background-color: $color-secondary-light;
-//    }
 
-//    &:active {
-//       transform: scale(1.04);
-//       background-color: $color-secondary-light;
-//    }
-// }
 
 .center-button {
    display: flex;

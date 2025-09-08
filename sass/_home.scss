@@ -81,7 +81,7 @@
       grid-template-columns: 60% 50%;
       position: relative;
       z-index: 1;
-      padding: 15rem 0 15rem 5rem;
+      padding: 12rem 0 12rem 5rem;
       overflow: hidden;
 
       @media only screen and (min-width: $bp-monitor) {
@@ -117,7 +117,7 @@
          width: 60%;
          top: 45%;
          left: 5%;
-         transform: translateY(50%);
+         transform: translateY(60%);
          z-index: 2;
 
 

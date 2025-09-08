@@ -122,7 +122,7 @@ body a:focus {
   grid-template-columns: 60% 50%;
   position: relative;
   z-index: 1;
-  padding: 15rem 0 15rem 5rem;
+  padding: 12rem 0 12rem 5rem;
   overflow: hidden;
 }
 @media only screen and (min-width: 100em) {
@@ -144,7 +144,7 @@ body a:focus {
   width: 60%;
   top: 45%;
   left: 5%;
-  transform: translateY(50%);
+  transform: translateY(60%);
   z-index: 2;
 }
 @media only screen and (min-width: 100em) {
@@ -4492,7 +4492,14 @@ select:active, select:focus {
 }
 
 .btn {
+  -webkit-transform: translateZ(0);
+  /* Force hardware acceleration */
   transform: translateZ(0);
+  -webkit-tap-highlight-color: transparent;
+  /* Remove iOS tap highlight */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
   position: relative;
   overflow: hidden;
   z-index: 0;
@@ -4517,9 +4524,13 @@ select:active, select:focus {
   width: 120%;
   height: 120%;
   border-radius: 20%;
-  scale: 0 0;
-  translate: 0 140%;
-  transition: scale 0.6s cubic-bezier(0.215, 0.61, 0.355, 1), translate 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  /* Add vendor prefixes for scale & translate */
+  -webkit-transform: scale(0, 0) translateY(140%);
+  transform: scale(0, 0) translateY(140%);
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   z-index: -1;
 }
 
@@ -4531,8 +4542,8 @@ select:active, select:focus {
   background: #112213;
 }
 .primary-btn:hover::before, .primary-btn:active::before {
-  scale: 1.5 1.5;
-  translate: 0 0;
+  -webkit-transform: scale(1.5, 1.5) translateY(0);
+  transform: scale(1.5, 1.5) translateY(0);
   border-radius: 50%;
 }
 
@@ -4544,25 +4555,8 @@ select:active, select:focus {
   background: #2170bf;
 }
 .secondary-btn:hover::before, .secondary-btn:active::before {
-  scale: 1.5 1.5;
-  translate: 0 0;
-  border-radius: 50%;
-}
-
-.light-btn {
-  background-color: #fff;
-  color: #000;
-  transition: color 0.3s ease;
-}
-.light-btn::before {
-  background: #1a3b60;
-}
-.light-btn:hover {
-  color: #fff !important;
-}
-.light-btn:hover::before, .light-btn:active::before {
-  scale: 1.5 1.5;
-  translate: 0 0;
+  -webkit-transform: scale(1.5, 1.5) translateY(0);
+  transform: scale(1.5, 1.5) translateY(0);
   border-radius: 50%;
 }
 
