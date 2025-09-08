@@ -73,6 +73,7 @@ body a:focus {
 @media only screen and (max-width: 50.3em) {
   .section-hero {
     height: 100rem;
+    background-image: none;
   }
 }
 .section-hero .hero-slideshow {
