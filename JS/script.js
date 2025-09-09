@@ -165,3 +165,76 @@ dropdownIcon?.addEventListener('click', (e) => {
   dropdownMenu.style.display = isOpen ? 'none' : 'flex';
   dropdownIcon.setAttribute('aria-expanded', !isOpen);
 });
+
+// zOHO cERTIFICATE vERIICATION
+
+const SHEET_URL =
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6TTfR0WneGMJoWzzINEkCoTfFzTz7_a5fLD5s-JAIi3cSezXpZRf028TfqyK_8vRcE8qbAWVnUYbM/pub?output=csv';
+
+// Modal Controls
+document.getElementById('openModalBtn').addEventListener('click', () => {
+  console.log('clicked');
+  document.getElementById('certModal').style.display = 'flex';
+});
+
+document.getElementById('openModalBtn_2').addEventListener('click', () => {
+  console.log('clicked 2');
+  document.getElementById('certModal').style.display = 'flex';
+});
+
+document.querySelector('.close').addEventListener('click', closeModal);
+
+function closeModal() {
+  document.getElementById('certModal').style.display = 'none';
+}
+
+const form = document.getElementById('certModal');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  checkCertificate();
+});
+
+// Verification Logic
+async function checkCertificate() {
+  const certNumber = document
+    .getElementById('certNumber')
+    .value.trim()
+    .toUpperCase();
+  const loader = document.getElementById('loader');
+  const result = document.getElementById('result');
+  const verifyBtn = document.getElementById('verifyBtn');
+
+  result.textContent = '';
+  if (!certNumber) {
+    result.textContent = 'Please enter a certificate number.';
+    return;
+  }
+
+  loader.style.display = 'block';
+  verifyBtn.disabled = true;
+
+  try {
+    const res = await fetch(SHEET_URL);
+    const text = await res.text();
+    const rows = text.split('\n').map((row) => row.split(','));
+
+    let found = false;
+    for (let i = 1; i < rows.length; i++) {
+      if (rows[i][0].trim().toUpperCase() === certNumber) {
+        found = rows[i][1].trim();
+        break;
+      }
+    }
+
+    if (found) {
+      result.innerHTML = `<a href="${found}" target="_blank">View Certificate</a>`;
+    } else {
+      result.textContent = 'Certificate not found.';
+    }
+  } catch (err) {
+    result.textContent = 'Error checking certificate.';
+  } finally {
+    loader.style.display = 'none';
+    verifyBtn.disabled = false;
+  }
+}

@@ -186,19 +186,27 @@
                   </div>
 
 
-                  <div class="nav-profile">
+                  <!-- <div class="nav-profile">
                      <a href="./assets/APEX ANALYTICS LIMITED COMPANY PROFILE.pdf" target="_blank">
                         <button class="btn primary-btn">Company Profile</button>
                      </a>
+                  </div> -->
+
+                  <div class="nav-profile">
+                     <button id="openModalBtn" class="btn primary-btn">Verify Certificates</button>
                   </div>
                </div>
             </div>
          </nav>
 
-         <div class="mobile-nav-profile">
+         <!-- <div class="mobile-nav-profile">
             <a href="./assets/APEX ANALYTICS LIMITED COMPANY PROFILE.pdf" target="_blank">
                <button class="btn primary-btn">Company Profile</button>
             </a>
+         </div> -->
+
+         <div class="mobile-nav-profile">
+            <button id="openModalBtn_2" class="btn primary-btn">Verify Certificates</button>
          </div>
 
          <button class="btn-mobile-nav">
@@ -2500,6 +2508,23 @@
       </section>
 
    </main>
+
+   <!-- Modal -->
+   <form class="modal" id="certModal">
+      <div class="modal-content">
+         <span class="close">&times;</span>
+         <h1 class="heading-midtext-wide mb-2">Certificate Verification</h1>
+
+         <input type="text" id="certNumber" placeholder="Enter Certificate Number" />
+
+         <!-- <br /><br /> -->
+         <button type="submit" id="verifyBtn" class="btn primary-btn">Verify</button>
+
+         <div id="loader" style="display:none;" class="loader"></div>
+
+         <div class="heading-minitext mt-2" id="result"></div>
+      </div>
+   </form>
 
 </body>
 
