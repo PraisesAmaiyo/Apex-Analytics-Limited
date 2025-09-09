@@ -321,7 +321,9 @@
                   Send Us a Message
                </h1>
 
-               <form class="form" id="contact-form">
+               <form class="form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+                  <input type="hidden" name="access_key" value="01fcedc0-3f17-453c-8ced-d2aafe0ea9d5">
 
                   <div class="form-group">
                      <div class="input-container">
@@ -356,6 +358,7 @@
                   <!-- <div class="g-recaptcha" data-sitekey="6LcbAYUqAAAAAOTXY28hK7L05cpDF63g7H4PWlQx" data-action="SUBMIT">
                   </div> -->
 
+                  <div class="h-captcha" data-captcha="true"></div>
 
                   <button type="submit" class="btn primary-btn">
                      Send Message
@@ -556,8 +559,22 @@
       document.getElementById('phone').addEventListener('input', function (e) {
          this.value = this.value.replace(/[^0-9+ ]/g, '');
       });
+
+      const form = document.getElementById('contact-form');
+
+      form.addEventListener('submit', function (e) {
+         const hCaptchaResponse = form.querySelector('textarea[name=h-captcha-response]').value;
+
+         // Check if the hCaptcha response is present
+         if (!hCaptchaResponse) {
+            e.preventDefault(); // Stop the form from submitting
+            alert("Please complete the CAPTCHA to send the message.");
+         }
+      });
    </script>
 
+
+   <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 
 </html>
