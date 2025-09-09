@@ -50,6 +50,9 @@
    <!-- particles.js -->
    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
+   <!-- Cloudflare -->
+   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
 
    <!-- Javascript and Third-Party CDNs -->
    <script defer type="module" src="JS/script.js"></script>
@@ -351,8 +354,13 @@
                      <textarea id="message" name="message" rows="3" placeholder="Your Message" required></textarea>
                   </div>
 
-                  <div class="g-recaptcha" data-sitekey="6LcbAYUqAAAAAOTXY28hK7L05cpDF63g7H4PWlQx" data-action="SUBMIT">
+
+                  <!-- Cloudflare Turnstile -->
+                  <div class="cf-turnstile" data-sitekey="0x4AAAAAAB0QhtfsUnG6uTGm" data-theme="light">
                   </div>
+
+                  <!-- <div class="g-recaptcha" data-sitekey="6LcbAYUqAAAAAOTXY28hK7L05cpDF63g7H4PWlQx" data-action="SUBMIT">
+                  </div> -->
 
 
                   <button type="submit" class="btn primary-btn">

@@ -172,24 +172,24 @@ const SHEET_URL =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6TTfR0WneGMJoWzzINEkCoTfFzTz7_a5fLD5s-JAIi3cSezXpZRf028TfqyK_8vRcE8qbAWVnUYbM/pub?output=csv';
 
 // Modal Controls
-document.getElementById('openModalBtn').addEventListener('click', () => {
-  console.log('clicked');
+document.getElementById('openModalBtn')?.addEventListener('click', () => {
   document.getElementById('certModal').style.display = 'flex';
 });
 
-document.getElementById('openModalBtn_2').addEventListener('click', () => {
-  console.log('clicked 2');
+// Mobile (Second) Verification button
+document.getElementById('openModalBtn_2')?.addEventListener('click', () => {
   document.getElementById('certModal').style.display = 'flex';
 });
 
-document.querySelector('.close').addEventListener('click', closeModal);
+document.querySelector('.close')?.addEventListener('click', closeModal);
 
 function closeModal() {
   document.getElementById('certModal').style.display = 'none';
 }
 
 const form = document.getElementById('certModal');
-form.addEventListener('submit', (e) => {
+
+form?.addEventListener('submit', (e) => {
   e.preventDefault();
   checkCertificate();
 });
