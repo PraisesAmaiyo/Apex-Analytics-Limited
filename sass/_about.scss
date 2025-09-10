@@ -114,6 +114,8 @@
                padding: .5rem;
                margin-right: 1rem;
                font-size: 1.5rem;
+
+
             }
 
             .heading-subtext {
@@ -1092,11 +1094,11 @@
             }
 
 
-            .material-symbols-sharp.icon {
+            .material-symbols-outline.icon {
                transform: translateX(100%);
             }
 
-            .material-symbols-sharp.icon_2 {
+            .material-symbols-outline.icon_2 {
                transform: translateX(0);
             }
          }
@@ -1158,12 +1160,12 @@
             }
 
             /* On hover, slide the first icon off to the LEFT */
-            .material-symbols-sharp.prevIcon {
+            .material-symbols-outline.prevIcon {
                transform: translateX(-100%);
             }
 
             /* And slide the second icon in from the RIGHT */
-            .material-symbols-sharp.prevIcon_2 {
+            .material-symbols-outline.prevIcon_2 {
                transform: translateX(0);
             }
          }
@@ -1213,8 +1215,8 @@
 
       // PREV BUTTON
 
-      .material-symbols-sharp.prevIcon,
-      .material-symbols-sharp.prevIcon_2 {
+      .material-symbols-outline.prevIcon,
+      .material-symbols-outline.prevIcon_2 {
          /* Style for both icons */
          padding: 1.3rem;
          color: $color-grey-light-1;
@@ -1223,19 +1225,19 @@
          transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       }
 
-      .material-symbols-sharp.prevIcon {
+      .material-symbols-outline.prevIcon {
          /* Initial state of the first icon: visible */
          transform: translateX(0);
       }
 
-      .material-symbols-sharp.prevIcon_2 {
+      .material-symbols-outline.prevIcon_2 {
          /* Now the second icon starts off-screen to the RIGHT */
          transform: translateX(100%);
       }
 
       // NEXT BUTTON
-      .material-symbols-sharp.icon,
-      .material-symbols-sharp.icon_2 {
+      .material-symbols-outline.icon,
+      .material-symbols-outline.icon_2 {
          /* Style for both icons */
          padding: 1.3rem;
          color: $color-grey-light-1;
@@ -1244,11 +1246,11 @@
          transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       }
 
-      .material-symbols-sharp.icon {
+      .material-symbols-outline.icon {
          transform: translateX(0);
       }
 
-      .material-symbols-sharp.icon_2 {
+      .material-symbols-outline.icon_2 {
          transform: translateX(-100%);
       }
 
@@ -1663,11 +1665,11 @@
                   }
 
 
-                  .material-symbols-sharp.icon {
+                  .material-symbols-outline.icon {
                      transform: translateX(100%);
                   }
 
-                  .material-symbols-sharp.icon_2 {
+                  .material-symbols-outline.icon_2 {
                      transform: translateX(0);
                   }
                }
@@ -1722,12 +1724,12 @@
                   }
 
                   /* On hover, slide the first icon off to the LEFT */
-                  .material-symbols-sharp.prevIcon {
+                  .material-symbols-outline.prevIcon {
                      transform: translateX(-100%);
                   }
 
                   /* And slide the second icon in from the RIGHT */
-                  .material-symbols-sharp.prevIcon_2 {
+                  .material-symbols-outline.prevIcon_2 {
                      transform: translateX(0);
                   }
                }
@@ -1769,8 +1771,8 @@
 
             // PREV BUTTON
 
-            .material-symbols-sharp.prevIcon,
-            .material-symbols-sharp.prevIcon_2 {
+            .material-symbols-outline.prevIcon,
+            .material-symbols-outline.prevIcon_2 {
                /* Style for both icons */
                padding: 1.3rem;
                color: $color-grey-light-1;
@@ -1779,19 +1781,19 @@
                transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             }
 
-            .material-symbols-sharp.prevIcon {
+            .material-symbols-outline.prevIcon {
                /* Initial state of the first icon: visible */
                transform: translateX(0);
             }
 
-            .material-symbols-sharp.prevIcon_2 {
+            .material-symbols-outline.prevIcon_2 {
                /* Now the second icon starts off-screen to the RIGHT */
                transform: translateX(100%);
             }
 
             // NEXT BUTTON
-            .material-symbols-sharp.icon,
-            .material-symbols-sharp.icon_2 {
+            .material-symbols-outline.icon,
+            .material-symbols-outline.icon_2 {
                /* Style for both icons */
                padding: 1.3rem;
                color: $color-grey-light-1;
@@ -1800,11 +1802,11 @@
                transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             }
 
-            .material-symbols-sharp.icon {
+            .material-symbols-outline.icon {
                transform: translateX(0);
             }
 
-            .material-symbols-sharp.icon_2 {
+            .material-symbols-outline.icon_2 {
                transform: translateX(-100%);
             }
 
@@ -2392,11 +2394,11 @@
                   }
 
 
-                  .material-symbols-sharp.icon {
+                  .material-symbols-outline.icon {
                      transform: translateX(100%);
                   }
 
-                  .material-symbols-sharp.icon_2 {
+                  .material-symbols-outline.icon_2 {
                      transform: translateX(0);
                   }
                }
@@ -2451,12 +2453,12 @@
                   }
 
                   /* On hover, slide the first icon off to the LEFT */
-                  .material-symbols-sharp.prevIcon {
+                  .material-symbols-outline.prevIcon {
                      transform: translateX(-100%);
                   }
 
                   /* And slide the second icon in from the RIGHT */
-                  .material-symbols-sharp.prevIcon_2 {
+                  .material-symbols-outline.prevIcon_2 {
                      transform: translateX(0);
                   }
                }
@@ -2498,8 +2500,8 @@
 
             // PREV BUTTON
 
-            .material-symbols-sharp.prevIcon,
-            .material-symbols-sharp.prevIcon_2 {
+            .material-symbols-outline.prevIcon,
+            .material-symbols-outline.prevIcon_2 {
                /* Style for both icons */
                padding: 1.3rem;
                color: $color-grey-light-1;
@@ -2508,19 +2510,19 @@
                transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             }
 
-            .material-symbols-sharp.prevIcon {
+            .material-symbols-outline.prevIcon {
                /* Initial state of the first icon: visible */
                transform: translateX(0);
             }
 
-            .material-symbols-sharp.prevIcon_2 {
+            .material-symbols-outline.prevIcon_2 {
                /* Now the second icon starts off-screen to the RIGHT */
                transform: translateX(100%);
             }
 
             // NEXT BUTTON
-            .material-symbols-sharp.icon,
-            .material-symbols-sharp.icon_2 {
+            .material-symbols-outline.icon,
+            .material-symbols-outline.icon_2 {
                /* Style for both icons */
                padding: 1.3rem;
                color: $color-grey-light-1;
@@ -2529,11 +2531,11 @@
                transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             }
 
-            .material-symbols-sharp.icon {
+            .material-symbols-outline.icon {
                transform: translateX(0);
             }
 
-            .material-symbols-sharp.icon_2 {
+            .material-symbols-outline.icon_2 {
                transform: translateX(-100%);
             }
 

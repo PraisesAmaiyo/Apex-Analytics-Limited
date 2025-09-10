@@ -289,6 +289,26 @@ select {
    }
 }
 
+.light-btn {
+   background-color: $color-grey-light-1;
+   color: $color-grey-dark-1;
+
+   &::before {
+      background: $color-primary-900;
+   }
+
+   &:hover {
+      color: $color-grey-light-1 !important;
+   }
+
+   &:hover::before,
+   &:active::before {
+      -webkit-transform: scale(1.5, 1.5) translateY(0);
+      transform: scale(1.5, 1.5) translateY(0);
+      border-radius: 50%;
+   }
+}
+
 
 
 

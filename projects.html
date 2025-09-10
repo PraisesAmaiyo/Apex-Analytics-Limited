@@ -17,11 +17,11 @@
       rel="stylesheet">
 
    <!-- Google Icon -->
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
-   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" /> -->
 
    <!-- <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=format_quote" /> -->
@@ -162,7 +162,7 @@
 
                      <li><a class="main-nav-link active" href="#">Projects</a></li>
 
-                     <li><a class="main-nav-link" href="/team-members.html">Team Members</a></li>
+
 
                      <li><a class="main-nav-link" href="/contact-us.html">Contact Us</a></li>
                   </ul>
@@ -188,18 +188,14 @@
 
 
                   <div class="nav-profile">
-                     <a href="./assets/APEX ANALYTICS LIMITED COMPANY PROFILE.pdf" target="_blank">
-                        <button class="btn primary-btn">Company Profile</button>
-                     </a>
+                     <button id="openModalBtn" class="btn primary-btn">Verify Certificates</button>
                   </div>
                </div>
             </div>
          </nav>
 
          <div class="mobile-nav-profile">
-            <a href="./assets/APEX ANALYTICS LIMITED COMPANY PROFILE.pdf" target="_blank">
-               <button class="btn primary-btn">Company Profile</button>
-            </a>
+            <button id="openModalBtn_2" class="btn primary-btn">Verify Certificates</button>
          </div>
 
          <button class="btn-mobile-nav">
@@ -221,9 +217,7 @@
                </h1>
 
                <div class="hero-text_nav">
-                  <span class="material-symbols-sharp hero-text_nav--icon ">
-                     house
-                  </span>
+                  <iconify-icon class="hero-text_nav--icon" icon="material-symbols:house-outline"></iconify-icon>
 
                   <p class="heading-subtext">
                      Home &nbsp;/ &nbsp;<span class="color">Projects</span>
@@ -693,23 +687,20 @@
                      <ul class="choose-us__right-list--container">
 
                         <li class="list">
-                           <span class="material-symbols-sharp list-icon">
-                              check
-                           </span>
+                           <iconify-icon class="material-symbols-outline list-icon"
+                              icon="material-symbols:check"></iconify-icon>
 
                            <p class="heading-minitext list-text">Innovation-Driven Solutions</p>
                         </li>
                         <li class="list">
-                           <span class="material-symbols-sharp list-icon">
-                              check
-                           </span>
+                           <iconify-icon class="material-symbols-outline list-icon"
+                              icon="material-symbols:check"></iconify-icon>
 
                            <p class="heading-minitext list-text">Regulatory Expertise</p>
                         </li>
                         <li class="list">
-                           <span class="material-symbols-sharp list-icon">
-                              check
-                           </span>
+                           <iconify-icon class="material-symbols-outline list-icon"
+                              icon="material-symbols:check"></iconify-icon>
 
                            <p class="heading-minitext list-text">Client-Centric Approach</p>
                         </li>
@@ -718,23 +709,20 @@
                      <ul class="choose-us__right-list--container">
 
                         <li class="list">
-                           <span class="material-symbols-sharp list-icon">
-                              check
-                           </span>
+                           <iconify-icon class="material-symbols-outline list-icon"
+                              icon="material-symbols:check"></iconify-icon>
 
                            <p class="heading-minitext list-text">Sustainability Focus</p>
                         </li>
                         <li class="list">
-                           <span class="material-symbols-sharp list-icon">
-                              check
-                           </span>
+                           <iconify-icon class="material-symbols-outline list-icon"
+                              icon="material-symbols:check"></iconify-icon>
 
                            <p class="heading-minitext list-text">Skilled Multidisciplinary Team</p>
                         </li>
                         <li class="list">
-                           <span class="material-symbols-sharp list-icon">
-                              check
-                           </span>
+                           <iconify-icon class="material-symbols-outline list-icon"
+                              icon="material-symbols:check"></iconify-icon>
 
                            <p class="heading-minitext list-text">Proven Track Record</p>
                         </li>
@@ -742,7 +730,7 @@
                   </div>
 
                   <div class="choose-us__right-btn">
-                     <a href="" target="_blank">
+                     <a href="/services.html">
                         <button class="btn secondary-btn">Know More</button>
                      </a>
                   </div>
@@ -832,9 +820,7 @@
                   <li class="list">
                      <a href="/projects.html" class="heading-minitext list-link">Projects</a>
                   </li>
-                  <li class="list">
-                     <a href="/team-members.html" class="heading-minitext list-link">Team Members</a>
-                  </li>
+
                   <li class="list">
                      <a href="/contact-us.html" class="heading-minitext list-link">Contact Us</a>
                   </li>
@@ -938,6 +924,24 @@
       </section>
 
    </main>
+
+   <!-- Modal -->
+   <form class="modal" id="certModal">
+      <div class="modal-content">
+         <span class="close">&times;</span>
+         <h1 class="heading-midtext-wide mb-2">Certificate Verification</h1>
+
+         <input type="text" id="certNumber" placeholder="Enter Certificate Number" />
+
+         <!-- <br /><br /> -->
+         <button type="submit" id="verifyBtn" class="btn primary-btn">Verify</button>
+
+         <div id="loader" style="display:none;" class="loader"></div>
+
+         <div class="heading-minitext mt-2" id="result"></div>
+      </div>
+   </form>
+   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </body>
 
 </html>
