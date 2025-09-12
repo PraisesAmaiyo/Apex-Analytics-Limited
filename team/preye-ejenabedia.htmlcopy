@@ -83,7 +83,7 @@
 
                   <li class="main-nav-top--contact_links">
                      <div class="nav-call_icon">
-                        <i class="fa-solid fa-phone-volume nav-icon "></i>
+                           <iconify-icon class="iconify nav-icon" icon="fa6-solid:phone-volume"></iconify-icon>
                      </div>
 
                      <a href="tel:+2349010642299" class="link-item">+234 901 064 2299</a>
@@ -94,17 +94,17 @@
                <ul class="main-nav-top--contact">
 
                   <li class="main-nav-top--contact_links">
-                     <i class="fa-solid fa-location-dot nav-icon"></i>
+                      <iconify-icon class="iconify nav-icon" icon="fa6-solid:location-dot"></iconify-icon>
                      <p class="heading-minitext">3 Nyokuru Close, off Estate Road, Rumuogba, Port Harcourt </p>
                   </li>
 
                   <li class="main-nav-top--contact_links">
-                     <i class="fa-regular fa-envelope nav-icon"></i>
+                   <iconify-icon class="iconify nav-icon" icon="fa6-regular:envelope"></iconify-icon>
                      <a href="mailto:info@apex-ng.com" class="link-item">info@apex-ng.com</a>
                   </li>
 
                   <li class="main-nav-top--contact_links">
-                     <i class="fa-regular fa-clock nav-icon"></i>
+                     <iconify-icon class="iconify nav-icon" icon="fa6-regular:clock"></iconify-icon>
                      <p class="heading-minitext" class="link-item">Mon-Fri 9:00am to 5:00pm</p>
                   </li>
 
@@ -135,7 +135,7 @@
                            </a>
                            <button class="dropdown-icon" aria-expanded="false" aria-controls="services-menu"
                               aria-label="Toggle Services menu" type="button">
-                              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                              <iconify-icon class="iconify " icon="fa6-solid:chevron-down"></iconify-icon>
                            </button>
                         </div>
 
@@ -171,16 +171,16 @@
                   <div class="main-nav-bottom_right--socials">
                      <a href="https://www.facebook.com/Apex-Analytics-Limited-181927449221499"  aria-label="Follow us on Facebook"target="_blank"
                         class="nav-icon">
-                        <i class="fa-brands fa-facebook-f icon"></i>
+                        <iconify-icon class="iconify icon" icon="fa6-brands:facebook-f"></iconify-icon>
                      </a>
 
                      <a href="https://x.com/apexanalyticslt" aria-label="Follow us on X, formerly Twitter" target="_blank" class="nav-icon">
-                        <i class="fa-brands fa-twitter icon"></i>
+                        <iconify-icon class="iconify icon" icon="fa6-brands:twitter"></iconify-icon>
                      </a>
 
                      <a href="https://www.linkedin.com/company/apex-analytics-limited/" aria-label="Follow us on Linkedin" target="_blank"
                         class="nav-icon">
-                        <i class="fa-brands fa-linkedin icon"></i>
+                        <iconify-icon class="iconify icon" icon="fa6-brands:linkedin-in"></iconify-icon>
                      </a>
                   </div>
 
@@ -328,16 +328,16 @@
                         <div class="aside-members_socials">
                            <a href="https://www.facebook.com/Apex-Analytics-Limited-181927449221499"  aria-label="Follow us on Facebook"itemprop="sameAs"
                               target="_blank" class="nav-icon">
-                              <i class="fa-brands fa-facebook-f icon"></i>
+                              <iconify-icon class="iconify icon" icon="fa6-brands:facebook-f"></iconify-icon>
                            </a>
 
                            <a href="https://x.com/apexanalyticslt" aria-label="Follow us on X, formerly Twitter" itemprop="sameAs" target="_blank" class="nav-icon">
-                              <i class="fa-brands fa-twitter icon"></i>
+                              <iconify-icon class="iconify icon" icon="fa6-brands:twitter"></iconify-icon>
                            </a>
 
                            <a href="https://www.linkedin.com/company/apex-analytics-limited/" aria-label="Follow us on Linkedin" itemprop="sameAs"
                               target="_blank" class="nav-icon">
-                              <i class="fa-brands fa-linkedin icon"></i>
+                              <iconify-icon class="iconify icon" icon="fa6-brands:linkedin-in"></iconify-icon>
                            </a>
                         </div>
 
@@ -554,15 +554,15 @@
                <div class="footer-info_socials">
                   <a href="https://www.facebook.com/Apex-Analytics-Limited-181927449221499"  aria-label="Follow us on Facebook"target="_blank"
                      class="nav-icon">
-                     <i class="fa-brands fa-facebook-f icon"></i>
+                     <iconify-icon class="iconify icon" icon="fa6-brands:facebook-f"></iconify-icon>
                   </a>
 
                   <a href="https://x.com/apexanalyticslt" aria-label="Follow us on X, formerly Twitter" target="_blank" class="nav-icon">
-                     <i class="fa-brands fa-twitter icon"></i>
+                     <iconify-icon class="iconify icon" icon="fa6-brands:twitter"></iconify-icon>
                   </a>
 
                   <a href="https://www.linkedin.com/company/apex-analytics-limited/" aria-label="Follow us on Linkedin" target="_blank" class="nav-icon">
-                     <i class="fa-brands fa-linkedin icon"></i>
+                     <iconify-icon class="iconify icon" icon="fa6-brands:linkedin-in"></iconify-icon>
                   </a>
                </div>
             </div>
@@ -643,7 +643,7 @@
                   </h2>
 
                   <div class="footer-contact_info--links">
-                     <i class="fa-regular fa-envelope nav-icon"></i>
+                   <iconify-icon class="iconify nav-icon" icon="fa6-regular:envelope"></iconify-icon>
                      <a href="mailto:info@apex-ng.com" class="link-item">info@apex-ng.com</a>
                   </div>
 
@@ -653,7 +653,7 @@
                   </h2>
 
                   <div class="footer-contact_info--links">
-                     <i class="fa-solid fa-phone-volume nav-icon "></i>
+                        <iconify-icon class="iconify nav-icon" icon="fa6-solid:phone-volume"></iconify-icon>
                      <a href="tel:+2349010642299" class="link-item">+234 901 064 2299</a>
                   </div>
 
@@ -662,7 +662,7 @@
                   </h2>
 
                   <div class="footer-contact_info--links">
-                     <i class="fa-solid fa-location-dot nav-icon"></i>
+                      <iconify-icon class="iconify nav-icon" icon="fa6-solid:location-dot"></iconify-icon>
                      <p class="heading-minitext">3 Nyokuru Close, off Estate Road, Rumuogba, Port Harcourt </p>
                   </div>
 
