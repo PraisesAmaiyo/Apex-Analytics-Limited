@@ -62,7 +62,7 @@
 
       <header class="navigation-header  ">
          <a href="/index.html" class=" mobile-nav-logo">
-            <img class="logo " alt="Apex Analytics Limited logo" src="/img/logo.webp"   />
+            <img class="logo " alt="Apex Analytics Limited logo" src="/img/logo.webp"  width="157" height="45"   />
          </a>
 
 
