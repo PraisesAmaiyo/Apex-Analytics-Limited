@@ -182,48 +182,50 @@ var swiper = new Swiper('.projectsSwiper', {
 
 // Currently In USe
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
 
-const servicesSection = document.querySelector('.services-bottom');
-const scrollWrapper = document.querySelector('.scroll-wrapper');
-const boxes = gsap.utils.toArray('.service-box');
+  const servicesSection = document.querySelector('.services-bottom');
+  const scrollWrapper = document.querySelector('.scroll-wrapper');
+  const boxes = gsap.utils.toArray('.service-box');
 
-if (servicesSection && scrollWrapper && boxes.length) {
-  // Calculate the total scrollable distance dynamically
-  const getScrollableWidth = () => {
-    return scrollWrapper.scrollWidth - window.innerWidth;
-  };
+  if (servicesSection && scrollWrapper && boxes.length) {
+    // Calculate the total scrollable distance dynamically
+    const getScrollableWidth = () => {
+      return scrollWrapper.scrollWidth - window.innerWidth;
+    };
 
-  // Create the main horizontal scroll animation
-  const mainScrollTween = gsap.to(scrollWrapper, {
-    x: () => -getScrollableWidth(),
-    ease: 'none',
-    scrollTrigger: {
-      trigger: servicesSection,
-      pin: true,
-      scrub: 1,
-      start: 'top top',
-      end: () => `+=${getScrollableWidth() + window.innerWidth}`,
-      invalidateOnRefresh: true,
-    },
-  });
-
-  // Now, create a more robust ScrollTrigger for each box
-  boxes.forEach((box, index) => {
-    ScrollTrigger.create({
-      trigger: box,
-      containerAnimation: mainScrollTween, // This remains the key for synchronizing
-      start: 'left 60%', // Trigger when the box's left edge is 60% across the viewport
-      end: 'right 40%', // Stay active until its right edge reaches 40% across
-      onEnter: () => setActive(index),
-      onEnterBack: () => setActive(index),
+    // Create the main horizontal scroll animation
+    const mainScrollTween = gsap.to(scrollWrapper, {
+      x: () => -getScrollableWidth(),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: servicesSection,
+        pin: true,
+        scrub: 1,
+        start: 'top top',
+        end: () => `+=${getScrollableWidth() + window.innerWidth}`,
+        invalidateOnRefresh: true,
+      },
     });
-  });
 
-  function setActive(index) {
-    boxes.forEach((box, i) => {
-      box.classList.toggle('active', i === index);
+    // Now, create a more robust ScrollTrigger for each box
+    boxes.forEach((box, index) => {
+      ScrollTrigger.create({
+        trigger: box,
+        containerAnimation: mainScrollTween, // This remains the key for synchronizing
+        start: 'left 60%', // Trigger when the box's left edge is 60% across the viewport
+        end: 'right 40%', // Stay active until its right edge reaches 40% across
+        onEnter: () => setActive(index),
+        onEnterBack: () => setActive(index),
+      });
     });
+
+    function setActive(index) {
+      boxes.forEach((box, i) => {
+        box.classList.toggle('active', i === index);
+      });
+    }
   }
 }
 

@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1" >
    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
    <meta name="description"
@@ -44,8 +44,7 @@
    <!-- Smooth Scroll -->
    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
 
    <!-- particles.js -->
    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -70,7 +69,7 @@
 
       <header class="navigation-header  ">
          <a href="/index.html" class=" mobile-nav-logo">
-            <img class="logo " alt="Apex Analytics Limited logo" src="/img/logo.png" />
+            <img class="logo " alt="Apex Analytics Limited logo" src="/img/logo.webp"   />
          </a>
 
 
@@ -80,7 +79,7 @@
                <!-- Top Left -->
                <ul class="main-nav-top--contact">
 
-                  <p class="heading-minitext">Schedule a Free Project Review</p>
+                  <li class="heading-minitext">Schedule a Free Project Review</li>
 
                   <li class="main-nav-top--contact_links">
                      <div class="nav-call_icon">
@@ -119,7 +118,7 @@
                   </button>
 
                   <a href="/index.html">
-                     <img class="logo" alt="Apex Analytics Limited logo" src="/img/logo.png" />
+                     <img class="logo" alt="Apex Analytics Limited logo" src="/img/logo.webp"   />
                   </a>
 
                   <ul class="main-nav-list">
@@ -143,13 +142,13 @@
 
                         <ul id="services-menu" class="dropdown-menu" role="menu">
                            <li><a role="menuitem" href="/services/environmental-and-sustainability.html">Environmental &
-                                 Sustainability</a></li>
+                                 Sustainability Consulting</a></li>
                            <li><a role="menuitem" href="/services/geophysical-and-geotechnical.html">Geophysical &
-                                 Geotechnical</a></li>
+                                 Geotechnical Services</a></li>
                            <li><a role="menuitem" href="/services/integrated-waste-and-water.html">Integrated Waste &
-                                 Water</a></li>
+                                 Water Solutions</a></li>
                            <li><a role="menuitem" href="/services/environmental-laboratory.html">Environmental
-                                 Laboratory</a></li>
+                                 Laboratory Services</a></li>
                            <li><a role="menuitem" href="/services/gis-and-remote-sensing.html">GIS & Remote Sensing</a>
                            </li>
                            <li><a role="menuitem" href="/services/training-and-capacity-building.html">Training &
@@ -170,16 +169,16 @@
 
                <div class="main-nav-bottom_right">
                   <div class="main-nav-bottom_right--socials">
-                     <a href="https://www.facebook.com/Apex-Analytics-Limited-181927449221499" target="_blank"
+                     <a href="https://www.facebook.com/Apex-Analytics-Limited-181927449221499"  aria-label="Follow us on Facebook"target="_blank"
                         class="nav-icon">
                         <i class="fa-brands fa-facebook-f icon"></i>
                      </a>
 
-                     <a href="https://x.com/apexanalyticslt" target="_blank" class="nav-icon">
+                     <a href="https://x.com/apexanalyticslt" aria-label="Follow us on X, formerly Twitter" target="_blank" class="nav-icon">
                         <i class="fa-brands fa-twitter icon"></i>
                      </a>
 
-                     <a href="https://www.linkedin.com/company/apex-analytics-limited/" target="_blank"
+                     <a href="https://www.linkedin.com/company/apex-analytics-limited/" aria-label="Follow us on Linkedin" target="_blank"
                         class="nav-icon">
                         <i class="fa-brands fa-linkedin icon"></i>
                      </a>
@@ -327,16 +326,16 @@
                      <div class="aside-members_bottom">
 
                         <div class="aside-members_socials">
-                           <a href="https://www.facebook.com/Apex-Analytics-Limited-181927449221499" itemprop="sameAs"
+                           <a href="https://www.facebook.com/Apex-Analytics-Limited-181927449221499"  aria-label="Follow us on Facebook"itemprop="sameAs"
                               target="_blank" class="nav-icon">
                               <i class="fa-brands fa-facebook-f icon"></i>
                            </a>
 
-                           <a href="https://x.com/apexanalyticslt" itemprop="sameAs" target="_blank" class="nav-icon">
+                           <a href="https://x.com/apexanalyticslt" aria-label="Follow us on X, formerly Twitter" itemprop="sameAs" target="_blank" class="nav-icon">
                               <i class="fa-brands fa-twitter icon"></i>
                            </a>
 
-                           <a href="https://www.linkedin.com/company/apex-analytics-limited/" itemprop="sameAs"
+                           <a href="https://www.linkedin.com/company/apex-analytics-limited/" aria-label="Follow us on Linkedin" itemprop="sameAs"
                               target="_blank" class="nav-icon">
                               <i class="fa-brands fa-linkedin icon"></i>
                            </a>
@@ -547,22 +546,22 @@
 
 
             <div class="footer-info">
-               <img src="../img/logo.png" alt="Apex Analytics Limited Logo" class="footer-logo">
+               <img src="../img/logo.webp" alt="Apex Analytics Limited Logo" class="footer-logo">
 
                <p class="heading-minitext">At Apex Analytics, we combine science, innovation, and integrity to provide
                   reliable testing and consulting for a cleaner, safer future</p>
 
                <div class="footer-info_socials">
-                  <a href="https://www.facebook.com/Apex-Analytics-Limited-181927449221499" target="_blank"
+                  <a href="https://www.facebook.com/Apex-Analytics-Limited-181927449221499"  aria-label="Follow us on Facebook"target="_blank"
                      class="nav-icon">
                      <i class="fa-brands fa-facebook-f icon"></i>
                   </a>
 
-                  <a href="https://x.com/apexanalyticslt" target="_blank" class="nav-icon">
+                  <a href="https://x.com/apexanalyticslt" aria-label="Follow us on X, formerly Twitter" target="_blank" class="nav-icon">
                      <i class="fa-brands fa-twitter icon"></i>
                   </a>
 
-                  <a href="https://www.linkedin.com/company/apex-analytics-limited/" target="_blank" class="nav-icon">
+                  <a href="https://www.linkedin.com/company/apex-analytics-limited/" aria-label="Follow us on Linkedin" target="_blank" class="nav-icon">
                      <i class="fa-brands fa-linkedin icon"></i>
                   </a>
                </div>
@@ -574,7 +573,7 @@
 
                <ul class="footer-nav_container">
 
-                  <h1 class="heading-midtext-wide mb-1">Useful Links</h1>
+                  <li class="heading-midtext-wide mb-1">Useful Links</li>
 
                   <li class="list">
                      <a href="/index.html" class="heading-minitext list-link">Home</a>
@@ -598,26 +597,21 @@
                </ul>
 
                <ul class="footer-nav_container">
-                  <h1 class="heading-midtext-wide mb-1">Our Services</h1>
+                  <li class="heading-midtext-wide mb-1">Our Services</li>
 
                   <li class="list">
                      <a href="/services/environmental-and-sustainability.html"
-                        class="heading-minitext list-link">Environmental &
-                        Sustainability</a>
+                        class="heading-minitext list-link">Environmental & Sustainability Consulting</a>
                   </li>
                   <li class="list">
                      <a href="/services/geophysical-and-geotechnical.html"
-                        class="heading-minitext list-link">Geophysical &
-                        Geotechnical</a>
+                        class="heading-minitext list-link">Geophysical & Geotechnical Services</a>
                   </li>
                   <li class="list">
-                     <a href="/services/integrated-waste-and-water.html" class="heading-minitext list-link">Integrated
-                        Waste &
-                        Water</a>
+                     <a href="/services/integrated-waste-and-water.html" class="heading-minitext list-link">Integrated Waste & Water Solutions</a>
                   </li>
                   <li class="list">
-                     <a href="/services/environmental-laboratory.html" class="heading-minitext list-link">Environmental
-                        Laboratory</a>
+                     <a href="/services/environmental-laboratory.html" class="heading-minitext list-link">Environmental Laboratory Services</a>
                   </li>
                   <li class="list">
                      <a href="/services/gis-and-remote-sensing.html" class="heading-minitext list-link">GIS & Remote

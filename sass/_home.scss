@@ -407,6 +407,10 @@
             align-items: center;
             justify-content: center;
 
+            @media only screen and (max-width: $bp-small) {
+               flex-direction: column;
+            }
+
             &_info {
                display: flex;
                flex-direction: column;
@@ -657,7 +661,7 @@
                }
 
                .image-background {
-                  background-image: url(../img/apex-analytics-stats.jpg);
+                  background-image: url(../img/apex-analytics-stats.webp);
                   background-position: center;
                   background-size: cover;
                   background-repeat: no-repeat;
@@ -1030,7 +1034,7 @@
       height: 100%;
       background: linear-gradient(rgba($color-primary, 0.7),
             rgba($color-primary-950, 0.7)),
-         url(../img/infrastructure-background.jpg) center/cover no-repeat;
+         url(../img/infrastructure-background.webp) center/cover no-repeat;
       opacity: 0; // start invisible
       transition: opacity 0.8s ease; // fade in/out
       z-index: 0;
@@ -2162,8 +2166,12 @@
 
       &-nav {
          display: flex;
-
          gap: 2rem;
+
+         @media only screen and (max-width: $bp-mid) {
+            flex-direction: column;
+            gap: 3rem;
+         }
 
          &_container {
             list-style-type: none;
@@ -2183,12 +2191,13 @@
             a {
                text-decoration: none;
                transition: all 0.5s ease;
+               color: $color-primary-700;
 
 
 
                &:hover,
                &:active {
-                  color: $color-primary;
+                  color: $color-primary-800;
                   font-weight: 600;
                }
             }
@@ -2281,6 +2290,7 @@
       padding: 2rem 5rem;
       border-top: 1px solid rgba($color-primary-900, 0.2);
       width: 100%;
+      text-align: center;
 
       @media only screen and (max-width: $bp-big) {
          padding: 2.5rem;
@@ -2288,6 +2298,10 @@
 
       .copyright-text.heading-minitext {
          font-size: 1.2rem;
+
+         a {
+            color: $color-primary-700;
+         }
       }
 
       @media only screen and (min-width: $bp-monitor) {

@@ -1,3 +1,6 @@
+@font-face {
+  font-display: swap;
+}
 *,
 *::before,
 *::after {
@@ -307,7 +310,7 @@ body a:focus {
   width: 7.5rem;
 }
 .section-credibility .credibility-card_number {
-  color: #47844b;
+  color: #2a4a2c;
   opacity: 0.7;
   margin-bottom: 0.5rem;
   height: 6rem;
@@ -321,7 +324,7 @@ body a:focus {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  background-color: #47844b;
+  background-color: #2a4a2c;
   transition: all 0.5s ease;
 }
 .section-credibility .credibility-card_heading {
@@ -380,6 +383,11 @@ body a:focus {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 30.5em) {
+  .section-about .about-top-stats {
+    flex-direction: column;
+  }
+}
 .section-about .about-top-stats_info {
   display: flex;
   flex-direction: column;
@@ -390,7 +398,7 @@ body a:focus {
   font-size: 3.5rem;
   font-weight: 700;
   font-family: "Familjen Grotesk", sans-serif;
-  color: #47844b;
+  color: #2a4a2c;
 }
 .section-about .about-top-stats_info--text {
   text-transform: uppercase;
@@ -595,7 +603,7 @@ body a:focus {
   }
 }
 .section-about .about-bottom_two--right .image-background {
-  background-image: url(../img/apex-analytics-stats.jpg);
+  background-image: url(../img/apex-analytics-stats.webp);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -656,7 +664,7 @@ body a:focus {
   text-align: center;
 }
 .section-partners .partners-textbox .heading-midtext {
-  color: #47844b;
+  color: #2a4a2c;
 }
 .section-partners .partners-swiper {
   display: flex;
@@ -889,7 +897,7 @@ body a:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(33, 112, 191, 0.7), rgba(17, 37, 64, 0.7)), url(../img/infrastructure-background.jpg) center/cover no-repeat;
+  background: linear-gradient(rgba(33, 112, 191, 0.7), rgba(17, 37, 64, 0.7)), url(../img/infrastructure-background.webp) center/cover no-repeat;
   opacity: 0;
   transition: opacity 0.8s ease;
   z-index: 0;
@@ -1790,6 +1798,12 @@ body a:focus {
   display: flex;
   gap: 2rem;
 }
+@media only screen and (max-width: 35.6em) {
+  .section-footer .footer-nav {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
 .section-footer .footer-nav_container {
   list-style-type: none;
   width: max-content;
@@ -1803,9 +1817,10 @@ body a:focus {
 .section-footer .footer-nav_container a {
   text-decoration: none;
   transition: all 0.5s ease;
+  color: #19518b;
 }
 .section-footer .footer-nav_container a:hover, .section-footer .footer-nav_container a:active {
-  color: #2170bf;
+  color: #194673;
   font-weight: 600;
 }
 .section-footer .footer-contact .heading-midtext-wide {
@@ -1878,6 +1893,7 @@ body a:focus {
   padding: 2rem 5rem;
   border-top: 1px solid rgba(26, 59, 96, 0.2);
   width: 100%;
+  text-align: center;
 }
 @media only screen and (max-width: 50.3em) {
   .section-copyright .copyright {
@@ -1886,6 +1902,9 @@ body a:focus {
 }
 .section-copyright .copyright .copyright-text.heading-minitext {
   font-size: 1.2rem;
+}
+.section-copyright .copyright .copyright-text.heading-minitext a {
+  color: #19518b;
 }
 @media only screen and (min-width: 100em) {
   .section-copyright .copyright {
@@ -1964,7 +1983,7 @@ body a:focus {
 .team-members-page-hero .about-page-background,
 .single-members-page-hero .about-page-background,
 .contact-page-hero .about-page-background {
-  background-image: url(../img/about/about-hero-bg.jpg);
+  background-image: url(../img/about/about-hero-bg.webp);
 }
 .about-page-hero .services-page-background,
 .services-page-hero .services-page-background,
@@ -1972,7 +1991,7 @@ body a:focus {
 .team-members-page-hero .services-page-background,
 .single-members-page-hero .services-page-background,
 .contact-page-hero .services-page-background {
-  background-image: url(../img/mini-hero-bg.JPG);
+  background-image: url(../img/mini-hero-bg.webp);
 }
 .about-page-hero .projects-page-background,
 .services-page-hero .projects-page-background,
@@ -1980,7 +1999,7 @@ body a:focus {
 .team-members-page-hero .projects-page-background,
 .single-members-page-hero .projects-page-background,
 .contact-page-hero .projects-page-background {
-  background-image: url(../img/mini-hero-bg.JPG);
+  background-image: url(../img/mini-hero-bg.webp);
 }
 .about-page-hero .team-members-page-background,
 .services-page-hero .team-members-page-background,
@@ -1988,7 +2007,7 @@ body a:focus {
 .team-members-page-hero .team-members-page-background,
 .single-members-page-hero .team-members-page-background,
 .contact-page-hero .team-members-page-background {
-  background-image: url(../img/mini-hero-bg.JPG);
+  background-image: url(../img/mini-hero-bg.webp);
 }
 .about-page-hero .single-members-page-background,
 .services-page-hero .single-members-page-background,
@@ -1996,7 +2015,7 @@ body a:focus {
 .team-members-page-hero .single-members-page-background,
 .single-members-page-hero .single-members-page-background,
 .contact-page-hero .single-members-page-background {
-  background-image: url(../img/mini-hero-bg.JPG);
+  background-image: url(../img/mini-hero-bg.webp);
 }
 .about-page-hero .contact-page-background,
 .services-page-hero .contact-page-background,
@@ -2004,7 +2023,7 @@ body a:focus {
 .team-members-page-hero .contact-page-background,
 .single-members-page-hero .contact-page-background,
 .contact-page-hero .contact-page-background {
-  background-image: url(../img/mini-hero-bg.JPG);
+  background-image: url(../img/mini-hero-bg.webp);
 }
 @media only screen and (max-width: 30.5em) {
   .about-page-hero,
@@ -4550,7 +4569,7 @@ select:active, select:focus {
 }
 
 .secondary-btn {
-  background-color: #47844b;
+  background-color: #2a4a2c;
   color: #fff;
 }
 .secondary-btn::before {
@@ -5001,6 +5020,7 @@ select:active, select:focus {
   align-items: center;
   gap: 2rem;
   font-size: 1.25rem;
+  list-style: none;
 }
 .navigation-header .main-nav-top--contact .heading-minitext {
   color: #fff;
@@ -5108,6 +5128,7 @@ select:active, select:focus {
 .navigation-header .main-nav-bottom_left .main-nav-list .main-nav-link {
   display: flex;
   align-items: center;
+  padding: 1rem;
 }
 .navigation-header .main-nav-bottom_left .main-nav-list .main-nav-link.active {
   color: #2170bf !important;
@@ -5158,10 +5179,11 @@ select:active, select:focus {
   background: none;
   cursor: pointer;
   transition: transform 0.3s ease;
+  padding: 1rem;
 }
 @media only screen and (max-width: 50.3em) {
   .navigation-header .main-nav-bottom_left .main-nav-list .nav-item .dropdown-icon {
-    padding: 0.5rem;
+    padding: 1rem;
   }
 }
 .navigation-header .main-nav-bottom_left .main-nav-list .nav-item .dropdown-icon i {
@@ -5376,7 +5398,7 @@ div.swiper-3 .swiper-pagination .swiper-pagination-bullet {
   background: #77b17a;
 }
 div.swiper-3 .swiper-pagination .swiper-pagination-bullet-active {
-  background: #47844b;
+  background: #2a4a2c;
 }
 
 /*# sourceMappingURL=style.css.map */

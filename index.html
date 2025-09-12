@@ -3,65 +3,57 @@
 
 <head>
    <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv=" X-UA-Compatible" content="ie=edge" />
    <meta name="description"
-      content="Apex Analytics Limited - A multidisciplinary indigenous services firm with expertise in handling survey services, environmental consultancy and analytical laboratory services." />
+      content="Apex Analytics Limited - A multidisciplinary indigenous services firm with expertise in handling survey services, environmental consultancy and analytical laboratory services.">
 
-   <!-- Google Font -->
+   <title>Home &mdash; Apex Analytics Limited</title>
+
+   <!-- 🔗 Preconnect to critical CDNs for faster font/icon fetch -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin>
+   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+   <!-- 🔤 Google Fonts (with font-display: swap) -->
    <link
       href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet">
 
-   <!-- Google Icon -->
-   <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- 🎨 Preload & load your main stylesheet early -->
+   <link rel="preload" href="css/style.css" as="style">
+   <link rel="stylesheet" href="css/style.css">
 
-   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
-   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" /> -->
+   <!-- 🔥 Consider using SVGs for icons to drop FontAwesome JS kit -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pJH...HASH" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-   <!-- <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=format_quote" /> -->
-
-
-   <link rel="stylesheet" href="css/style.css" />
-
-   <!-- Favicon -->
+   <!-- 🖼️ Favicon -->
    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
    <link rel="manifest" href="/site.webmanifest">
 
-   <!-- Font Awesome & Icons-->
-   <script src="https://kit.fontawesome.com/d0cbf0cdf0.js" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   <!-- 🎠 Swiper CSS (preload, then load) -->
+   <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-   <!-- Smooth Scroll -->
-   <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+   <!-- ⚡ Third-party scripts (defer for non-blocking load) -->
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-   <!-- particles.js -->
-   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-
-   <!-- Javascript and Third-Party CDNs -->
+   <!-- 🛠️ Your scripts (defer keeps page render fast) -->
    <script defer type="module" src="JS/script.js"></script>
-
    <script defer type="module" src="JS/swiper.js"></script>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
-   <title>Home &mdash; Apex Analytics Limited</title>
-
+   <!-- ✨ Optional: inline Ionicons if only using a few -->
+   <script type="module" defer src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule defer src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
+
 
 <body class="home">
    <main class="home-container">
@@ -69,7 +61,7 @@
 
       <header class="navigation-header  ">
          <a href="/index.html" class=" mobile-nav-logo">
-            <img class="logo " alt="Apex Analytics Limited logo" src="/img/logo.png" />
+            <img class="logo " alt="Apex Analytics Limited logo" src="/img/logo.webp" />
          </a>
 
 
@@ -79,7 +71,7 @@
                <!-- Top Left -->
                <ul class="main-nav-top--contact">
 
-                  <p class="heading-minitext">Schedule a Free Project Review</p>
+                  <li class="heading-minitext">Schedule a Free Project Review</li>
 
                   <li class="main-nav-top--contact_links">
                      <div class="nav-call_icon">
@@ -118,7 +110,7 @@
                   </button>
 
                   <a href="/index.html">
-                     <img class="logo" alt="Apex Analytics Limited logo" src="img/logo.png" />
+                     <img class="logo" alt="Apex Analytics Limited logo" src="img/logo.webp" />
                   </a>
 
                   <ul class="main-nav-list">
@@ -142,13 +134,13 @@
 
                         <ul id="services-menu" class="dropdown-menu" role="menu">
                            <li><a role="menuitem" href="/services/environmental-and-sustainability.html">Environmental &
-                                 Sustainability</a></li>
+                                 Sustainability Consulting</a></li>
                            <li><a role="menuitem" href="/services/geophysical-and-geotechnical.html">Geophysical &
-                                 Geotechnical</a></li>
+                                 Geotechnical Services</a></li>
                            <li><a role="menuitem" href="/services/integrated-waste-and-water.html">Integrated Waste &
-                                 Water</a></li>
+                                 Water Solutions</a></li>
                            <li><a role="menuitem" href="/services/environmental-laboratory.html">Environmental
-                                 Laboratory</a></li>
+                                 Laboratory Services</a></li>
                            <li><a role="menuitem" href="/services/gis-and-remote-sensing.html">GIS & Remote Sensing</a>
                            </li>
                            <li><a role="menuitem" href="/services/training-and-capacity-building.html">Training &
@@ -170,17 +162,18 @@
 
                <div class="main-nav-bottom_right">
                   <div class="main-nav-bottom_right--socials">
-                     <a href="https://www.facebook.com/Apex-Analytics-Limited-181927449221499" target="_blank"
-                        class="nav-icon">
+                     <a href="https://www.facebook.com/Apex-Analytics-Limited-181927449221499"
+                        aria-label="Follow us on Facebook" target="_blank" class="nav-icon">
                         <i class="fa-brands fa-facebook-f icon"></i>
                      </a>
 
-                     <a href="https://x.com/apexanalyticslt" target="_blank" class="nav-icon">
+                     <a href="https://x.com/apexanalyticslt" aria-label="Follow us on X, formerly Twitter"
+                        target="_blank" class="nav-icon">
                         <i class="fa-brands fa-twitter icon"></i>
                      </a>
 
-                     <a href="https://www.linkedin.com/company/apex-analytics-limited/" target="_blank"
-                        class="nav-icon">
+                     <a href="https://www.linkedin.com/company/apex-analytics-limited/"
+                        aria-label="Follow us on Linkedin" target="_blank" class="nav-icon">
                         <i class="fa-brands fa-linkedin icon"></i>
                      </a>
                   </div>
@@ -207,10 +200,12 @@
 
          <div class="hero-slideshow">
             <div class="slideshow-image active"
-               style="background-image: url('./img/apex-analytics-header-image-1.jpg');"></div>
-            <div class="slideshow-image " style="background-image: url('./img/apex-analytics-header-image-2.jpg');">
+               style="background-image: url('./img/apex-analytics-header-image-1.webp');" fetchpriority="high"></div>
+            <div class="slideshow-image " style="background-image: url('./img/apex-analytics-header-image-2.webp');"
+               fetchpriority="high">
             </div>
-            <div class="slideshow-image " style="background-image: url('./img/apex-analytics-header-image-3.jpg');">
+            <div class="slideshow-image " style="background-image: url('./img/apex-analytics-header-image-3.webp');"
+               fetchpriority="high">
             </div>
          </div>
 
@@ -472,23 +467,23 @@
                   <div class="swiper-wrapper">
 
                      <div class="swiper-slide">
-                        <img src="./img/partners/renaissance.png"
+                        <img src="./img/partners/renaissance.webp"
                            alt="Renaissance - Apex Analytics Limited trusted partners" class="partners-swiper_logo">
                      </div>
 
                      <div class="swiper-slide">
-                        <img src="./img/partners/total-logo.png" alt="Total - Apex Analytics Limited trusted partners"
+                        <img src="./img/partners/total-logo.webp" alt="Total - Apex Analytics Limited trusted partners"
                            class="partners-swiper_logo">
                      </div>
 
                      <div class="swiper-slide">
-                        <img src="./img/partners/mobil.png" alt="Mobil - Apex Analytics Limited trusted partners"
+                        <img src="./img/partners/mobil.webp" alt="Mobil - Apex Analytics Limited trusted partners"
                            class="partners-swiper_logo">
                      </div>
 
 
                      <div class="swiper-slide">
-                        <img src="./img/partners/chevron.png" alt="Chevron - Apex Analytics Limited trusted partners"
+                        <img src="./img/partners/chevron.webp" alt="Chevron - Apex Analytics Limited trusted partners"
                            class="partners-swiper_logo">
                      </div>
 
@@ -1502,7 +1497,7 @@
                         <div class="swiper-slide">
                            <div class="member-card">
                               <div class="image-container">
-                                 <img src="./img/apex-analytics-header-image-1.jpg" class="image-container_image"
+                                 <img src="./img/apex-analytics-header-image-1.webp" class="image-container_image"
                                     alt="Photo of Michael Ochoche" />
                               </div>
                               <div class="member-info">
@@ -1582,7 +1577,7 @@
                         <div class="swiper-slide">
                            <div class="member-card">
                               <div class="image-container">
-                                 <img src="./img/apex-analytics-header-image-1.jpg" class="image-container_image"
+                                 <img src="./img/apex-analytics-header-image-1.webp" class="image-container_image"
                                     alt="Photo of Team Member" />
                               </div>
                               <div class="member-info">
@@ -1617,7 +1612,7 @@
                         <div class="swiper-slide">
                            <div class="member-card">
                               <div class="image-container">
-                                 <img src="./img/apex-analytics-header-image-1.jpg" class="image-container_image"
+                                 <img src="./img/apex-analytics-header-image-1.webp" class="image-container_image"
                                     alt="Photo of Team Member" />
                               </div>
                               <div class="member-info">
@@ -1652,7 +1647,7 @@
                         <div class="swiper-slide">
                            <div class="member-card">
                               <div class="image-container">
-                                 <img src="./img/apex-analytics-header-image-1.jpg" class="image-container_image"
+                                 <img src="./img/apex-analytics-header-image-1.webp" class="image-container_image"
                                     alt="Photo of Team Member" />
                               </div>
                               <div class="member-info">
@@ -1687,7 +1682,7 @@
                         <div class="swiper-slide">
                            <div class="member-card">
                               <div class="image-container">
-                                 <img src="./img/apex-analytics-header-image-1.jpg" class="image-container_image"
+                                 <img src="./img/apex-analytics-header-image-1.webp" class="image-container_image"
                                     alt="Photo of Team Member" />
                               </div>
                               <div class="member-info">
@@ -1775,7 +1770,8 @@
                                        <div class="review-bottom">
 
                                           <div class="review-user">
-                                             <img src="./img/reviews/review-4.jpg" alt="" class="review-user_image">
+                                             <img src="./img/reviews/review-4.jpg" alt="reviewer-image"
+                                                class="review-user_image">
 
                                              <div class="review-user_text--container">
                                                 <h1 class="heading-midtext">Adeyemi Oladipo</h1>
@@ -1814,7 +1810,8 @@
                                        <div class="review-bottom">
 
                                           <div class="review-user">
-                                             <img src="./img/reviews/review-2.jpg" alt="" class="review-user_image">
+                                             <img src="./img/reviews/review-2.jpg" alt="reviewer-image"
+                                                class="review-user_image">
 
                                              <div class="review-user_text--container">
                                                 <h1 class="heading-midtext">Chiamaka Udeh</h1>
@@ -1852,7 +1849,8 @@
                                        <div class="review-bottom">
 
                                           <div class="review-user">
-                                             <img src="./img/reviews/review-1.jpg" alt="" class="review-user_image">
+                                             <img src="./img/reviews/review-1.jpg" alt="reviewer-image"
+                                                class="review-user_image">
 
                                              <div class="review-user_text--container">
                                                 <h1 class="heading-midtext">Michael Thompson</h1>
@@ -1891,7 +1889,8 @@
                                        <div class="review-bottom">
 
                                           <div class="review-user">
-                                             <img src="./img/reviews/review-3.jpg" alt="" class="review-user_image">
+                                             <img src="./img/reviews/review-3.jpg" alt="reviewer-image"
+                                                class="review-user_image">
 
                                              <div class="review-user_text--container">
                                                 <h1 class="heading-midtext">Ebezeama Patrick</h1>
@@ -2018,7 +2017,7 @@
                            <div class="project-image_container">
 
                               <img src="./img/projects/projects-1.jpg" alt="Apex Analytics Limited - Project 1"
-                                 class="project-image">
+                                 loading="lazy" class="project-image">
                            </div>
 
                            <a class="project-name_container" href="/projects/water-toxicity.html">
@@ -2039,7 +2038,7 @@
                            <div class="project-image_container">
 
                               <img src="./img/projects/projects-2.jpg" alt="Apex Analytics Limited - Project 1"
-                                 class="project-image">
+                                 loading="lazy" class="project-image">
                            </div>
 
                            <a class="project-name_container" href="#">
@@ -2060,7 +2059,7 @@
                            <div class="project-image_container">
 
                               <img src="./img/projects/projects-3.jpg" alt="Apex Analytics Limited - Project 1"
-                                 class="project-image">
+                                 loading="lazy" class="project-image">
                            </div>
 
                            <a class="project-name_container" href="#">
@@ -2081,7 +2080,7 @@
                            <div class="project-image_container">
 
                               <img src="./img/projects/projects-4.jpg" alt="Apex Analytics Limited - Project 1"
-                                 class="project-image">
+                                 loading="lazy" class="project-image">
                            </div>
 
                            <a class="project-name_container" href="#">
@@ -2102,7 +2101,7 @@
                            <div class="project-image_container">
 
                               <img src="./img/projects/projects-5.jpg" alt="Apex Analytics Limited - Project 1"
-                                 class="project-image">
+                                 loading="lazy" class="project-image">
                            </div>
 
                            <a class="project-name_container" href="#">
@@ -2123,7 +2122,7 @@
                            <div class="project-image_container">
 
                               <img src="./img/projects/projects-6.jpg" alt="Apex Analytics Limited - Project 1"
-                                 class="project-image">
+                                 loading="lazy" class="project-image">
                            </div>
 
                            <a class="project-name_container" href="#">
@@ -2179,22 +2178,24 @@
 
 
             <div class="footer-info">
-               <img src="./img/logo.png" alt="Apex Analytics Limited Logo" class="footer-logo">
+               <img src="./img/logo.webp" alt="Apex Analytics Limited Logo" class="footer-logo">
 
                <p class="heading-minitext">At Apex Analytics, we combine science, innovation, and integrity to provide
                   reliable testing and consulting for a cleaner, safer future</p>
 
                <div class="footer-info_socials">
-                  <a href="https://www.facebook.com/Apex-Analytics-Limited-181927449221499" target="_blank"
-                     class="nav-icon">
+                  <a href="https://www.facebook.com/Apex-Analytics-Limited-181927449221499"
+                     aria-label="Follow us on Facebook" target="_blank" class="nav-icon">
                      <i class="fa-brands fa-facebook-f icon"></i>
                   </a>
 
-                  <a href="https://x.com/apexanalyticslt" target="_blank" class="nav-icon">
+                  <a href="https://x.com/apexanalyticslt" aria-label="Follow us on X, formerly Twitter" target="_blank"
+                     class="nav-icon">
                      <i class="fa-brands fa-twitter icon"></i>
                   </a>
 
-                  <a href="https://www.linkedin.com/company/apex-analytics-limited/" target="_blank" class="nav-icon">
+                  <a href="https://www.linkedin.com/company/apex-analytics-limited/" aria-label="Follow us on Linkedin"
+                     target="_blank" class="nav-icon">
                      <i class="fa-brands fa-linkedin icon"></i>
                   </a>
                </div>
@@ -2206,7 +2207,7 @@
 
                <ul class="footer-nav_container">
 
-                  <h1 class="heading-midtext-wide mb-1">Useful Links</h1>
+                  <li class="heading-midtext-wide mb-1">Useful Links</li>
 
                   <li class="list">
                      <a href="/index.html" class="heading-minitext list-link">Home</a>
@@ -2228,26 +2229,23 @@
                </ul>
 
                <ul class="footer-nav_container">
-                  <h1 class="heading-midtext-wide mb-1">Our Services</h1>
+                  <li class="heading-midtext-wide mb-1">Our Services</li>
 
                   <li class="list">
                      <a href="/services/environmental-and-sustainability.html"
-                        class="heading-minitext list-link">Environmental &
-                        Sustainability</a>
+                        class="heading-minitext list-link">Environmental & Sustainability Consulting</a>
                   </li>
                   <li class="list">
                      <a href="/services/geophysical-and-geotechnical.html"
-                        class="heading-minitext list-link">Geophysical &
-                        Geotechnical</a>
+                        class="heading-minitext list-link">Geophysical & Geotechnical Services</a>
                   </li>
                   <li class="list">
                      <a href="/services/integrated-waste-and-water.html" class="heading-minitext list-link">Integrated
-                        Waste &
-                        Water</a>
+                        Waste & Water Solutions</a>
                   </li>
                   <li class="list">
                      <a href="/services/environmental-laboratory.html" class="heading-minitext list-link">Environmental
-                        Laboratory</a>
+                        Laboratory Services</a>
                   </li>
                   <li class="list">
                      <a href="/services/gis-and-remote-sensing.html" class="heading-minitext list-link">GIS & Remote

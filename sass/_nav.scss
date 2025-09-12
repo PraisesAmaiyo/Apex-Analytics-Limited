@@ -110,6 +110,7 @@
             align-items: center;
             gap: 2rem;
             font-size: 1.25rem;
+            list-style: none;
 
             .heading-minitext {
                color: $color-grey-light-1;
@@ -228,6 +229,7 @@
                .main-nav-link {
                   display: flex;
                   align-items: center;
+                  padding: 1rem;
 
                   &.active {
                      color: $color-primary-600 !important;
@@ -291,9 +293,10 @@
                      background: none;
                      cursor: pointer;
                      transition: transform 0.3s ease;
+                     padding: 1rem;
 
                      @media only screen and (max-width:$bp-big) {
-                        padding: .5rem;
+                        padding: 1rem;
                      }
 
                      i {

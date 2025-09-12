@@ -3,7 +3,7 @@ $color-primary: #2170bf;
 $color-primary-light: #8fbeea;
 $color-primary-dark: #1a3b60;
 
-$color-secondary: #47844b;
+$color-secondary: #2a4a2c;
 $color-secondary-light: #a6cfa9;
 $color-secondary-dark: #274029;
 
@@ -36,7 +36,7 @@ $color-secondary-200: #cde5ce;
 $color-secondary-300: #a6cfa9;
 $color-secondary-400: #77b17a;
 $color-secondary-500: #539457;
-$color-secondary-600: #47844b;
+$color-secondary-600: #2a4a2c;
 $color-secondary-700: #356038;
 $color-secondary-800: #2e4d31;
 $color-secondary-900: #274029;
@@ -46,6 +46,10 @@ $color-secondary-950: #112213;
 // FONT VARIABLES
 $font-primary: "Familjen Grotesk", sans-serif;
 $font-secondary: "Plus Jakarta Sans", sans-serif;
+
+@font-face {
+   font-display: swap;
+}
 
 // RESPONSIVE VARIABLES
 $bp-monitor: 100em;
