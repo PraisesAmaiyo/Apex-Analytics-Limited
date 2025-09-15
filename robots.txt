@@ -1,3 +1,3 @@
 User-agent: *
 Disallow: 
-Sitemap: https://apexanalyticsltd.netlify.app/sitemap.xml
+Sitemap:  https://apex-ng.com/sitemap.xml
