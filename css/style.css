@@ -3100,44 +3100,44 @@ body a:focus {
   font-size: 1.5rem;
   font-weight: 500;
 }
-.service-detail .content-pagination {
+.content-pagination {
   display: flex;
   justify-content: space-between;
   gap: 4rem;
 }
 @media only screen and (max-width: 20.8em) {
-  .service-detail .content-pagination {
+  .content-pagination {
     flex-direction: column;
   }
 }
-.service-detail .content-pagination .content-next {
+.content-pagination .content-next {
   text-align: end;
   margin-left: auto;
 }
-.service-detail .content-pagination .content-next:hover p.heading-midtext {
+.content-pagination .content-next:hover p.heading-midtext {
   color: #2170bf;
 }
-.service-detail .content-pagination .content-next:hover .material-symbols-outline.icon {
+.content-pagination .content-next:hover .material-symbols-outline.icon {
   transform: translateX(100%);
 }
-.service-detail .content-pagination .content-next:hover .material-symbols-outline.icon_2 {
+.content-pagination .content-next:hover .material-symbols-outline.icon_2 {
   transform: translateX(0);
 }
-.service-detail .content-pagination .content-next a {
+.content-pagination .content-next a {
   text-decoration: none;
 }
-.service-detail .content-pagination .content-next_btn {
+.content-pagination .content-next_btn {
   display: flex;
   gap: 2rem;
   align-items: center;
   justify-content: end;
 }
-.service-detail .content-pagination .content-next_btn .tag {
+.content-pagination .content-next_btn .tag {
   margin: 0;
   color: #000;
   font-size: 1.3rem;
 }
-.service-detail .content-pagination .content-next_btn--icon {
+.content-pagination .content-next_btn--icon {
   height: 3.5rem;
   width: 3.5rem;
   display: flex;
@@ -3150,51 +3150,51 @@ body a:focus {
   flex-shrink: 0;
   position: relative;
 }
-.service-detail .content-pagination .content-next_text p.heading-midtext {
+.content-pagination .content-next_text p.heading-midtext {
   text-decoration: none;
   font-weight: 700;
   transition: all 0.2s ease;
   font-size: 1.8rem;
 }
-.service-detail .content-pagination .content-prev {
+.content-pagination .content-prev {
   text-align: start;
   margin-right: 3rem;
 }
 @media only screen and (max-width: 20.8em) {
-  .service-detail .content-pagination .content-prev {
+  .content-pagination .content-prev {
     margin-right: auto;
   }
 }
-.service-detail .content-pagination .content-prev:hover p.heading-midtext {
+.content-pagination .content-prev:hover p.heading-midtext {
   color: #2170bf;
 }
-.service-detail .content-pagination .content-prev:hover {
+.content-pagination .content-prev:hover {
   /* On hover, slide the first icon off to the LEFT */
 }
-.service-detail .content-pagination .content-prev:hover .material-symbols-outline.prevIcon {
+.content-pagination .content-prev:hover .material-symbols-outline.prevIcon {
   transform: translateX(-100%);
 }
-.service-detail .content-pagination .content-prev:hover {
+.content-pagination .content-prev:hover {
   /* And slide the second icon in from the RIGHT */
 }
-.service-detail .content-pagination .content-prev:hover .material-symbols-outline.prevIcon_2 {
+.content-pagination .content-prev:hover .material-symbols-outline.prevIcon_2 {
   transform: translateX(0);
 }
-.service-detail .content-pagination .content-prev a {
+.content-pagination .content-prev a {
   text-decoration: none;
 }
-.service-detail .content-pagination .content-prev_btn {
+.content-pagination .content-prev_btn {
   display: flex;
   gap: 2rem;
   align-items: center;
   justify-content: start;
 }
-.service-detail .content-pagination .content-prev_btn .tag {
+.content-pagination .content-prev_btn .tag {
   font-size: 1.3rem;
   margin: 0;
   color: #000;
 }
-.service-detail .content-pagination .content-prev_btn--icon {
+.content-pagination .content-prev_btn--icon {
   height: 3.5rem;
   width: 3.5rem;
   display: flex;
@@ -3207,14 +3207,14 @@ body a:focus {
   flex-shrink: 0;
   position: relative;
 }
-.service-detail .content-pagination .content-prev_text p.heading-midtext {
+.content-pagination .content-prev_text p.heading-midtext {
   text-decoration: none;
   font-weight: 700;
   transition: all 0.2s ease;
   font-size: 1.8rem;
 }
-.service-detail .content-pagination .material-symbols-outline.prevIcon,
-.service-detail .content-pagination .material-symbols-outline.prevIcon_2 {
+.content-pagination .material-symbols-outline.prevIcon,
+.content-pagination .material-symbols-outline.prevIcon_2 {
   /* Style for both icons */
   padding: 1.3rem;
   color: #fff;
@@ -3222,16 +3222,16 @@ body a:focus {
   position: absolute;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.service-detail .content-pagination .material-symbols-outline.prevIcon {
+.content-pagination .material-symbols-outline.prevIcon {
   /* Initial state of the first icon: visible */
   transform: translateX(0);
 }
-.service-detail .content-pagination .material-symbols-outline.prevIcon_2 {
+.content-pagination .material-symbols-outline.prevIcon_2 {
   /* Now the second icon starts off-screen to the RIGHT */
   transform: translateX(100%);
 }
-.service-detail .content-pagination .material-symbols-outline.icon,
-.service-detail .content-pagination .material-symbols-outline.icon_2 {
+.content-pagination .material-symbols-outline.icon,
+.content-pagination .material-symbols-outline.icon_2 {
   /* Style for both icons */
   padding: 1.3rem;
   color: #fff;
@@ -3239,10 +3239,10 @@ body a:focus {
   position: absolute;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.service-detail .content-pagination .material-symbols-outline.icon {
+.content-pagination .material-symbols-outline.icon {
   transform: translateX(0);
 }
-.service-detail .content-pagination .material-symbols-outline.icon_2 {
+.content-pagination .material-symbols-outline.icon_2 {
   transform: translateX(-100%);
 }
 
@@ -3441,6 +3441,16 @@ body a:focus {
 .project-detail_container--aside .aside-top_image {
   width: 100%;
 }
+@media only screen and (max-width: 100em) {
+  .project-detail_container--aside .aside-top_image {
+    height: 65rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .project-detail_container--aside .aside-top_image {
+    height: auto;
+  }
+}
 .project-detail_container--aside .aside-top_image img {
   width: 100%;
   height: 100%;
@@ -3553,138 +3563,6 @@ body a:focus {
   font-size: 1.5rem;
   font-weight: 600;
 }
-.project-detail_container--content .content-pagination {
-  display: flex;
-  justify-content: space-between;
-  gap: 4rem;
-}
-@media only screen and (max-width: 20.8em) {
-  .project-detail_container--content .content-pagination {
-    flex-direction: column;
-  }
-}
-.project-detail_container--content .content-pagination .content-next {
-  text-align: end;
-  margin-left: auto;
-}
-.project-detail_container--content .content-pagination .content-next:hover a.heading-midtext {
-  color: #2170bf;
-}
-.project-detail_container--content .content-pagination .content-next:hover .material-symbols-outline.icon {
-  transform: translateX(100%);
-}
-.project-detail_container--content .content-pagination .content-next:hover .material-symbols-outline.icon_2 {
-  transform: translateX(0);
-}
-.project-detail_container--content .content-pagination .content-next_btn {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: end;
-}
-.project-detail_container--content .content-pagination .content-next_btn .tag {
-  margin: 0;
-}
-.project-detail_container--content .content-pagination .content-next_btn--icon {
-  height: 5rem;
-  width: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background-color: #2170bf;
-  border-radius: 100%;
-  aspect-ratio: 1/1;
-  flex-shrink: 0;
-  position: relative;
-}
-.project-detail_container--content .content-pagination .content-next_text a.heading-midtext {
-  text-decoration: none;
-  font-weight: 700;
-}
-.project-detail_container--content .content-pagination .content-prev {
-  text-align: start;
-  margin-right: 3rem;
-}
-@media only screen and (max-width: 20.8em) {
-  .project-detail_container--content .content-pagination .content-prev {
-    margin-right: auto;
-  }
-}
-.project-detail_container--content .content-pagination .content-prev:hover a.heading-midtext {
-  color: #2170bf;
-}
-.project-detail_container--content .content-pagination .content-prev:hover {
-  /* On hover, slide the first icon off to the LEFT */
-}
-.project-detail_container--content .content-pagination .content-prev:hover .material-symbols-outline.prevIcon {
-  transform: translateX(-100%);
-}
-.project-detail_container--content .content-pagination .content-prev:hover {
-  /* And slide the second icon in from the RIGHT */
-}
-.project-detail_container--content .content-pagination .content-prev:hover .material-symbols-outline.prevIcon_2 {
-  transform: translateX(0);
-}
-.project-detail_container--content .content-pagination .content-prev_btn {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: end;
-}
-.project-detail_container--content .content-pagination .content-prev_btn .tag {
-  margin: 0;
-}
-.project-detail_container--content .content-pagination .content-prev_btn--icon {
-  height: 5rem;
-  width: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background-color: #2170bf;
-  border-radius: 100%;
-  aspect-ratio: 1/1;
-  flex-shrink: 0;
-  position: relative;
-}
-.project-detail_container--content .content-pagination .content-prev_text a.heading-midtext {
-  text-decoration: none;
-  font-weight: 700;
-}
-.project-detail_container--content .content-pagination .material-symbols-outline.prevIcon,
-.project-detail_container--content .content-pagination .material-symbols-outline.prevIcon_2 {
-  /* Style for both icons */
-  padding: 1.3rem;
-  color: #fff;
-  font-size: 2.5rem;
-  position: absolute;
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.project-detail_container--content .content-pagination .material-symbols-outline.prevIcon {
-  /* Initial state of the first icon: visible */
-  transform: translateX(0);
-}
-.project-detail_container--content .content-pagination .material-symbols-outline.prevIcon_2 {
-  /* Now the second icon starts off-screen to the RIGHT */
-  transform: translateX(100%);
-}
-.project-detail_container--content .content-pagination .material-symbols-outline.icon,
-.project-detail_container--content .content-pagination .material-symbols-outline.icon_2 {
-  /* Style for both icons */
-  padding: 1.3rem;
-  color: #fff;
-  font-size: 2.5rem;
-  position: absolute;
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.project-detail_container--content .content-pagination .material-symbols-outline.icon {
-  transform: translateX(0);
-}
-.project-detail_container--content .content-pagination .material-symbols-outline.icon_2 {
-  transform: translateX(-100%);
-}
-
 .section-team-members.single {
   padding: 7rem 3rem;
 }
@@ -4119,138 +3997,6 @@ body a:focus {
   font-size: 1.5rem;
   font-weight: 600;
 }
-.member-detail_container--content .content-pagination {
-  display: flex;
-  justify-content: space-between;
-  gap: 4rem;
-}
-@media only screen and (max-width: 20.8em) {
-  .member-detail_container--content .content-pagination {
-    flex-direction: column;
-  }
-}
-.member-detail_container--content .content-pagination .content-next {
-  text-align: end;
-  margin-left: auto;
-}
-.member-detail_container--content .content-pagination .content-next:hover a.heading-midtext {
-  color: #2170bf;
-}
-.member-detail_container--content .content-pagination .content-next:hover .material-symbols-outline.icon {
-  transform: translateX(100%);
-}
-.member-detail_container--content .content-pagination .content-next:hover .material-symbols-outline.icon_2 {
-  transform: translateX(0);
-}
-.member-detail_container--content .content-pagination .content-next_btn {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: end;
-}
-.member-detail_container--content .content-pagination .content-next_btn .tag {
-  margin: 0;
-}
-.member-detail_container--content .content-pagination .content-next_btn--icon {
-  height: 5rem;
-  width: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background-color: #2170bf;
-  border-radius: 100%;
-  aspect-ratio: 1/1;
-  flex-shrink: 0;
-  position: relative;
-}
-.member-detail_container--content .content-pagination .content-next_text a.heading-midtext {
-  text-decoration: none;
-  font-weight: 700;
-}
-.member-detail_container--content .content-pagination .content-prev {
-  text-align: start;
-  margin-right: 3rem;
-}
-@media only screen and (max-width: 20.8em) {
-  .member-detail_container--content .content-pagination .content-prev {
-    margin-right: auto;
-  }
-}
-.member-detail_container--content .content-pagination .content-prev:hover a.heading-midtext {
-  color: #2170bf;
-}
-.member-detail_container--content .content-pagination .content-prev:hover {
-  /* On hover, slide the first icon off to the LEFT */
-}
-.member-detail_container--content .content-pagination .content-prev:hover .material-symbols-outline.prevIcon {
-  transform: translateX(-100%);
-}
-.member-detail_container--content .content-pagination .content-prev:hover {
-  /* And slide the second icon in from the RIGHT */
-}
-.member-detail_container--content .content-pagination .content-prev:hover .material-symbols-outline.prevIcon_2 {
-  transform: translateX(0);
-}
-.member-detail_container--content .content-pagination .content-prev_btn {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: end;
-}
-.member-detail_container--content .content-pagination .content-prev_btn .tag {
-  margin: 0;
-}
-.member-detail_container--content .content-pagination .content-prev_btn--icon {
-  height: 5rem;
-  width: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background-color: #2170bf;
-  border-radius: 100%;
-  aspect-ratio: 1/1;
-  flex-shrink: 0;
-  position: relative;
-}
-.member-detail_container--content .content-pagination .content-prev_text a.heading-midtext {
-  text-decoration: none;
-  font-weight: 700;
-}
-.member-detail_container--content .content-pagination .material-symbols-outline.prevIcon,
-.member-detail_container--content .content-pagination .material-symbols-outline.prevIcon_2 {
-  /* Style for both icons */
-  padding: 1.3rem;
-  color: #fff;
-  font-size: 2.5rem;
-  position: absolute;
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.member-detail_container--content .content-pagination .material-symbols-outline.prevIcon {
-  /* Initial state of the first icon: visible */
-  transform: translateX(0);
-}
-.member-detail_container--content .content-pagination .material-symbols-outline.prevIcon_2 {
-  /* Now the second icon starts off-screen to the RIGHT */
-  transform: translateX(100%);
-}
-.member-detail_container--content .content-pagination .material-symbols-outline.icon,
-.member-detail_container--content .content-pagination .material-symbols-outline.icon_2 {
-  /* Style for both icons */
-  padding: 1.3rem;
-  color: #fff;
-  font-size: 2.5rem;
-  position: absolute;
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.member-detail_container--content .content-pagination .material-symbols-outline.icon {
-  transform: translateX(0);
-}
-.member-detail_container--content .content-pagination .material-symbols-outline.icon_2 {
-  transform: translateX(-100%);
-}
-
 .contact-detail {
   position: relative;
   background-color: #fff;

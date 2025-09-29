@@ -1074,187 +1074,188 @@
 
       }
    }
+}
 
-   .content-pagination {
-      display: flex;
-      justify-content: space-between;
-      gap: 4rem;
+// Content Navigation
+.content-pagination {
+   display: flex;
+   justify-content: space-between;
+   gap: 4rem;
+
+   @media only screen and (max-width: $bp-smaller) {
+      flex-direction: column;
+   }
+
+   .content-next {
+      text-align: end;
+      margin-left: auto;
+
+      &:hover {
+         p.heading-midtext {
+            color: $color-primary;
+         }
+
+
+         .material-symbols-outline.icon {
+            transform: translateX(100%);
+         }
+
+         .material-symbols-outline.icon_2 {
+            transform: translateX(0);
+         }
+      }
+
+      a {
+         text-decoration: none;
+      }
+
+      &_btn {
+         display: flex;
+         gap: 2rem;
+         align-items: center;
+         justify-content: end;
+
+         .tag {
+            margin: 0;
+            color: $color-grey-dark-1;
+            font-size: 1.3rem;
+         }
+
+         &--icon {
+            height: 3.5rem;
+            width: 3.5rem;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            background-color: $color-primary;
+            border-radius: 100%;
+            aspect-ratio: 1 / 1;
+            flex-shrink: 0;
+            position: relative;
+         }
+      }
+
+      &_text {
+         p.heading-midtext {
+            text-decoration: none;
+            font-weight: 700;
+            transition: all .2s ease;
+            font-size: 1.8rem;
+         }
+      }
+   }
+
+   .content-prev {
+      text-align: start;
+      margin-right: 3rem;
 
       @media only screen and (max-width: $bp-smaller) {
-         flex-direction: column;
+         margin-right: auto;
       }
 
-      .content-next {
-         text-align: end;
-         margin-left: auto;
-
-         &:hover {
-            p.heading-midtext {
-               color: $color-primary;
-            }
-
-
-            .material-symbols-outline.icon {
-               transform: translateX(100%);
-            }
-
-            .material-symbols-outline.icon_2 {
-               transform: translateX(0);
-            }
+      &:hover {
+         p.heading-midtext {
+            color: $color-primary;
          }
 
-         a {
-            text-decoration: none;
+         /* On hover, slide the first icon off to the LEFT */
+         .material-symbols-outline.prevIcon {
+            transform: translateX(-100%);
          }
 
-         &_btn {
+         /* And slide the second icon in from the RIGHT */
+         .material-symbols-outline.prevIcon_2 {
+            transform: translateX(0);
+         }
+      }
+
+      a {
+         text-decoration: none;
+      }
+
+      &_btn {
+         display: flex;
+         gap: 2rem;
+         align-items: center;
+         justify-content: start;
+
+         .tag {
+            font-size: 1.3rem;
+            margin: 0;
+            color: $color-grey-dark-1;
+         }
+
+         &--icon {
+            height: 3.5rem;
+            width: 3.5rem;
             display: flex;
-            gap: 2rem;
+
+            justify-content: center;
             align-items: center;
-            justify-content: end;
+            overflow: hidden;
 
-            .tag {
-               margin: 0;
-               color: $color-grey-dark-1;
-               font-size: 1.3rem;
-            }
-
-            &--icon {
-               height: 3.5rem;
-               width: 3.5rem;
-               display: flex;
-
-               justify-content: center;
-               align-items: center;
-               overflow: hidden;
-
-               background-color: $color-primary;
-               border-radius: 100%;
-               aspect-ratio: 1 / 1;
-               flex-shrink: 0;
-               position: relative;
-            }
-         }
-
-         &_text {
-            p.heading-midtext {
-               text-decoration: none;
-               font-weight: 700;
-               transition: all .2s ease;
-               font-size: 1.8rem;
-            }
+            background-color: $color-primary;
+            border-radius: 100%;
+            aspect-ratio: 1 / 1;
+            flex-shrink: 0;
+            position: relative;
          }
       }
 
-      .content-prev {
-         text-align: start;
-         margin-right: 3rem;
-
-         @media only screen and (max-width: $bp-smaller) {
-            margin-right: auto;
-         }
-
-         &:hover {
-            p.heading-midtext {
-               color: $color-primary;
-            }
-
-            /* On hover, slide the first icon off to the LEFT */
-            .material-symbols-outline.prevIcon {
-               transform: translateX(-100%);
-            }
-
-            /* And slide the second icon in from the RIGHT */
-            .material-symbols-outline.prevIcon_2 {
-               transform: translateX(0);
-            }
-         }
-
-         a {
+      &_text {
+         p.heading-midtext {
             text-decoration: none;
-         }
-
-         &_btn {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            justify-content: start;
-
-            .tag {
-               font-size: 1.3rem;
-               margin: 0;
-               color: $color-grey-dark-1;
-            }
-
-            &--icon {
-               height: 3.5rem;
-               width: 3.5rem;
-               display: flex;
-
-               justify-content: center;
-               align-items: center;
-               overflow: hidden;
-
-               background-color: $color-primary;
-               border-radius: 100%;
-               aspect-ratio: 1 / 1;
-               flex-shrink: 0;
-               position: relative;
-            }
-         }
-
-         &_text {
-            p.heading-midtext {
-               text-decoration: none;
-               font-weight: 700;
-               transition: all .2s ease;
-               font-size: 1.8rem;
-            }
+            font-weight: 700;
+            transition: all .2s ease;
+            font-size: 1.8rem;
          }
       }
-
-      // PREV BUTTON
-
-      .material-symbols-outline.prevIcon,
-      .material-symbols-outline.prevIcon_2 {
-         /* Style for both icons */
-         padding: 1.3rem;
-         color: $color-grey-light-1;
-         font-size: 2.5rem;
-         position: absolute;
-         transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      }
-
-      .material-symbols-outline.prevIcon {
-         /* Initial state of the first icon: visible */
-         transform: translateX(0);
-      }
-
-      .material-symbols-outline.prevIcon_2 {
-         /* Now the second icon starts off-screen to the RIGHT */
-         transform: translateX(100%);
-      }
-
-      // NEXT BUTTON
-      .material-symbols-outline.icon,
-      .material-symbols-outline.icon_2 {
-         /* Style for both icons */
-         padding: 1.3rem;
-         color: $color-grey-light-1;
-         font-size: 2.5rem;
-         position: absolute;
-         transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      }
-
-      .material-symbols-outline.icon {
-         transform: translateX(0);
-      }
-
-      .material-symbols-outline.icon_2 {
-         transform: translateX(-100%);
-      }
-
    }
+
+   // PREV BUTTON
+
+   .material-symbols-outline.prevIcon,
+   .material-symbols-outline.prevIcon_2 {
+      /* Style for both icons */
+      padding: 1.3rem;
+      color: $color-grey-light-1;
+      font-size: 2.5rem;
+      position: absolute;
+      transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+   }
+
+   .material-symbols-outline.prevIcon {
+      /* Initial state of the first icon: visible */
+      transform: translateX(0);
+   }
+
+   .material-symbols-outline.prevIcon_2 {
+      /* Now the second icon starts off-screen to the RIGHT */
+      transform: translateX(100%);
+   }
+
+   // NEXT BUTTON
+   .material-symbols-outline.icon,
+   .material-symbols-outline.icon_2 {
+      /* Style for both icons */
+      padding: 1.3rem;
+      color: $color-grey-light-1;
+      font-size: 2.5rem;
+      position: absolute;
+      transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+   }
+
+   .material-symbols-outline.icon {
+      transform: translateX(0);
+   }
+
+   .material-symbols-outline.icon_2 {
+      transform: translateX(-100%);
+   }
+
 }
 
 
@@ -1490,6 +1491,14 @@
          .aside-top_image {
             width: 100%;
 
+            @media only screen and (max-width: $bp-monitor) {
+               height: 65rem;
+            }
+
+            @media only screen and (max-width: $bp-largest) {
+               height: auto;
+            }
+
             img {
                width: 100%;
                height: 100%;
@@ -1646,171 +1655,171 @@
             }
          }
 
-         .content-pagination {
-            display: flex;
-            justify-content: space-between;
-            gap: 4rem;
+         // .content-pagination {
+         //    display: flex;
+         //    justify-content: space-between;
+         //    gap: 4rem;
 
-            @media only screen and (max-width: $bp-smaller) {
-               flex-direction: column;
-            }
+         //    @media only screen and (max-width: $bp-smaller) {
+         //       flex-direction: column;
+         //    }
 
-            .content-next {
-               text-align: end;
-               margin-left: auto;
+         //    .content-next {
+         //       text-align: end;
+         //       margin-left: auto;
 
-               &:hover {
-                  a.heading-midtext {
-                     color: $color-primary;
-                  }
-
-
-                  .material-symbols-outline.icon {
-                     transform: translateX(100%);
-                  }
-
-                  .material-symbols-outline.icon_2 {
-                     transform: translateX(0);
-                  }
-               }
-
-               &_btn {
-                  display: flex;
-                  gap: 2rem;
-                  align-items: center;
-                  justify-content: end;
-
-                  .tag {
-                     margin: 0;
-                  }
-
-                  &--icon {
-                     height: 5rem;
-                     width: 5rem;
-                     display: flex;
-
-                     justify-content: center;
-                     align-items: center;
-                     overflow: hidden;
-
-                     background-color: $color-primary;
-                     border-radius: 100%;
-                     aspect-ratio: 1 / 1;
-                     flex-shrink: 0;
-                     position: relative;
-                  }
-               }
-
-               &_text {
-                  a.heading-midtext {
-                     text-decoration: none;
-                     font-weight: 700;
-                  }
-               }
-            }
-
-            .content-prev {
-               text-align: start;
-               margin-right: 3rem;
+         //       &:hover {
+         //          a.heading-midtext {
+         //             color: $color-primary;
+         //          }
 
 
-               @media only screen and (max-width: $bp-smaller) {
-                  margin-right: auto;
-               }
+         //          .material-symbols-outline.icon {
+         //             transform: translateX(100%);
+         //          }
 
-               &:hover {
-                  a.heading-midtext {
-                     color: $color-primary;
-                  }
+         //          .material-symbols-outline.icon_2 {
+         //             transform: translateX(0);
+         //          }
+         //       }
 
-                  /* On hover, slide the first icon off to the LEFT */
-                  .material-symbols-outline.prevIcon {
-                     transform: translateX(-100%);
-                  }
+         //       &_btn {
+         //          display: flex;
+         //          gap: 2rem;
+         //          align-items: center;
+         //          justify-content: end;
 
-                  /* And slide the second icon in from the RIGHT */
-                  .material-symbols-outline.prevIcon_2 {
-                     transform: translateX(0);
-                  }
-               }
+         //          .tag {
+         //             margin: 0;
+         //          }
 
-               &_btn {
-                  display: flex;
-                  gap: 2rem;
-                  align-items: center;
-                  justify-content: end;
+         //          &--icon {
+         //             height: 5rem;
+         //             width: 5rem;
+         //             display: flex;
 
-                  .tag {
-                     margin: 0;
-                  }
+         //             justify-content: center;
+         //             align-items: center;
+         //             overflow: hidden;
 
-                  &--icon {
-                     height: 5rem;
-                     width: 5rem;
-                     display: flex;
+         //             background-color: $color-primary;
+         //             border-radius: 100%;
+         //             aspect-ratio: 1 / 1;
+         //             flex-shrink: 0;
+         //             position: relative;
+         //          }
+         //       }
 
-                     justify-content: center;
-                     align-items: center;
-                     overflow: hidden;
+         //       &_text {
+         //          a.heading-midtext {
+         //             text-decoration: none;
+         //             font-weight: 700;
+         //          }
+         //       }
+         //    }
 
-                     background-color: $color-primary;
-                     border-radius: 100%;
-                     aspect-ratio: 1 / 1;
-                     flex-shrink: 0;
-                     position: relative;
-                  }
-               }
+         //    .content-prev {
+         //       text-align: start;
+         //       margin-right: 3rem;
 
-               &_text {
-                  a.heading-midtext {
-                     text-decoration: none;
-                     font-weight: 700;
-                  }
-               }
-            }
 
-            // PREV BUTTON
+         //       @media only screen and (max-width: $bp-smaller) {
+         //          margin-right: auto;
+         //       }
 
-            .material-symbols-outline.prevIcon,
-            .material-symbols-outline.prevIcon_2 {
-               /* Style for both icons */
-               padding: 1.3rem;
-               color: $color-grey-light-1;
-               font-size: 2.5rem;
-               position: absolute;
-               transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            }
+         //       &:hover {
+         //          a.heading-midtext {
+         //             color: $color-primary;
+         //          }
 
-            .material-symbols-outline.prevIcon {
-               /* Initial state of the first icon: visible */
-               transform: translateX(0);
-            }
+         //          /* On hover, slide the first icon off to the LEFT */
+         //          .material-symbols-outline.prevIcon {
+         //             transform: translateX(-100%);
+         //          }
 
-            .material-symbols-outline.prevIcon_2 {
-               /* Now the second icon starts off-screen to the RIGHT */
-               transform: translateX(100%);
-            }
+         //          /* And slide the second icon in from the RIGHT */
+         //          .material-symbols-outline.prevIcon_2 {
+         //             transform: translateX(0);
+         //          }
+         //       }
 
-            // NEXT BUTTON
-            .material-symbols-outline.icon,
-            .material-symbols-outline.icon_2 {
-               /* Style for both icons */
-               padding: 1.3rem;
-               color: $color-grey-light-1;
-               font-size: 2.5rem;
-               position: absolute;
-               transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            }
+         //       &_btn {
+         //          display: flex;
+         //          gap: 2rem;
+         //          align-items: center;
+         //          justify-content: end;
 
-            .material-symbols-outline.icon {
-               transform: translateX(0);
-            }
+         //          .tag {
+         //             margin: 0;
+         //          }
 
-            .material-symbols-outline.icon_2 {
-               transform: translateX(-100%);
-            }
+         //          &--icon {
+         //             height: 5rem;
+         //             width: 5rem;
+         //             display: flex;
 
-         }
+         //             justify-content: center;
+         //             align-items: center;
+         //             overflow: hidden;
+
+         //             background-color: $color-primary;
+         //             border-radius: 100%;
+         //             aspect-ratio: 1 / 1;
+         //             flex-shrink: 0;
+         //             position: relative;
+         //          }
+         //       }
+
+         //       &_text {
+         //          a.heading-midtext {
+         //             text-decoration: none;
+         //             font-weight: 700;
+         //          }
+         //       }
+         //    }
+
+         //    // PREV BUTTON
+
+         //    .material-symbols-outline.prevIcon,
+         //    .material-symbols-outline.prevIcon_2 {
+         //       /* Style for both icons */
+         //       padding: 1.3rem;
+         //       color: $color-grey-light-1;
+         //       font-size: 2.5rem;
+         //       position: absolute;
+         //       transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+         //    }
+
+         //    .material-symbols-outline.prevIcon {
+         //       /* Initial state of the first icon: visible */
+         //       transform: translateX(0);
+         //    }
+
+         //    .material-symbols-outline.prevIcon_2 {
+         //       /* Now the second icon starts off-screen to the RIGHT */
+         //       transform: translateX(100%);
+         //    }
+
+         //    // NEXT BUTTON
+         //    .material-symbols-outline.icon,
+         //    .material-symbols-outline.icon_2 {
+         //       /* Style for both icons */
+         //       padding: 1.3rem;
+         //       color: $color-grey-light-1;
+         //       font-size: 2.5rem;
+         //       position: absolute;
+         //       transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+         //    }
+
+         //    .material-symbols-outline.icon {
+         //       transform: translateX(0);
+         //    }
+
+         //    .material-symbols-outline.icon_2 {
+         //       transform: translateX(-100%);
+         //    }
+
+         // }
 
 
       }
@@ -2374,172 +2383,172 @@
             }
          }
 
-         .content-pagination {
-            display: flex;
-            justify-content: space-between;
-            gap: 4rem;
+         // .content-pagination {
+         //    display: flex;
+         //    justify-content: space-between;
+         //    gap: 4rem;
 
-            @media only screen and (max-width: $bp-smaller) {
-               flex-direction: column;
-            }
-
-
-            .content-next {
-               text-align: end;
-               margin-left: auto;
-
-               &:hover {
-                  a.heading-midtext {
-                     color: $color-primary;
-                  }
+         //    @media only screen and (max-width: $bp-smaller) {
+         //       flex-direction: column;
+         //    }
 
 
-                  .material-symbols-outline.icon {
-                     transform: translateX(100%);
-                  }
+         //    .content-next {
+         //       text-align: end;
+         //       margin-left: auto;
 
-                  .material-symbols-outline.icon_2 {
-                     transform: translateX(0);
-                  }
-               }
-
-               &_btn {
-                  display: flex;
-                  gap: 2rem;
-                  align-items: center;
-                  justify-content: end;
-
-                  .tag {
-                     margin: 0;
-                  }
-
-                  &--icon {
-                     height: 5rem;
-                     width: 5rem;
-                     display: flex;
-
-                     justify-content: center;
-                     align-items: center;
-                     overflow: hidden;
-
-                     background-color: $color-primary;
-                     border-radius: 100%;
-                     aspect-ratio: 1 / 1;
-                     flex-shrink: 0;
-                     position: relative;
-                  }
-               }
-
-               &_text {
-                  a.heading-midtext {
-                     text-decoration: none;
-                     font-weight: 700;
-                  }
-               }
-            }
-
-            .content-prev {
-               text-align: start;
-               margin-right: 3rem;
+         //       &:hover {
+         //          a.heading-midtext {
+         //             color: $color-primary;
+         //          }
 
 
-               @media only screen and (max-width: $bp-smaller) {
-                  margin-right: auto;
-               }
+         //          .material-symbols-outline.icon {
+         //             transform: translateX(100%);
+         //          }
 
-               &:hover {
-                  a.heading-midtext {
-                     color: $color-primary;
-                  }
+         //          .material-symbols-outline.icon_2 {
+         //             transform: translateX(0);
+         //          }
+         //       }
 
-                  /* On hover, slide the first icon off to the LEFT */
-                  .material-symbols-outline.prevIcon {
-                     transform: translateX(-100%);
-                  }
+         //       &_btn {
+         //          display: flex;
+         //          gap: 2rem;
+         //          align-items: center;
+         //          justify-content: end;
 
-                  /* And slide the second icon in from the RIGHT */
-                  .material-symbols-outline.prevIcon_2 {
-                     transform: translateX(0);
-                  }
-               }
+         //          .tag {
+         //             margin: 0;
+         //          }
 
-               &_btn {
-                  display: flex;
-                  gap: 2rem;
-                  align-items: center;
-                  justify-content: end;
+         //          &--icon {
+         //             height: 5rem;
+         //             width: 5rem;
+         //             display: flex;
 
-                  .tag {
-                     margin: 0;
-                  }
+         //             justify-content: center;
+         //             align-items: center;
+         //             overflow: hidden;
 
-                  &--icon {
-                     height: 5rem;
-                     width: 5rem;
-                     display: flex;
+         //             background-color: $color-primary;
+         //             border-radius: 100%;
+         //             aspect-ratio: 1 / 1;
+         //             flex-shrink: 0;
+         //             position: relative;
+         //          }
+         //       }
 
-                     justify-content: center;
-                     align-items: center;
-                     overflow: hidden;
+         //       &_text {
+         //          a.heading-midtext {
+         //             text-decoration: none;
+         //             font-weight: 700;
+         //          }
+         //       }
+         //    }
 
-                     background-color: $color-primary;
-                     border-radius: 100%;
-                     aspect-ratio: 1 / 1;
-                     flex-shrink: 0;
-                     position: relative;
-                  }
-               }
+         //    .content-prev {
+         //       text-align: start;
+         //       margin-right: 3rem;
 
-               &_text {
-                  a.heading-midtext {
-                     text-decoration: none;
-                     font-weight: 700;
-                  }
-               }
-            }
 
-            // PREV BUTTON
+         //       @media only screen and (max-width: $bp-smaller) {
+         //          margin-right: auto;
+         //       }
 
-            .material-symbols-outline.prevIcon,
-            .material-symbols-outline.prevIcon_2 {
-               /* Style for both icons */
-               padding: 1.3rem;
-               color: $color-grey-light-1;
-               font-size: 2.5rem;
-               position: absolute;
-               transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            }
+         //       &:hover {
+         //          a.heading-midtext {
+         //             color: $color-primary;
+         //          }
 
-            .material-symbols-outline.prevIcon {
-               /* Initial state of the first icon: visible */
-               transform: translateX(0);
-            }
+         //          /* On hover, slide the first icon off to the LEFT */
+         //          .material-symbols-outline.prevIcon {
+         //             transform: translateX(-100%);
+         //          }
 
-            .material-symbols-outline.prevIcon_2 {
-               /* Now the second icon starts off-screen to the RIGHT */
-               transform: translateX(100%);
-            }
+         //          /* And slide the second icon in from the RIGHT */
+         //          .material-symbols-outline.prevIcon_2 {
+         //             transform: translateX(0);
+         //          }
+         //       }
 
-            // NEXT BUTTON
-            .material-symbols-outline.icon,
-            .material-symbols-outline.icon_2 {
-               /* Style for both icons */
-               padding: 1.3rem;
-               color: $color-grey-light-1;
-               font-size: 2.5rem;
-               position: absolute;
-               transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            }
+         //       &_btn {
+         //          display: flex;
+         //          gap: 2rem;
+         //          align-items: center;
+         //          justify-content: end;
 
-            .material-symbols-outline.icon {
-               transform: translateX(0);
-            }
+         //          .tag {
+         //             margin: 0;
+         //          }
 
-            .material-symbols-outline.icon_2 {
-               transform: translateX(-100%);
-            }
+         //          &--icon {
+         //             height: 5rem;
+         //             width: 5rem;
+         //             display: flex;
 
-         }
+         //             justify-content: center;
+         //             align-items: center;
+         //             overflow: hidden;
+
+         //             background-color: $color-primary;
+         //             border-radius: 100%;
+         //             aspect-ratio: 1 / 1;
+         //             flex-shrink: 0;
+         //             position: relative;
+         //          }
+         //       }
+
+         //       &_text {
+         //          a.heading-midtext {
+         //             text-decoration: none;
+         //             font-weight: 700;
+         //          }
+         //       }
+         //    }
+
+         //    // PREV BUTTON
+
+         //    .material-symbols-outline.prevIcon,
+         //    .material-symbols-outline.prevIcon_2 {
+         //       /* Style for both icons */
+         //       padding: 1.3rem;
+         //       color: $color-grey-light-1;
+         //       font-size: 2.5rem;
+         //       position: absolute;
+         //       transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+         //    }
+
+         //    .material-symbols-outline.prevIcon {
+         //       /* Initial state of the first icon: visible */
+         //       transform: translateX(0);
+         //    }
+
+         //    .material-symbols-outline.prevIcon_2 {
+         //       /* Now the second icon starts off-screen to the RIGHT */
+         //       transform: translateX(100%);
+         //    }
+
+         //    // NEXT BUTTON
+         //    .material-symbols-outline.icon,
+         //    .material-symbols-outline.icon_2 {
+         //       /* Style for both icons */
+         //       padding: 1.3rem;
+         //       color: $color-grey-light-1;
+         //       font-size: 2.5rem;
+         //       position: absolute;
+         //       transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+         //    }
+
+         //    .material-symbols-outline.icon {
+         //       transform: translateX(0);
+         //    }
+
+         //    .material-symbols-outline.icon_2 {
+         //       transform: translateX(-100%);
+         //    }
+
+         // }
 
 
       }
