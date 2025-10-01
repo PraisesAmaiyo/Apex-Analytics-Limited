@@ -166,14 +166,11 @@ dropdownIcon?.addEventListener('click', (e) => {
   dropdownIcon.setAttribute('aria-expanded', !isOpen);
 });
 
-// zOHO cERTIFICATE vERIICATION
+// CERTIFICATE vERIICATION
 
 // const SHEET_URL =
 //   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6TTfR0WneGMJoWzzINEkCoTfFzTz7_a5fLD5s-JAIi3cSezXpZRf028TfqyK_8vRcE8qbAWVnUYbM/pub?output=csv';
-// const SHEET_URL =
-//   'https://sheet.zohopublic.com/sheet/published/h4ip87ec342acd541486ea3710306d2d9eec4?format=csv';
-// const SHEET_URL =
-//   'https://sheet.zohopublic.com/sheet/published/h4ip87ec342acd541486ea3710306d2d9eec4?download=csv&sheetname=Sheet1';
+
 const SHEET_URL =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQdtOB8EsCnQt7CYo2sa_oGsNbGLuK_AhY0HccN-1dRBCD178Fqo8LWCfaCk1RcYPV_JZp6TJyvdDI1/pub?output=csv';
 
