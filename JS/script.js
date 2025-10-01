@@ -168,8 +168,12 @@ dropdownIcon?.addEventListener('click', (e) => {
 
 // zOHO cERTIFICATE vERIICATION
 
+// const SHEET_URL =
+//   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6TTfR0WneGMJoWzzINEkCoTfFzTz7_a5fLD5s-JAIi3cSezXpZRf028TfqyK_8vRcE8qbAWVnUYbM/pub?output=csv';
 const SHEET_URL =
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6TTfR0WneGMJoWzzINEkCoTfFzTz7_a5fLD5s-JAIi3cSezXpZRf028TfqyK_8vRcE8qbAWVnUYbM/pub?output=csv';
+  'https://sheet.zohopublic.com/sheet/published/h4ip87ec342acd541486ea3710306d2d9eec4?format=csv';
+
+console.log(SHEET_URL);
 
 // Modal Controls
 document.getElementById('openModalBtn')?.addEventListener('click', () => {
