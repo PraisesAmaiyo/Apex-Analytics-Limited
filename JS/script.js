@@ -174,8 +174,10 @@ dropdownIcon?.addEventListener('click', (e) => {
 //   'https://sheet.zohopublic.com/sheet/published/h4ip87ec342acd541486ea3710306d2d9eec4?format=csv';
 // const SHEET_URL =
 //   'https://sheet.zohopublic.com/sheet/published/h4ip87ec342acd541486ea3710306d2d9eec4?download=csv&sheetname=Sheet1';
+// const SHEET_URL =
+//   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQdtOB8EsCnQt7CYo2sa_oGsNbGLuK_AhY0HccN-1dRBCD178Fqo8LWCfaCk1RcYPV_JZp6TJyvdDI1/pub?output=csv';
 const SHEET_URL =
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQdtOB8EsCnQt7CYo2sa_oGsNbGLuK_AhY0HccN-1dRBCD178Fqo8LWCfaCk1RcYPV_JZp6TJyvdDI1/pub?output=csv';
+  'https://corsproxy.io/?https://sheet.zohopublic.com/sheet/published/h4ip87ec342acd541486ea3710306d2d9eec4?download=csv&sheetname=Sheet1';
 
 console.log(SHEET_URL);
 
@@ -224,6 +226,7 @@ async function checkCertificate() {
   try {
     const res = await fetch(SHEET_URL);
     const text = await res.text();
+    console.log('CSV content:', text);
     const rows = text.split('\n').map((row) => row.split(','));
 
     let found = false;
