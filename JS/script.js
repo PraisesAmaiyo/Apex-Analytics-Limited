@@ -177,8 +177,6 @@ dropdownIcon?.addEventListener('click', (e) => {
 const SHEET_URL =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQdtOB8EsCnQt7CYo2sa_oGsNbGLuK_AhY0HccN-1dRBCD178Fqo8LWCfaCk1RcYPV_JZp6TJyvdDI1/pub?output=csv';
 
-console.log(SHEET_URL);
-
 // Modal Controls
 document.getElementById('openModalBtn')?.addEventListener('click', () => {
   document.getElementById('certModal').style.display = 'flex';
