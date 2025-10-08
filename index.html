@@ -30,9 +30,15 @@
 
 
    <!-- 🖼️ Favicon -->
+   <!-- Favicons -->
    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+   <link rel="icon" type="image/png" sizes="any" href="/android-chrome-192x192.png">
+   <link rel="icon" type="image/png" sizes="any" href="/android-chrome-512x512.png">
+   <link rel="icon" type="image/png" sizes="any" href="/favicon.png">
+   <link rel="icon" type="image/png" sizes="any" href="/favicon.ico">
+   <link rel=”shortcut icon” href=/favicon.ico”>
    <link rel="manifest" href="/site.webmanifest">
 
    <!-- 🎠 Swiper CSS (preload, then load) -->
@@ -108,8 +114,7 @@
 
       <header class="navigation-header  ">
          <a href="/index.html" class=" mobile-nav-logo">
-            <img class="logo " alt="Apex Analytics Limited logo" src="/img/logo.webp" width="157" height="45"
-               width="157" height="45" />
+            <img class="logo " alt="Apex Analytics Limited logo" src="/img/logo.webp" />
          </a>
 
 
@@ -248,12 +253,13 @@
 
          <div class="hero-slideshow">
             <div class="slideshow-image active"
-               style="background-image: url('./img/apex-analytics-header-image-1.webp');" fetchpriority="high"></div>
+               style="background-image: url('./img/apex-analytics-header-image-1.webp');" loading="eager"
+               fetchpriority="high"></div>
             <div class="slideshow-image " style="background-image: url('./img/apex-analytics-header-image-2.webp');"
-               fetchpriority="high">
+               loading="eager" fetchpriority="high">
             </div>
             <div class="slideshow-image " style="background-image: url('./img/apex-analytics-header-image-3.webp');"
-               fetchpriority="high">
+               loading="eager" fetchpriority="high">
             </div>
          </div>
 
@@ -2271,7 +2277,7 @@
 
 
             <div class="footer-info">
-               <img src="./img/logo.webp" alt="Apex Analytics Limited Logo" class="footer-logo" width="157" height="45">
+               <img src="./img/logo.webp" alt="Apex Analytics Limited Logo" class="footer-logo">
 
                <p class="heading-minitext">At Apex Analytics, we combine science, innovation, and integrity to provide
                   reliable testing and consulting for a cleaner, safer future</p>
@@ -2431,7 +2437,57 @@
 
          <div id="loader" style="display:none;" class="loader"></div>
 
-         <div class="heading-minitext mt-2" id="result"></div>
+         <!-- Error message (new) -->
+         <p id="certError" class="heading-midtext mt-2" style="color: red; display:none;"></p>
+
+         <!-- Verified Certificate info -->
+
+         <div class="heading-minitext mt-2" id="result">
+            <div class="verification-header">
+               <h1 class="heading-midtext">Verification Results</h1>
+               <p class="heading-minitext">Verification Successful. View Results Below</p>
+            </div>
+
+            <div class="cert-details">
+               <div class="info">
+                  <span class="info-label mb-1">Client Name</span>
+                  <h4 class="info-content clientName"></h4>
+               </div>
+
+               <div class="info">
+                  <span class="info-label mb-1">Certificate Number</span>
+                  <h4 class="info-content certificateNumber"></h4>
+               </div>
+               <div class="info">
+                  <span class="info-label mb-1">Equipment Name</span>
+                  <h4 class="info-content equipmentName"></h4>
+               </div>
+               <div class="info">
+                  <span class="info-label mb-1">Model Number</span>
+                  <h4 class="info-content modelNumber"></h4>
+               </div>
+               <div class="info">
+                  <span class="info-label mb-1">Serial Number</span>
+                  <h4 class="info-content serialNumber"></h4>
+               </div>
+               <div class="info">
+                  <span class="info-label mb-1">Date Calibrated</span>
+                  <h4 class="info-content dateCalibrated"></h4>
+               </div>
+               <div class="info">
+                  <span class="info-label mb-1">Due Date</span>
+                  <h4 class="info-content dueDate"></h4>
+               </div>
+               <!-- <a href="${link}" target="_blank" class="btn-link  mt-2">
+                  <button class="btn primary-btn center-button" type="button">
+                     View Document
+                  </button>
+               </a> -->
+
+            </div>
+         </div>
+
+
       </div>
    </form>
 

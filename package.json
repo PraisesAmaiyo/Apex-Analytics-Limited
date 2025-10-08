@@ -4,13 +4,15 @@
   "description": "apexanalyricltd webpage",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass sass/main.scss css/style.css -w",
+    "watch:sass": "sass --quiet-deps sass/main.scss css/style.css --watch",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "sass css/style.prefix.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "prefix:css": "postcss css/style.comp.css --use autoprefixer -b 'last 10 versions' -o css/style.prefix.css",
+    "compress:css": "sass css/style.prefix.css css/style.css --style=compressed",
+    "update:browserslist": "npx update-browserslist-db@latest --quiet",
+    "build:css": "npm-run-all update:browserslist compile:sass prefix:css compress:css",
+    "sass:silent": "sass --quiet-deps sass/main.scss css/style.css"
   },
   "author": "Praises Amaiyo",
   "license": "ISC",

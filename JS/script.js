@@ -169,10 +169,10 @@ dropdownIcon?.addEventListener('click', (e) => {
 // CERTIFICATE vERIICATION
 
 // const SHEET_URL =
-//   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6TTfR0WneGMJoWzzINEkCoTfFzTz7_a5fLD5s-JAIi3cSezXpZRf028TfqyK_8vRcE8qbAWVnUYbM/pub?output=csv';
+//   'https://docs.google.com/spreadsheets/d/e/2PACX-1vRObSQdxAPjb9kbLx-9exCwkC5AzdYwaTlxB8Onu3-RdM85mfN6e_2Gp8ZqEB_RpCES4_yz32XQHSGl/pub?output=csv';
 
 const SHEET_URL =
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQdtOB8EsCnQt7CYo2sa_oGsNbGLuK_AhY0HccN-1dRBCD178Fqo8LWCfaCk1RcYPV_JZp6TJyvdDI1/pub?output=csv';
+  'https://opensheet.elk.sh/1qWktil0sqkU8xHzEeLBgrzDfrnRauc3xHWyFOR0DYdA/SHEET1';
 
 // Modal Controls
 document.getElementById('openModalBtn')?.addEventListener('click', () => {
@@ -188,7 +188,12 @@ document.querySelector('.close')?.addEventListener('click', closeModal);
 
 function closeModal() {
   document.getElementById('certModal').style.display = 'none';
+  document.querySelector('#result').style.display = 'none';
+  document.querySelector('#certError').style.display = 'none';
+  document.getElementById('certNumber').value = '';
 }
+
+document.querySelector('#result').style.display = 'none';
 
 const form = document.getElementById('certModal');
 
@@ -198,6 +203,128 @@ form?.addEventListener('submit', (e) => {
 });
 
 // Verification Logic
+// async function checkCertificate() {
+//   const certNumber = document
+//     .getElementById('certNumber')
+//     .value.trim()
+//     .toUpperCase();
+//   const loader = document.getElementById('loader');
+//   const result = document.getElementById('result');
+//   const verifyBtn = document.getElementById('verifyBtn');
+
+//   result.textContent = '';
+//   if (!certNumber) {
+//     result.textContent = 'Please enter a certificate number.';
+//     return;
+//   }
+
+//   loader.style.display = 'block';
+//   verifyBtn.disabled = true;
+
+//   try {
+//     const res = await fetch(SHEET_URL);
+//     const text = await res.text();
+//     const rows = text.split('\n').map((row) => row.split(','));
+
+//     let found = false;
+//     for (let i = 1; i < rows.length; i++) {
+//       if (rows[i][0].trim().toUpperCase() === certNumber) {
+//         found = rows[i][1].trim();
+//         break;
+//       }
+//     }
+
+//     if (found) {
+//       result.innerHTML = `<a href="${found}" target="_blank">View Certificate</a>`;
+//     } else {
+//       result.textContent = 'Certificate not found.';
+//     }
+//   } catch (err) {
+//     result.textContent = 'Error checking certificate.';
+//   } finally {
+//     loader.style.display = 'none';
+//     verifyBtn.disabled = false;
+//   }
+// }
+
+// Improved Verification Logic with detailed results
+// async function checkCertificate() {
+//   const certNumber = document
+//     .getElementById('certNumber')
+//     .value.trim()
+//     .toUpperCase();
+//   const loader = document.getElementById('loader');
+//   const result = document.getElementById('result');
+//   const errorMsg = document.getElementById('certError');
+//   const verifyBtn = document.getElementById('verifyBtn');
+
+//   result.style.display = 'none';
+//   errorMsg.style.display = 'none';
+//   errorMsg.textContent = '';
+
+//   if (!certNumber) {
+//     errorMsg.textContent = 'Please enter a certificate number.';
+//     errorMsg.style.display = 'block';
+//     return;
+//   }
+
+//   loader.style.display = 'block';
+//   verifyBtn.disabled = true;
+
+//   try {
+//     const res = await fetch(SHEET_URL);
+//     const text = await res.text();
+//     const rows = text.split('\n').map((row) => row.split(','));
+
+//     let foundRow = null;
+
+//     // Loop through rows and find the certificate
+//     for (let i = 1; i < rows.length; i++) {
+//       const row = rows[i].map((cell) => cell.trim());
+//       if (row[0].toUpperCase() === certNumber) {
+//         foundRow = row;
+//         break;
+//       }
+//     }
+
+//     if (foundRow) {
+//       const [certNum, client, certName, dateCalibrated, dueDate, link] =
+//         foundRow;
+
+//       result.style.display = 'block';
+
+//       document.querySelector('.clientName').textContent = client || 'N/A';
+//       document.querySelector('.certificateNumber').textContent =
+//         certNum || 'N/A';
+//       document.querySelector('.equipmentName').textContent = certName || 'N/A';
+//       document.querySelector('.dateCalibrated').textContent =
+//         dateCalibrated || 'N/A';
+//       document.querySelector('.dueDate').textContent = dueDate || 'N/A';
+
+//       // Not Needed for now: Update link dynamically
+//       // const linkButton = document.querySelector('.btn-link');
+//       // if (link) {
+//       //   const fixedLink = link.startsWith('http') ? link : `https://${link}`;
+//       //   linkButton.style.display = 'flex';
+//       //   linkButton.href = fixedLink;
+//       // } else {
+//       //   linkButton.style.display = 'none';
+//       // }
+//     } else {
+//       errorMsg.textContent = 'Certificate not found.';
+//       errorMsg.style.display = 'block';
+//     }
+//   } catch (err) {
+//     console.error(err);
+//     errorMsg.textContent =
+//       'Error checking certificate. Please try again later.';
+//     errorMsg.style.display = 'block';
+//   } finally {
+//     loader.style.display = 'none';
+//     verifyBtn.disabled = false;
+//   }
+// }
+
 async function checkCertificate() {
   const certNumber = document
     .getElementById('certNumber')
@@ -205,11 +332,16 @@ async function checkCertificate() {
     .toUpperCase();
   const loader = document.getElementById('loader');
   const result = document.getElementById('result');
+  const errorMsg = document.getElementById('certError');
   const verifyBtn = document.getElementById('verifyBtn');
 
-  result.textContent = '';
+  result.style.display = 'none';
+  errorMsg.style.display = 'none';
+  errorMsg.textContent = '';
+
   if (!certNumber) {
-    result.textContent = 'Please enter a certificate number.';
+    errorMsg.textContent = 'Please enter a certificate number.';
+    errorMsg.style.display = 'block';
     return;
   }
 
@@ -218,24 +350,53 @@ async function checkCertificate() {
 
   try {
     const res = await fetch(SHEET_URL);
-    const text = await res.text();
-    const rows = text.split('\n').map((row) => row.split(','));
+    const data = await res.json();
 
-    let found = false;
-    for (let i = 1; i < rows.length; i++) {
-      if (rows[i][0].trim().toUpperCase() === certNumber) {
-        found = rows[i][1].trim();
-        break;
-      }
-    }
+    const foundRow = data.find(
+      (row) => row['CERTIFICATE NUMBER'].toUpperCase() === certNumber
+    );
 
-    if (found) {
-      result.innerHTML = `<a href="${found}" target="_blank">View Certificate</a>`;
+    if (foundRow) {
+      const client = foundRow['CLIENT'] || 'N/A';
+      const certNum = foundRow['CERTIFICATE NUMBER'] || 'N/A';
+      const equipName = foundRow['NAME OF EQUIPMENT'] || 'N/A';
+      const modelNumber = foundRow['MODEL NUMBER'] || 'N/A';
+      const serialNumber = foundRow['SERIAL NUMBER'] || 'N/A';
+      const dateCalibrated = foundRow['DATE CALIBRATED'] || 'N/A';
+      const dueDate = foundRow['DUE DATE'] || 'N/A';
+      // const link = foundRow['LINK'] || '';
+
+      result.style.display = 'block';
+
+      document.querySelector('.clientName').textContent = client || 'N/A';
+      document.querySelector('.certificateNumber').textContent =
+        certNum || 'N/A';
+      document.querySelector('.equipmentName').textContent = equipName || 'N/A';
+      document.querySelector('.modelNumber').textContent = modelNumber || 'N/A';
+      document.querySelector('.serialNumber').textContent =
+        serialNumber || 'N/A';
+      document.querySelector('.dateCalibrated').textContent =
+        dateCalibrated || 'N/A';
+      document.querySelector('.dueDate').textContent = dueDate || 'N/A';
+
+      // Not Needed for now: Update link dynamically
+      // const linkButton = document.querySelector('.btn-link');
+      // if (link) {
+      //   const fixedLink = link.startsWith('http') ? link : `https://${link}`;
+      //   linkButton.style.display = 'flex';
+      //   linkButton.href = fixedLink;
+      // } else {
+      //   linkButton.style.display = 'none';
+      // }
     } else {
-      result.textContent = 'Certificate not found.';
+      errorMsg.textContent = 'Certificate not found.';
+      errorMsg.style.display = 'block';
     }
   } catch (err) {
-    result.textContent = 'Error checking certificate.';
+    console.error(err);
+    errorMsg.textContent =
+      'Error checking certificate. Please try again later.';
+    errorMsg.style.display = 'block';
   } finally {
     loader.style.display = 'none';
     verifyBtn.disabled = false;
